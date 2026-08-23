@@ -1,0 +1,28 @@
+Chapter 5 CE age-spending summary, 2024
+
+Interpretation: age means age of the BLS CE reference person, not every member of the household.
+These are CE expenditure shares, not official CPI relative-importance weights by age.
+
+CPI-like mapping from the published CE age table:
+  Food and beverages = Food + Alcoholic beverages
+  Housing = Housing - Telephone services - Postage and stationery
+  Apparel = Apparel and services
+  Transportation = Transportation
+  Medical care = Healthcare
+  Recreation = Entertainment + Reading
+  Education and communication = Education + Telephone services + Postage and stationery
+  Other goods and services = Average annual expenditures - sum(previous seven groups)
+
+Highest average annual expenditures among compact age groups: 45-54 years ($100,327).
+Lowest average annual expenditures among compact age groups: Under 25 years ($47,283).
+Largest across-age category range: Medical care (9.6 percentage points).
+
+65+ minus Under 25 differences, percentage points:
+  Medical care: +9.6
+  Other goods and services: +1.4
+  Recreation: +1.0
+  Housing: +0.0
+  Apparel: -1.3
+  Food and beverages: -2.3
+  Transportation: -4.0
+  Education and communication: -4.4

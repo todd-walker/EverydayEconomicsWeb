@@ -1,0 +1,14 @@
+$$
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\ind}{\mathbf{1}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vtheta}{\boldsymbol{\theta}}
+\newcommand{\qd}{Q_d}
+\newcommand{\qs}{Q_s}
+\newcommand{\pd}{P^\ast}
+\newcommand{\qdstar}{Q^\ast}
+$$

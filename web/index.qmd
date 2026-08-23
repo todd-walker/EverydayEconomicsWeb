@@ -1,0 +1,8 @@
+# Preface {.unnumbered}
+
+{{< include _macros.qmd >}}
+
+Welcome to *Everyday Economics*. This book builds the tools of personal
+finance from the ground up — no prior economics required.
+
+The full source — text, data, and code — lives at [github.com/todd-walker/everydayecon](https://github.com/todd-walker/everydayecon).

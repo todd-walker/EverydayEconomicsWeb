@@ -1,0 +1,21 @@
+Chapter 3 CE-based time-cost redo, anchor year 2024
+
+This replaces the earlier big-ticket allocation rules with CE annual means by age of reference person.
+Interpretation: fixed 2024 CE age-specific annual spending bundle, repriced by category CPI and expressed in 2024 dollars.
+
+2024 CE annual spending anchors used:
+  25 to 34 Years: Housing=$26,380; Education=$1,418; Transportation=$12,802; Healthcare=$3,825
+  35 to 44 Years: Housing=$30,369; Education=$1,445; Transportation=$15,581; Healthcare=$5,949
+  45 to 54 Years: Housing=$30,747; Education=$3,181; Transportation=$17,184; Healthcare=$6,748
+  55 to 64 Years: Housing=$27,019; Education=$1,856; Transportation=$15,085; Healthcare=$6,711
+  65 Years and Older: Housing=$22,193; Education=$429; Transportation=$9,538; Healthcare=$7,799
+
+Latest year in time-cost panel: 2024
+  25 to 34 Years: latest 0.88 years (1,756 hours); peak 1.18 years in 1983; Housing=1,042h, Education=56h, Transportation=506h, Healthcare=151h
+  35 to 44 Years: latest 0.87 years (1,744 hours); peak 1.16 years in 1982; Housing=993h, Education=47h, Transportation=509h, Healthcare=194h
+  45 to 54 Years: latest 0.92 years (1,834 hours); peak 1.25 years in 1982; Housing=975h, Education=101h, Transportation=545h, Healthcare=214h
+  55 to 64 Years: latest 0.96 years (1,911 hours); peak 1.37 years in 1982; Housing=1,019h, Education=70h, Transportation=569h, Healthcare=253h
+  65 Years and Older: latest 1.16 years (2,313 hours); peak 1.91 years in 1980; Housing=1,285h, Education=25h, Transportation=552h, Healthcare=451h
+
+Important limitation: this is not historical actual CE spending by age. It fixes the 2024 age-specific CE bundle and reprices it with CPI category indexes.
+That is deliberately weaker than assigning a full home/college/car purchase to a cohort, but still transparent enough for a teaching chapter.

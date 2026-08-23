@@ -1,0 +1,16 @@
+/*-- scss:rules --*/
+@mixin econbox($accent, $bg) {
+  border-left: 4px solid $accent;
+  background: $bg;
+  border-radius: 6px;
+  padding: 0.6em 1em;
+  margin: 1.2em 0;
+  & > p:first-child strong { color: $accent; }
+}
+.vocabularybox      { @include econbox(#1f4fd6, rgba(31,79,214,0.06)); }
+.mentalmathbox      { @include econbox(#1f9d3a, rgba(31,157,58,0.06)); }
+.examplebox         { @include econbox(#c9a000, rgba(201,160,0,0.07)); }
+.coreconceptbox     { @include econbox(#cc2b2b, rgba(204,43,43,0.06)); }
+.studentquestionbox { @include econbox(#7a2fb0, rgba(122,47,176,0.08)); }
+.keyidea            { @include econbox(#1f4fd6, rgba(31,79,214,0.05)); }
+.exercise           { @include econbox(#222222, rgba(0,0,0,0.04)); }

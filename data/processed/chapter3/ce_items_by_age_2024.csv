@@ -1,0 +1,1027 @@
+source_row,item,age_group,mean,share_reported,se,rse
+8,Income before taxes,All consumer units,104207.0,,1248.94,1.2
+8,Income before taxes,Under 25 years,48514.0,,3585.03,7.39
+8,Income before taxes,25-34 years,102494.0,,2500.8,2.44
+8,Income before taxes,35-44 years,128285.0,,2889.26,2.25
+8,Income before taxes,45-54 years,141121.0,,4186.85,2.97
+8,Income before taxes,55-64 years,121571.0,,4133.34,3.4
+8,Income before taxes,65 years and older,67462.0,,1692.81,2.51
+8,Income before taxes,65-74 years,75460.0,,2601.34,3.45
+8,Income before taxes,75 years and older,56028.0,,2107.55,3.76
+50,Average annual expenditures,All consumer units,78535.0,,831.48,1.06
+50,Average annual expenditures,Under 25 years,47283.0,,2430.5,5.14
+50,Average annual expenditures,25-34 years,74475.0,,1548.93,2.08
+50,Average annual expenditures,35-44 years,91229.0,,1694.35,1.86
+50,Average annual expenditures,45-54 years,100327.0,,1801.06,1.8
+50,Average annual expenditures,55-64 years,84946.0,,2184.78,2.57
+50,Average annual expenditures,65 years and older,61432.0,,1204.69,1.96
+50,Average annual expenditures,65-74 years,65354.0,,1648.15,2.52
+50,Average annual expenditures,75 years and older,55834.0,,1753.56,3.14
+55,Food,All consumer units,10169.0,12.9,158.96,1.56
+55,Food,Under 25 years,7215.0,15.3,413.9,5.74
+55,Food,25-34 years,9630.0,12.9,325.33,3.38
+55,Food,35-44 years,12460.0,13.7,378.08,3.03
+55,Food,45-54 years,12772.0,12.7,269.32,2.11
+55,Food,55-64 years,10214.0,12.0,244.79,2.4
+55,Food,65 years and older,7940.0,12.9,227.52,2.87
+55,Food,65-74 years,8483.0,13.0,294.99,3.48
+55,Food,75 years and older,7168.0,12.8,271.09,3.78
+60,Food at home,All consumer units,6224.0,7.9,118.31,1.9
+60,Food at home,Under 25 years,4189.0,8.9,278.08,6.64
+60,Food at home,25-34 years,5712.0,7.7,277.84,4.86
+60,Food at home,35-44 years,7411.0,8.1,249.0,3.36
+60,Food at home,45-54 years,7703.0,7.7,213.53,2.77
+60,Food at home,55-64 years,6174.0,7.3,173.49,2.81
+60,Food at home,65 years and older,5251.0,8.5,172.09,3.28
+60,Food at home,65-74 years,5642.0,8.6,217.16,3.85
+60,Food at home,75 years and older,4696.0,8.4,205.58,4.38
+65,Cereals and bakery products,All consumer units,779.0,1.0,14.83,1.9
+65,Cereals and bakery products,Under 25 years,501.0,1.1,42.04,8.39
+65,Cereals and bakery products,25-34 years,681.0,0.9,31.09,4.57
+65,Cereals and bakery products,35-44 years,961.0,1.1,36.82,3.83
+65,Cereals and bakery products,45-54 years,944.0,0.9,35.94,3.81
+65,Cereals and bakery products,55-64 years,750.0,0.9,26.61,3.55
+65,Cereals and bakery products,65 years and older,685.0,1.1,25.03,3.66
+65,Cereals and bakery products,65-74 years,710.0,1.1,34.42,4.85
+65,Cereals and bakery products,75 years and older,649.0,1.2,32.34,4.98
+70,Cereals and cereal products,All consumer units,240.0,0.3,6.06,2.53
+70,Cereals and cereal products,Under 25 years,162.0,0.3,17.14,10.59
+70,Cereals and cereal products,25-34 years,223.0,0.3,12.41,5.57
+70,Cereals and cereal products,35-44 years,309.0,0.3,15.24,4.94
+70,Cereals and cereal products,45-54 years,300.0,0.3,13.6,4.54
+70,Cereals and cereal products,55-64 years,231.0,0.3,10.67,4.62
+70,Cereals and cereal products,65 years and older,189.0,0.3,11.59,6.14
+70,Cereals and cereal products,65-74 years,204.0,0.3,15.88,7.79
+70,Cereals and cereal products,75 years and older,167.0,0.3,11.61,6.95
+75,Bakery products,All consumer units,539.0,0.7,12.34,2.29
+75,Bakery products,Under 25 years,339.0,0.7,33.35,9.82
+75,Bakery products,25-34 years,458.0,0.6,24.52,5.36
+75,Bakery products,35-44 years,653.0,0.7,26.69,4.09
+75,Bakery products,45-54 years,644.0,0.6,31.22,4.85
+75,Bakery products,55-64 years,519.0,0.6,20.23,3.9
+75,Bakery products,65 years and older,496.0,0.8,17.19,3.47
+75,Bakery products,65-74 years,506.0,0.8,23.06,4.56
+75,Bakery products,75 years and older,482.0,0.9,25.69,5.33
+80,"Meats, poultry, fish, and eggs",All consumer units,1414.0,1.8,35.02,2.48
+80,"Meats, poultry, fish, and eggs",Under 25 years,885.0,1.9,78.46,8.86
+80,"Meats, poultry, fish, and eggs",25-34 years,1345.0,1.8,106.76,7.94
+80,"Meats, poultry, fish, and eggs",35-44 years,1669.0,1.8,79.01,4.73
+80,"Meats, poultry, fish, and eggs",45-54 years,1782.0,1.8,54.64,3.07
+80,"Meats, poultry, fish, and eggs",55-64 years,1402.0,1.7,54.59,3.89
+80,"Meats, poultry, fish, and eggs",65 years and older,1168.0,1.9,54.21,4.64
+80,"Meats, poultry, fish, and eggs",65-74 years,1285.0,2.0,68.78,5.35
+80,"Meats, poultry, fish, and eggs",75 years and older,1002.0,1.8,60.55,6.04
+85,Beef,All consumer units,408.0,0.5,15.67,3.84
+85,Beef,Under 25 years,234.0,0.5,26.45,11.29
+85,Beef,25-34 years,405.0,0.5,42.13,10.41
+85,Beef,35-44 years,487.0,0.5,33.76,6.94
+85,Beef,45-54 years,504.0,0.5,26.38,5.23
+85,Beef,55-64 years,415.0,0.5,26.15,6.3
+85,Beef,65 years and older,327.0,0.5,36.22,11.07
+85,Beef,65-74 years,377.0,0.6,55.94,14.85
+85,Beef,75 years and older,257.0,0.5,21.88,8.52
+90,Pork,All consumer units,260.0,0.3,7.71,2.97
+90,Pork,Under 25 years,172.0,0.4,26.56,15.41
+90,Pork,25-34 years,250.0,0.3,31.63,12.64
+90,Pork,35-44 years,288.0,0.3,17.88,6.22
+90,Pork,45-54 years,303.0,0.3,10.7,3.53
+90,Pork,55-64 years,280.0,0.3,16.33,5.83
+90,Pork,65 years and older,223.0,0.4,9.87,4.43
+90,Pork,65-74 years,233.0,0.4,12.61,5.41
+90,Pork,75 years and older,207.0,0.4,16.81,8.1
+95,Other meats,All consumer units,150.0,0.2,4.69,3.13
+95,Other meats,Under 25 years,110.0,0.2,16.86,15.32
+95,Other meats,25-34 years,134.0,0.2,18.35,13.65
+95,Other meats,35-44 years,173.0,0.2,7.98,4.63
+95,Other meats,45-54 years,187.0,0.2,10.82,5.77
+95,Other meats,55-64 years,154.0,0.2,10.35,6.73
+95,Other meats,65 years and older,126.0,0.2,7.42,5.89
+95,Other meats,65-74 years,129.0,0.2,7.92,6.14
+95,Other meats,75 years and older,122.0,0.2,11.87,9.76
+100,Poultry,All consumer units,267.0,0.3,8.63,3.23
+100,Poultry,Under 25 years,169.0,0.4,23.77,14.04
+100,Poultry,25-34 years,275.0,0.4,20.57,7.48
+100,Poultry,35-44 years,331.0,0.4,17.28,5.22
+100,Poultry,45-54 years,346.0,0.3,18.89,5.46
+100,Poultry,55-64 years,256.0,0.3,13.66,5.34
+100,Poultry,65 years and older,200.0,0.3,9.78,4.9
+100,Poultry,65-74 years,219.0,0.3,12.55,5.72
+100,Poultry,75 years and older,171.0,0.3,15.09,8.81
+105,Fish and seafood,All consumer units,224.0,0.3,8.32,3.72
+105,Fish and seafood,Under 25 years,118.0,0.2,27.84,23.62
+105,Fish and seafood,25-34 years,182.0,0.2,14.06,7.73
+105,Fish and seafood,35-44 years,259.0,0.3,20.7,7.98
+105,Fish and seafood,45-54 years,302.0,0.3,19.46,6.44
+105,Fish and seafood,55-64 years,210.0,0.2,12.52,5.97
+105,Fish and seafood,65 years and older,206.0,0.3,15.03,7.31
+105,Fish and seafood,65-74 years,239.0,0.4,23.42,9.79
+105,Fish and seafood,75 years and older,158.0,0.3,15.1,9.56
+110,Eggs,All consumer units,105.0,0.1,3.58,3.4
+110,Eggs,Under 25 years,81.0,0.2,8.99,11.05
+110,Eggs,25-34 years,99.0,0.1,7.31,7.4
+110,Eggs,35-44 years,132.0,0.1,8.24,6.23
+110,Eggs,45-54 years,139.0,0.1,9.44,6.78
+110,Eggs,55-64 years,88.0,0.1,4.01,4.56
+110,Eggs,65 years and older,87.0,0.1,5.52,6.34
+110,Eggs,65-74 years,87.0,0.1,7.89,9.04
+110,Eggs,75 years and older,87.0,0.2,6.96,8.02
+115,Dairy products,All consumer units,631.0,0.8,12.9,2.04
+115,Dairy products,Under 25 years,377.0,0.8,26.41,7.0
+115,Dairy products,25-34 years,573.0,0.8,22.22,3.88
+115,Dairy products,35-44 years,749.0,0.8,26.54,3.55
+115,Dairy products,45-54 years,786.0,0.8,29.29,3.73
+115,Dairy products,55-64 years,621.0,0.7,24.12,3.88
+115,Dairy products,65 years and older,547.0,0.9,20.39,3.73
+115,Dairy products,65-74 years,579.0,0.9,26.01,4.49
+115,Dairy products,75 years and older,501.0,0.9,24.24,4.84
+120,Fresh milk and cream,All consumer units,141.0,0.2,2.9,2.05
+120,Fresh milk and cream,Under 25 years,80.0,0.2,8.12,10.12
+120,Fresh milk and cream,25-34 years,142.0,0.2,7.8,5.48
+120,Fresh milk and cream,35-44 years,160.0,0.2,7.78,4.86
+120,Fresh milk and cream,45-54 years,185.0,0.2,9.1,4.91
+120,Fresh milk and cream,55-64 years,138.0,0.2,7.56,5.46
+120,Fresh milk and cream,65 years and older,114.0,0.2,5.49,4.81
+120,Fresh milk and cream,65-74 years,123.0,0.2,7.16,5.81
+120,Fresh milk and cream,75 years and older,101.0,0.2,7.31,7.22
+125,Other dairy products,All consumer units,490.0,0.6,11.79,2.41
+125,Other dairy products,Under 25 years,297.0,0.6,23.14,7.79
+125,Other dairy products,25-34 years,431.0,0.6,20.48,4.76
+125,Other dairy products,35-44 years,588.0,0.6,22.34,3.8
+125,Other dairy products,45-54 years,601.0,0.6,25.95,4.32
+125,Other dairy products,55-64 years,482.0,0.6,19.85,4.11
+125,Other dairy products,65 years and older,433.0,0.7,16.85,3.89
+125,Other dairy products,65-74 years,456.0,0.7,21.74,4.76
+125,Other dairy products,75 years and older,400.0,0.7,20.56,5.15
+130,Fruits and vegetables,All consumer units,953.0,1.2,22.02,2.31
+130,Fruits and vegetables,Under 25 years,625.0,1.3,61.3,9.8
+130,Fruits and vegetables,25-34 years,867.0,1.2,51.11,5.89
+130,Fruits and vegetables,35-44 years,1115.0,1.2,47.5,4.26
+130,Fruits and vegetables,45-54 years,1183.0,1.2,41.45,3.5
+130,Fruits and vegetables,55-64 years,912.0,1.1,31.14,3.41
+130,Fruits and vegetables,65 years and older,842.0,1.4,38.65,4.59
+130,Fruits and vegetables,65-74 years,884.0,1.4,47.18,5.33
+130,Fruits and vegetables,75 years and older,781.0,1.4,41.26,5.28
+135,Fresh fruits,All consumer units,394.0,0.5,10.59,2.68
+135,Fresh fruits,Under 25 years,266.0,0.6,32.98,12.4
+135,Fresh fruits,25-34 years,362.0,0.5,27.67,7.64
+135,Fresh fruits,35-44 years,476.0,0.5,21.96,4.61
+135,Fresh fruits,45-54 years,482.0,0.5,23.15,4.8
+135,Fresh fruits,55-64 years,381.0,0.4,17.41,4.57
+135,Fresh fruits,65 years and older,338.0,0.6,17.41,5.15
+135,Fresh fruits,65-74 years,349.0,0.5,21.9,6.27
+135,Fresh fruits,75 years and older,323.0,0.6,18.1,5.61
+140,Fresh vegetables,All consumer units,355.0,0.5,9.73,2.74
+140,Fresh vegetables,Under 25 years,227.0,0.5,26.91,11.87
+140,Fresh vegetables,25-34 years,322.0,0.4,18.59,5.78
+140,Fresh vegetables,35-44 years,395.0,0.4,23.14,5.86
+140,Fresh vegetables,45-54 years,449.0,0.4,18.46,4.11
+140,Fresh vegetables,55-64 years,345.0,0.4,11.95,3.46
+140,Fresh vegetables,65 years and older,320.0,0.5,18.6,5.81
+140,Fresh vegetables,65-74 years,346.0,0.5,23.35,6.74
+140,Fresh vegetables,75 years and older,283.0,0.5,19.03,6.72
+145,Processed fruits and vegetables,All consumer units,203.0,0.3,4.7,2.31
+145,Processed fruits and vegetables,Under 25 years,133.0,0.3,15.97,12.04
+145,Processed fruits and vegetables,25-34 years,183.0,0.2,11.77,6.42
+145,Processed fruits and vegetables,35-44 years,244.0,0.3,11.57,4.75
+145,Processed fruits and vegetables,45-54 years,252.0,0.3,11.35,4.51
+145,Processed fruits and vegetables,55-64 years,186.0,0.2,8.41,4.52
+145,Processed fruits and vegetables,65 years and older,183.0,0.3,7.54,4.12
+145,Processed fruits and vegetables,65-74 years,189.0,0.3,8.65,4.58
+145,Processed fruits and vegetables,75 years and older,175.0,0.3,11.81,6.75
+150,Other food at home,All consumer units,2447.0,3.1,47.63,1.95
+150,Other food at home,Under 25 years,1800.0,3.8,131.19,7.29
+150,Other food at home,25-34 years,2247.0,3.0,100.6,4.48
+150,Other food at home,35-44 years,2917.0,3.2,94.52,3.24
+150,Other food at home,45-54 years,3009.0,3.0,95.65,3.18
+150,Other food at home,55-64 years,2489.0,2.9,77.1,3.1
+150,Other food at home,65 years and older,2010.0,3.3,65.68,3.27
+150,Other food at home,65-74 years,2184.0,3.3,87.28,4.0
+150,Other food at home,75 years and older,1764.0,3.2,77.69,4.41
+155,Sugar and other sweets,All consumer units,230.0,0.3,6.55,2.85
+155,Sugar and other sweets,Under 25 years,151.0,0.3,16.64,11.05
+155,Sugar and other sweets,25-34 years,196.0,0.3,11.84,6.03
+155,Sugar and other sweets,35-44 years,268.0,0.3,14.89,5.55
+155,Sugar and other sweets,45-54 years,283.0,0.3,16.29,5.77
+155,Sugar and other sweets,55-64 years,237.0,0.3,12.73,5.37
+155,Sugar and other sweets,65 years and older,202.0,0.3,8.4,4.16
+155,Sugar and other sweets,65-74 years,218.0,0.3,10.41,4.79
+155,Sugar and other sweets,75 years and older,180.0,0.3,13.68,7.62
+160,Fats and oils,All consumer units,125.0,0.2,3.04,2.43
+160,Fats and oils,Under 25 years,75.0,0.2,9.88,13.12
+160,Fats and oils,25-34 years,118.0,0.2,7.98,6.75
+160,Fats and oils,35-44 years,152.0,0.2,9.87,6.51
+160,Fats and oils,45-54 years,150.0,0.1,8.14,5.44
+160,Fats and oils,55-64 years,129.0,0.2,7.38,5.71
+160,Fats and oils,65 years and older,103.0,0.2,5.97,5.78
+160,Fats and oils,65-74 years,110.0,0.2,8.66,7.85
+160,Fats and oils,75 years and older,93.0,0.2,7.56,8.09
+165,Miscellaneous foods,All consumer units,1284.0,1.6,28.0,2.18
+165,Miscellaneous foods,Under 25 years,943.0,2.0,82.35,8.74
+165,Miscellaneous foods,25-34 years,1191.0,1.6,55.02,4.62
+165,Miscellaneous foods,35-44 years,1580.0,1.7,54.82,3.47
+165,Miscellaneous foods,45-54 years,1605.0,1.6,61.32,3.82
+165,Miscellaneous foods,55-64 years,1254.0,1.5,44.55,3.55
+165,Miscellaneous foods,65 years and older,1035.0,1.7,40.96,3.96
+165,Miscellaneous foods,65-74 years,1143.0,1.7,55.51,4.86
+165,Miscellaneous foods,75 years and older,882.0,1.6,42.15,4.78
+170,Nonalcoholic beverages,All consumer units,714.0,0.9,16.2,2.27
+170,Nonalcoholic beverages,Under 25 years,592.0,1.3,60.53,10.22
+170,Nonalcoholic beverages,25-34 years,669.0,0.9,45.5,6.8
+170,Nonalcoholic beverages,35-44 years,803.0,0.9,34.32,4.28
+170,Nonalcoholic beverages,45-54 years,851.0,0.8,30.69,3.6
+170,Nonalcoholic beverages,55-64 years,759.0,0.9,30.58,4.03
+170,Nonalcoholic beverages,65 years and older,593.0,1.0,21.07,3.55
+170,Nonalcoholic beverages,65-74 years,624.0,1.0,32.61,5.22
+170,Nonalcoholic beverages,75 years and older,550.0,1.0,28.5,5.18
+175,Food prepared by consumer unit on out of town trips,All consumer units,94.0,0.1,4.59,4.88
+175,Food prepared by consumer unit on out of town trips,Under 25 years,39.0,0.1,8.06,20.49
+175,Food prepared by consumer unit on out of town trips,25-34 years,72.0,0.1,5.86,8.12
+175,Food prepared by consumer unit on out of town trips,35-44 years,115.0,0.1,10.8,9.41
+175,Food prepared by consumer unit on out of town trips,45-54 years,120.0,0.1,8.62,7.18
+175,Food prepared by consumer unit on out of town trips,55-64 years,110.0,0.1,14.24,12.89
+175,Food prepared by consumer unit on out of town trips,65 years and older,77.0,0.1,7.48,9.71
+175,Food prepared by consumer unit on out of town trips,65-74 years,89.0,0.1,13.44,15.05
+175,Food prepared by consumer unit on out of town trips,75 years and older,59.0,0.1,9.28,15.62
+180,Food away from home,All consumer units,3945.0,5.0,73.8,1.87
+180,Food away from home,Under 25 years,3025.0,6.4,294.17,9.72
+180,Food away from home,25-34 years,3918.0,5.3,165.04,4.21
+180,Food away from home,35-44 years,5049.0,5.5,230.8,4.57
+180,Food away from home,45-54 years,5069.0,5.1,152.59,3.01
+180,Food away from home,55-64 years,4040.0,4.8,170.37,4.22
+180,Food away from home,65 years and older,2689.0,4.4,107.53,4.0
+180,Food away from home,65-74 years,2841.0,4.3,140.18,4.93
+180,Food away from home,75 years and older,2472.0,4.4,149.49,6.05
+186,Alcoholic beverages,All consumer units,643.0,0.8,22.6,3.52
+186,Alcoholic beverages,Under 25 years,382.0,0.8,68.9,18.04
+186,Alcoholic beverages,25-34 years,600.0,0.8,54.44,9.07
+186,Alcoholic beverages,35-44 years,727.0,0.8,43.87,6.03
+186,Alcoholic beverages,45-54 years,838.0,0.8,65.45,7.81
+186,Alcoholic beverages,55-64 years,657.0,0.8,73.87,11.24
+186,Alcoholic beverages,65 years and older,532.0,0.9,45.61,8.57
+186,Alcoholic beverages,65-74 years,610.0,0.9,62.37,10.22
+186,Alcoholic beverages,75 years and older,422.0,0.8,34.28,8.13
+192,Housing,All consumer units,26266.0,33.4,298.47,1.14
+192,Housing,Under 25 years,16853.0,35.6,1044.99,6.2
+192,Housing,25-34 years,26380.0,35.4,525.52,1.99
+192,Housing,35-44 years,30369.0,33.3,579.01,1.91
+192,Housing,45-54 years,30747.0,30.6,535.47,1.74
+192,Housing,55-64 years,27019.0,31.8,800.08,2.96
+192,Housing,65 years and older,22193.0,36.1,507.83,2.29
+192,Housing,65-74 years,22329.0,34.2,681.71,3.05
+192,Housing,75 years and older,21999.0,39.4,700.78,3.19
+197,Shelter,All consumer units,16317.0,20.8,224.12,1.37
+197,Shelter,Under 25 years,12050.0,25.5,805.47,6.68
+197,Shelter,25-34 years,17656.0,23.7,415.24,2.35
+197,Shelter,35-44 years,18728.0,20.5,416.85,2.23
+197,Shelter,45-54 years,19283.0,19.2,431.4,2.24
+197,Shelter,55-64 years,16507.0,19.4,677.42,4.1
+197,Shelter,65 years and older,12995.0,21.2,371.94,2.86
+197,Shelter,65-74 years,12749.0,19.5,572.23,4.49
+197,Shelter,75 years and older,13346.0,23.9,512.11,3.84
+202,Owned dwellings,All consumer units,9310.0,11.9,176.4,1.89
+202,Owned dwellings,Under 25 years,1127.0,2.4,237.0,21.03
+202,Owned dwellings,25-34 years,6983.0,9.4,354.5,5.08
+202,Owned dwellings,35-44 years,10552.0,11.6,430.76,4.08
+202,Owned dwellings,45-54 years,12500.0,12.5,462.4,3.7
+202,Owned dwellings,55-64 years,11150.0,13.1,542.06,4.86
+202,Owned dwellings,65 years and older,8196.0,13.3,308.78,3.77
+202,Owned dwellings,65-74 years,8536.0,13.1,491.14,5.75
+202,Owned dwellings,75 years and older,7711.0,13.8,316.08,4.1
+207,Mortgage interest and charges,All consumer units,3646.0,4.6,84.13,2.31
+207,Mortgage interest and charges,Under 25 years,631.0,1.3,165.67,26.24
+207,Mortgage interest and charges,25-34 years,4093.0,5.5,220.95,5.4
+207,Mortgage interest and charges,35-44 years,5580.0,6.1,299.23,5.36
+207,Mortgage interest and charges,45-54 years,5326.0,5.3,211.78,3.98
+207,Mortgage interest and charges,55-64 years,3689.0,4.3,163.12,4.42
+207,Mortgage interest and charges,65 years and older,1712.0,2.8,75.68,4.42
+207,Mortgage interest and charges,65-74 years,1975.0,3.0,89.65,4.54
+207,Mortgage interest and charges,75 years and older,1337.0,2.4,137.15,10.26
+212,Property taxes,All consumer units,2738.0,3.5,59.34,2.17
+212,Property taxes,Under 25 years,229.0,0.5,50.12,21.92
+212,Property taxes,25-34 years,1591.0,2.1,83.78,5.26
+212,Property taxes,35-44 years,2729.0,3.0,105.3,3.86
+212,Property taxes,45-54 years,3653.0,3.6,188.54,5.16
+212,Property taxes,55-64 years,3307.0,3.9,124.36,3.76
+212,Property taxes,65 years and older,2906.0,4.7,76.13,2.62
+212,Property taxes,65-74 years,3003.0,4.6,114.81,3.82
+212,Property taxes,75 years and older,2767.0,5.0,131.78,4.76
+217,"Maintenance, repairs, insurance, and other expenses",All consumer units,2926.0,3.7,114.8,3.92
+217,"Maintenance, repairs, insurance, and other expenses",Under 25 years,267.0,0.6,86.52,32.4
+217,"Maintenance, repairs, insurance, and other expenses",25-34 years,1298.0,1.7,128.96,9.93
+217,"Maintenance, repairs, insurance, and other expenses",35-44 years,2243.0,2.5,197.86,8.82
+217,"Maintenance, repairs, insurance, and other expenses",45-54 years,3520.0,3.5,308.9,8.78
+217,"Maintenance, repairs, insurance, and other expenses",55-64 years,4155.0,4.9,388.31,9.35
+217,"Maintenance, repairs, insurance, and other expenses",65 years and older,3578.0,5.8,256.14,7.16
+217,"Maintenance, repairs, insurance, and other expenses",65-74 years,3558.0,5.4,367.96,10.34
+217,"Maintenance, repairs, insurance, and other expenses",75 years and older,3607.0,6.5,229.13,6.35
+222,Rented dwellings,All consumer units,5660.0,7.2,86.58,1.53
+222,Rented dwellings,Under 25 years,10119.0,21.4,770.07,7.61
+222,Rented dwellings,25-34 years,9927.0,13.3,359.22,3.62
+222,Rented dwellings,35-44 years,7036.0,7.7,259.98,3.7
+222,Rented dwellings,45-54 years,5001.0,5.0,242.85,4.86
+222,Rented dwellings,55-64 years,3619.0,4.3,190.56,5.27
+222,Rented dwellings,65 years and older,3403.0,5.5,176.63,5.19
+222,Rented dwellings,65-74 years,2681.0,4.1,152.15,5.68
+222,Rented dwellings,75 years and older,4435.0,7.9,343.49,7.74
+227,Other lodging,All consumer units,1347.0,1.7,55.08,4.09
+227,Other lodging,Under 25 years,804.0,1.7,182.6,22.71
+227,Other lodging,25-34 years,745.0,1.0,83.77,11.24
+227,Other lodging,35-44 years,1139.0,1.2,74.09,6.5
+227,Other lodging,45-54 years,1782.0,1.8,126.16,7.08
+227,Other lodging,55-64 years,1738.0,2.0,149.59,8.61
+227,Other lodging,65 years and older,1396.0,2.3,156.11,11.19
+227,Other lodging,65-74 years,1533.0,2.3,228.25,14.89
+227,Other lodging,75 years and older,1200.0,2.1,149.61,12.47
+232,"Utilities, fuels, and public services",All consumer units,4736.0,6.0,44.25,0.93
+232,"Utilities, fuels, and public services",Under 25 years,2181.0,4.6,168.36,7.72
+232,"Utilities, fuels, and public services",25-34 years,4076.0,5.5,76.02,1.86
+232,"Utilities, fuels, and public services",35-44 years,5053.0,5.5,92.95,1.84
+232,"Utilities, fuels, and public services",45-54 years,5779.0,5.8,101.68,1.76
+232,"Utilities, fuels, and public services",55-64 years,5138.0,6.0,95.38,1.86
+232,"Utilities, fuels, and public services",65 years and older,4480.0,7.3,66.08,1.47
+232,"Utilities, fuels, and public services",65-74 years,4653.0,7.1,69.29,1.49
+232,"Utilities, fuels, and public services",75 years and older,4234.0,7.6,93.59,2.21
+237,Natural gas,All consumer units,493.0,0.6,15.62,3.17
+237,Natural gas,Under 25 years,190.0,0.4,33.6,17.64
+237,Natural gas,25-34 years,375.0,0.5,20.2,5.39
+237,Natural gas,35-44 years,509.0,0.6,25.55,5.02
+237,Natural gas,45-54 years,587.0,0.6,26.48,4.51
+237,Natural gas,55-64 years,538.0,0.6,23.81,4.43
+237,Natural gas,65 years and older,514.0,0.8,24.19,4.7
+237,Natural gas,65-74 years,497.0,0.8,26.65,5.36
+237,Natural gas,75 years and older,538.0,1.0,34.14,6.34
+242,Electricity,All consumer units,1833.0,2.3,30.55,1.67
+242,Electricity,Under 25 years,952.0,2.0,82.56,8.67
+242,Electricity,25-34 years,1721.0,2.3,49.91,2.9
+242,Electricity,35-44 years,1965.0,2.2,52.69,2.68
+242,Electricity,45-54 years,2158.0,2.2,55.11,2.55
+242,Electricity,55-64 years,1949.0,2.3,44.14,2.26
+242,Electricity,65 years and older,1703.0,2.8,30.73,1.8
+242,Electricity,65-74 years,1769.0,2.7,37.59,2.13
+242,Electricity,75 years and older,1608.0,2.9,43.71,2.72
+247,Fuel oil and other fuels,All consumer units,125.0,0.2,6.75,5.39
+247,Fuel oil and other fuels,Under 25 years,9.0,,4.99,53.47
+247,Fuel oil and other fuels,25-34 years,70.0,0.1,13.37,18.98
+247,Fuel oil and other fuels,35-44 years,103.0,0.1,18.79,18.29
+247,Fuel oil and other fuels,45-54 years,128.0,0.1,19.52,15.28
+247,Fuel oil and other fuels,55-64 years,163.0,0.2,22.43,13.77
+247,Fuel oil and other fuels,65 years and older,164.0,0.3,11.32,6.9
+247,Fuel oil and other fuels,65-74 years,170.0,0.3,20.71,12.19
+247,Fuel oil and other fuels,75 years and older,156.0,0.3,22.4,14.34
+252,Telephone services,All consumer units,1460.0,1.9,19.52,1.34
+252,Telephone services,Under 25 years,806.0,1.7,61.96,7.69
+252,Telephone services,25-34 years,1241.0,1.7,35.01,2.82
+252,Telephone services,35-44 years,1604.0,1.8,43.43,2.71
+252,Telephone services,45-54 years,1919.0,1.9,37.29,1.94
+252,Telephone services,55-64 years,1596.0,1.9,44.23,2.77
+252,Telephone services,65 years and older,1249.0,2.0,24.78,1.98
+252,Telephone services,65-74 years,1356.0,2.1,34.84,2.57
+252,Telephone services,75 years and older,1096.0,2.0,30.91,2.82
+257,"Residential phone service, VOIP, and phone cards",All consumer units,100.0,0.1,4.25,4.24
+257,"Residential phone service, VOIP, and phone cards",Under 25 years,8.0,,3.51,44.63
+257,"Residential phone service, VOIP, and phone cards",25-34 years,20.0,,3.98,19.94
+257,"Residential phone service, VOIP, and phone cards",35-44 years,33.0,,4.6,14.12
+257,"Residential phone service, VOIP, and phone cards",45-54 years,73.0,0.1,6.63,9.12
+257,"Residential phone service, VOIP, and phone cards",55-64 years,94.0,0.1,7.21,7.65
+257,"Residential phone service, VOIP, and phone cards",65 years and older,222.0,0.4,9.96,4.5
+257,"Residential phone service, VOIP, and phone cards",65-74 years,176.0,0.3,9.18,5.23
+257,"Residential phone service, VOIP, and phone cards",75 years and older,287.0,0.5,15.91,5.54
+262,Cellular phone service,All consumer units,1359.0,1.7,19.66,1.45
+262,Cellular phone service,Under 25 years,798.0,1.7,61.4,7.69
+262,Cellular phone service,25-34 years,1221.0,1.6,34.11,2.79
+262,Cellular phone service,35-44 years,1571.0,1.7,42.96,2.73
+262,Cellular phone service,45-54 years,1846.0,1.8,35.96,1.95
+262,Cellular phone service,55-64 years,1501.0,1.8,45.54,3.03
+262,Cellular phone service,65 years and older,1027.0,1.7,24.02,2.34
+262,Cellular phone service,65-74 years,1180.0,1.8,32.52,2.76
+262,Cellular phone service,75 years and older,808.0,1.4,31.55,3.9
+267,Water and other public services,All consumer units,826.0,1.1,14.94,1.81
+267,Water and other public services,Under 25 years,223.0,0.5,24.9,11.18
+267,Water and other public services,25-34 years,669.0,0.9,25.85,3.86
+267,Water and other public services,35-44 years,872.0,1.0,26.51,3.04
+267,Water and other public services,45-54 years,988.0,1.0,29.45,2.98
+267,Water and other public services,55-64 years,893.0,1.1,28.86,3.23
+267,Water and other public services,65 years and older,850.0,1.4,24.43,2.87
+267,Water and other public services,65-74 years,861.0,1.3,24.88,2.89
+267,Water and other public services,75 years and older,836.0,1.5,37.14,4.44
+272,Household operations,All consumer units,1921.0,2.4,54.74,2.85
+272,Household operations,Under 25 years,620.0,1.3,70.62,11.39
+272,Household operations,25-34 years,1902.0,2.6,126.3,6.64
+272,Household operations,35-44 years,2907.0,3.2,181.86,6.26
+272,Household operations,45-54 years,2038.0,2.0,112.41,5.52
+272,Household operations,55-64 years,1536.0,1.8,101.76,6.63
+272,Household operations,65 years and older,1706.0,2.8,99.44,5.83
+272,Household operations,65-74 years,1484.0,2.3,69.96,4.71
+272,Household operations,75 years and older,2022.0,3.6,209.68,10.37
+277,Personal services,All consumer units,547.0,0.7,44.09,8.06
+277,Personal services,Under 25 years,121.0,0.3,49.16,40.7
+277,Personal services,25-34 years,892.0,1.2,114.06,12.78
+277,Personal services,35-44 years,1468.0,1.6,162.65,11.08
+277,Personal services,45-54 years,395.0,0.4,82.92,21.01
+277,Personal services,55-64 years,143.0,0.2,91.29,63.98
+277,Personal services,65 years and older,196.0,0.3,68.96,35.21
+277,Personal services,65-74 years,51.0,0.1,15.63,30.65
+277,Personal services,75 years and older,403.0,0.7,167.99,41.69
+282,Other household expenses,All consumer units,1374.0,1.7,32.51,2.37
+282,Other household expenses,Under 25 years,499.0,1.1,46.65,9.35
+282,Other household expenses,25-34 years,1010.0,1.4,37.33,3.7
+282,Other household expenses,35-44 years,1439.0,1.6,60.34,4.19
+282,Other household expenses,45-54 years,1643.0,1.6,79.02,4.81
+282,Other household expenses,55-64 years,1393.0,1.6,56.9,4.08
+282,Other household expenses,65 years and older,1510.0,2.5,59.43,3.94
+282,Other household expenses,65-74 years,1433.0,2.2,63.84,4.46
+282,Other household expenses,75 years and older,1619.0,2.9,97.22,6.0
+287,Housekeeping supplies,All consumer units,877.0,1.1,23.88,2.72
+287,Housekeeping supplies,Under 25 years,459.0,1.0,79.94,17.41
+287,Housekeeping supplies,25-34 years,692.0,0.9,38.4,5.55
+287,Housekeeping supplies,35-44 years,999.0,1.1,62.25,6.23
+287,Housekeeping supplies,45-54 years,914.0,0.9,64.71,7.08
+287,Housekeeping supplies,55-64 years,1022.0,1.2,79.43,7.77
+287,Housekeeping supplies,65 years and older,859.0,1.4,44.21,5.15
+287,Housekeeping supplies,65-74 years,922.0,1.4,63.73,6.91
+287,Housekeeping supplies,75 years and older,770.0,1.4,42.98,5.58
+292,Laundry and cleaning products,All consumer units,209.0,0.3,6.57,3.14
+292,Laundry and cleaning products,Under 25 years,151.0,0.3,34.19,22.71
+292,Laundry and cleaning products,25-34 years,212.0,0.3,23.41,11.03
+292,Laundry and cleaning products,35-44 years,221.0,0.2,18.67,8.46
+292,Laundry and cleaning products,45-54 years,225.0,0.2,17.07,7.59
+292,Laundry and cleaning products,55-64 years,243.0,0.3,18.55,7.65
+292,Laundry and cleaning products,65 years and older,178.0,0.3,10.42,5.87
+292,Laundry and cleaning products,65-74 years,188.0,0.3,15.27,8.11
+292,Laundry and cleaning products,75 years and older,163.0,0.3,15.35,9.44
+297,Other household products,All consumer units,537.0,0.7,15.84,2.95
+297,Other household products,Under 25 years,268.0,0.6,62.64,23.41
+297,Other household products,25-34 years,353.0,0.5,23.54,6.68
+297,Other household products,35-44 years,650.0,0.7,39.69,6.11
+297,Other household products,45-54 years,563.0,0.6,54.42,9.67
+297,Other household products,55-64 years,624.0,0.7,56.1,8.99
+297,Other household products,65 years and older,544.0,0.9,34.16,6.28
+297,Other household products,65-74 years,598.0,0.9,53.38,8.93
+297,Other household products,75 years and older,467.0,0.8,28.58,6.11
+302,Postage and stationery,All consumer units,131.0,0.2,12.51,9.52
+302,Postage and stationery,Under 25 years,41.0,0.1,9.56,23.37
+302,Postage and stationery,25-34 years,127.0,0.2,22.93,18.1
+302,Postage and stationery,35-44 years,129.0,0.1,45.92,35.71
+302,Postage and stationery,45-54 years,126.0,0.1,18.15,14.41
+302,Postage and stationery,55-64 years,156.0,0.2,40.1,25.78
+302,Postage and stationery,65 years and older,138.0,0.2,12.56,9.12
+302,Postage and stationery,65-74 years,136.0,0.2,16.66,12.24
+302,Postage and stationery,75 years and older,140.0,0.3,19.23,13.74
+307,Household furnishings and equipment,All consumer units,2414.0,3.1,75.42,3.12
+307,Household furnishings and equipment,Under 25 years,1543.0,3.3,183.57,11.9
+307,Household furnishings and equipment,25-34 years,2055.0,2.8,125.1,6.09
+307,Household furnishings and equipment,35-44 years,2683.0,2.9,161.94,6.04
+307,Household furnishings and equipment,45-54 years,2733.0,2.7,153.32,5.61
+307,Household furnishings and equipment,55-64 years,2816.0,3.3,149.53,5.31
+307,Household furnishings and equipment,65 years and older,2153.0,3.5,149.88,6.96
+307,Household furnishings and equipment,65-74 years,2522.0,3.9,215.14,8.53
+307,Household furnishings and equipment,75 years and older,1627.0,2.9,118.96,7.31
+312,Household textiles,All consumer units,107.0,0.1,8.21,7.7
+312,Household textiles,Under 25 years,99.0,0.2,28.71,28.9
+312,Household textiles,25-34 years,96.0,0.1,20.07,20.85
+312,Household textiles,35-44 years,104.0,0.1,16.76,16.05
+312,Household textiles,45-54 years,109.0,0.1,16.68,15.26
+312,Household textiles,55-64 years,136.0,0.2,19.9,14.62
+312,Household textiles,65 years and older,95.0,0.2,10.43,11.01
+312,Household textiles,65-74 years,112.0,0.2,18.44,16.42
+312,Household textiles,75 years and older,70.0,0.1,13.4,19.18
+317,Furniture,All consumer units,648.0,0.8,33.08,5.1
+317,Furniture,Under 25 years,435.0,0.9,76.04,17.49
+317,Furniture,25-34 years,537.0,0.7,58.87,10.96
+317,Furniture,35-44 years,752.0,0.8,94.81,12.6
+317,Furniture,45-54 years,648.0,0.6,52.27,8.07
+317,Furniture,55-64 years,790.0,0.9,105.35,13.34
+317,Furniture,65 years and older,591.0,1.0,47.16,7.98
+317,Furniture,65-74 years,650.0,1.0,62.77,9.66
+317,Furniture,75 years and older,506.0,0.9,79.83,15.77
+322,Floor coverings,All consumer units,30.0,,3.17,10.49
+322,Floor coverings,Under 25 years,12.0,,3.48,28.23
+322,Floor coverings,25-34 years,22.0,,4.2,18.81
+322,Floor coverings,35-44 years,33.0,,6.43,19.76
+322,Floor coverings,45-54 years,23.0,,3.76,16.6
+322,Floor coverings,55-64 years,39.0,,8.65,22.36
+322,Floor coverings,65 years and older,35.0,0.1,6.99,19.83
+322,Floor coverings,65-74 years,50.0,0.1,11.63,23.04
+322,Floor coverings,75 years and older,13.0,,4.3,31.94
+327,Major appliances,All consumer units,385.0,0.5,17.48,4.54
+327,Major appliances,Under 25 years,144.0,0.3,29.3,20.34
+327,Major appliances,25-34 years,307.0,0.4,44.96,14.64
+327,Major appliances,35-44 years,431.0,0.5,39.59,9.19
+327,Major appliances,45-54 years,435.0,0.4,40.07,9.22
+327,Major appliances,55-64 years,478.0,0.6,40.53,8.48
+327,Major appliances,65 years and older,353.0,0.6,27.26,7.72
+327,Major appliances,65-74 years,392.0,0.6,41.56,10.6
+327,Major appliances,75 years and older,298.0,0.5,31.93,10.73
+332,Small appliances and miscellaneous housewares,All consumer units,155.0,0.2,9.26,5.98
+332,Small appliances and miscellaneous housewares,Under 25 years,95.0,0.2,27.17,28.75
+332,Small appliances and miscellaneous housewares,25-34 years,124.0,0.2,11.38,9.14
+332,Small appliances and miscellaneous housewares,35-44 years,228.0,0.2,53.64,23.54
+332,Small appliances and miscellaneous housewares,45-54 years,162.0,0.2,23.0,14.17
+332,Small appliances and miscellaneous housewares,55-64 years,195.0,0.2,27.01,13.87
+332,Small appliances and miscellaneous housewares,65 years and older,106.0,0.2,9.44,8.91
+332,Small appliances and miscellaneous housewares,65-74 years,130.0,0.2,13.65,10.49
+332,Small appliances and miscellaneous housewares,75 years and older,72.0,0.1,11.73,16.39
+337,Miscellaneous household equipment,All consumer units,1089.0,1.4,46.75,4.29
+337,Miscellaneous household equipment,Under 25 years,758.0,1.6,127.83,16.86
+337,Miscellaneous household equipment,25-34 years,967.0,1.3,69.02,7.14
+337,Miscellaneous household equipment,35-44 years,1135.0,1.2,91.32,8.05
+337,Miscellaneous household equipment,45-54 years,1356.0,1.4,113.29,8.36
+337,Miscellaneous household equipment,55-64 years,1179.0,1.4,71.64,6.08
+337,Miscellaneous household equipment,65 years and older,973.0,1.6,121.26,12.46
+337,Miscellaneous household equipment,65-74 years,1187.0,1.8,197.28,16.62
+337,Miscellaneous household equipment,75 years and older,669.0,1.2,60.35,9.02
+343,Apparel and services,All consumer units,2001.0,2.5,65.72,3.28
+343,Apparel and services,Under 25 years,1541.0,3.3,315.51,20.48
+343,Apparel and services,25-34 years,2220.0,3.0,131.45,5.92
+343,Apparel and services,35-44 years,2649.0,2.9,142.32,5.37
+343,Apparel and services,45-54 years,2547.0,2.5,190.62,7.48
+343,Apparel and services,55-64 years,2032.0,2.4,119.75,5.89
+343,Apparel and services,65 years and older,1198.0,1.9,84.47,7.05
+343,Apparel and services,65-74 years,1377.0,2.1,120.91,8.78
+343,Apparel and services,75 years and older,942.0,1.7,83.92,8.9
+348,Men and boys,All consumer units,467.0,0.6,23.7,5.08
+348,Men and boys,Under 25 years,584.0,1.2,270.21,46.28
+348,Men and boys,25-34 years,480.0,0.6,45.7,9.52
+348,Men and boys,35-44 years,617.0,0.7,62.42,10.12
+348,Men and boys,45-54 years,619.0,0.6,73.0,11.79
+348,Men and boys,55-64 years,471.0,0.6,52.86,11.22
+348,Men and boys,65 years and older,253.0,0.4,27.02,10.66
+348,Men and boys,65-74 years,289.0,0.4,43.83,15.17
+348,Men and boys,75 years and older,203.0,0.4,37.91,18.67
+353,"Men, 16 and over",All consumer units,374.0,0.5,21.75,5.81
+353,"Men, 16 and over",Under 25 years,575.0,1.2,270.12,46.99
+353,"Men, 16 and over",25-34 years,389.0,0.5,37.95,9.75
+353,"Men, 16 and over",35-44 years,364.0,0.4,36.95,10.14
+353,"Men, 16 and over",45-54 years,500.0,0.5,52.18,10.44
+353,"Men, 16 and over",55-64 years,427.0,0.5,50.36,11.81
+353,"Men, 16 and over",65 years and older,235.0,0.4,27.23,11.61
+353,"Men, 16 and over",65-74 years,263.0,0.4,43.11,16.37
+353,"Men, 16 and over",75 years and older,194.0,0.3,36.99,19.09
+358,"Boys, 2 to 15",All consumer units,92.0,0.1,11.05,11.97
+358,"Boys, 2 to 15",Under 25 years,9.0,,7.61,84.16
+358,"Boys, 2 to 15",25-34 years,91.0,0.1,25.99,28.6
+358,"Boys, 2 to 15",35-44 years,253.0,0.3,38.75,15.32
+358,"Boys, 2 to 15",45-54 years,119.0,0.1,39.02,32.78
+358,"Boys, 2 to 15",55-64 years,45.0,0.1,17.2,38.51
+358,"Boys, 2 to 15",65 years and older,19.0,,5.24,27.82
+358,"Boys, 2 to 15",65-74 years,26.0,,8.58,33.63
+358,"Boys, 2 to 15",75 years and older,9.0,,4.03,43.37
+363,Women and girls,All consumer units,744.0,0.9,37.23,5.01
+363,Women and girls,Under 25 years,428.0,0.9,97.49,22.78
+363,Women and girls,25-34 years,737.0,1.0,77.03,10.44
+363,Women and girls,35-44 years,1006.0,1.1,58.07,5.77
+363,Women and girls,45-54 years,938.0,0.9,92.55,9.86
+363,Women and girls,55-64 years,731.0,0.9,63.24,8.65
+363,Women and girls,65 years and older,524.0,0.9,39.88,7.61
+363,Women and girls,65-74 years,582.0,0.9,66.67,11.46
+363,Women and girls,75 years and older,442.0,0.8,46.22,10.45
+368,"Women, 16 and over",All consumer units,632.0,0.8,33.84,5.36
+368,"Women, 16 and over",Under 25 years,421.0,0.9,97.62,23.18
+368,"Women, 16 and over",25-34 years,622.0,0.8,75.73,12.18
+368,"Women, 16 and over",35-44 years,721.0,0.8,50.06,6.95
+368,"Women, 16 and over",45-54 years,783.0,0.8,83.87,10.71
+368,"Women, 16 and over",55-64 years,681.0,0.8,60.77,8.93
+368,"Women, 16 and over",65 years and older,495.0,0.8,39.74,8.03
+368,"Women, 16 and over",65-74 years,562.0,0.9,66.99,11.93
+368,"Women, 16 and over",75 years and older,400.0,0.7,42.4,10.6
+373,"Girls, 2 to 15",All consumer units,112.0,0.1,11.92,10.67
+373,"Girls, 2 to 15",Under 25 years,7.0,,6.57,97.43
+373,"Girls, 2 to 15",25-34 years,116.0,0.2,25.32,21.87
+373,"Girls, 2 to 15",35-44 years,285.0,0.3,32.3,11.33
+373,"Girls, 2 to 15",45-54 years,155.0,0.2,37.41,24.13
+373,"Girls, 2 to 15",55-64 years,51.0,0.1,15.91,31.41
+373,"Girls, 2 to 15",65 years and older,29.0,,7.35,25.1
+373,"Girls, 2 to 15",65-74 years,20.0,,6.07,30.34
+373,"Girls, 2 to 15",75 years and older,42.0,0.1,14.92,35.15
+378,Children under 2,All consumer units,77.0,0.1,7.98,10.33
+378,Children under 2,Under 25 years,61.0,0.1,24.14,39.47
+378,Children under 2,25-34 years,207.0,0.3,28.29,13.65
+378,Children under 2,35-44 years,135.0,0.1,26.38,19.48
+378,Children under 2,45-54 years,41.0,,14.52,35.83
+378,Children under 2,55-64 years,30.0,,10.22,33.74
+378,Children under 2,65 years and older,19.0,,5.71,29.43
+378,Children under 2,65-74 years,22.0,,8.92,39.92
+378,Children under 2,75 years and older,15.0,,5.01,32.93
+383,Footwear,All consumer units,461.0,0.6,26.1,5.66
+383,Footwear,Under 25 years,256.0,0.5,88.78,34.64
+383,Footwear,25-34 years,534.0,0.7,71.17,13.34
+383,Footwear,35-44 years,648.0,0.7,66.5,10.26
+383,Footwear,45-54 years,617.0,0.6,93.38,15.14
+383,Footwear,55-64 years,483.0,0.6,47.45,9.83
+383,Footwear,65 years and older,227.0,0.4,28.11,12.37
+383,Footwear,65-74 years,276.0,0.4,44.53,16.16
+383,Footwear,75 years and older,159.0,0.3,26.81,16.9
+388,Other apparel products and services,All consumer units,252.0,0.3,12.9,5.12
+388,Other apparel products and services,Under 25 years,212.0,0.4,43.9,20.74
+388,Other apparel products and services,25-34 years,262.0,0.4,24.24,9.25
+388,Other apparel products and services,35-44 years,242.0,0.3,18.71,7.72
+388,Other apparel products and services,45-54 years,333.0,0.3,46.81,14.07
+388,Other apparel products and services,55-64 years,317.0,0.4,34.62,10.93
+388,Other apparel products and services,65 years and older,174.0,0.3,16.65,9.59
+388,Other apparel products and services,65-74 years,209.0,0.3,27.05,12.96
+388,Other apparel products and services,75 years and older,123.0,0.2,24.31,19.72
+394,Transportation,All consumer units,13318.0,17.0,265.14,1.99
+394,Transportation,Under 25 years,9243.0,19.5,979.23,10.59
+394,Transportation,25-34 years,12802.0,17.2,669.39,5.23
+394,Transportation,35-44 years,15581.0,17.1,746.32,4.79
+394,Transportation,45-54 years,17184.0,17.1,743.25,4.33
+394,Transportation,55-64 years,15085.0,17.8,801.17,5.31
+394,Transportation,65 years and older,9538.0,15.5,371.8,3.9
+394,Transportation,65-74 years,11414.0,17.5,575.01,5.04
+394,Transportation,75 years and older,6855.0,12.3,532.34,7.77
+399,Vehicle purchases (net outlay),All consumer units,5337.0,6.8,241.04,4.52
+399,Vehicle purchases (net outlay),Under 25 years,4312.0,9.1,804.62,18.66
+399,Vehicle purchases (net outlay),25-34 years,5266.0,7.1,615.42,11.69
+399,Vehicle purchases (net outlay),35-44 years,6560.0,7.2,674.17,10.28
+399,Vehicle purchases (net outlay),45-54 years,6448.0,6.4,654.35,10.15
+399,Vehicle purchases (net outlay),55-64 years,6344.0,7.5,675.45,10.65
+399,Vehicle purchases (net outlay),65 years and older,3510.0,5.7,314.25,8.95
+399,Vehicle purchases (net outlay),65-74 years,4539.0,6.9,494.69,10.9
+399,Vehicle purchases (net outlay),75 years and older,2039.0,3.7,431.05,21.14
+404,"Cars and trucks, new",All consumer units,2469.0,3.1,173.44,7.02
+404,"Cars and trucks, new",Under 25 years,1181.0,2.5,300.89,25.48
+404,"Cars and trucks, new",25-34 years,2487.0,3.3,511.98,20.59
+404,"Cars and trucks, new",35-44 years,2827.0,3.1,508.62,17.99
+404,"Cars and trucks, new",45-54 years,2467.0,2.5,388.71,15.76
+404,"Cars and trucks, new",55-64 years,3356.0,4.0,583.57,17.39
+404,"Cars and trucks, new",65 years and older,1907.0,3.1,213.97,11.22
+404,"Cars and trucks, new",65-74 years,2325.0,3.6,308.09,13.25
+404,"Cars and trucks, new",75 years and older,1311.0,2.3,325.81,24.85
+409,"Cars and trucks, used",All consumer units,2818.0,3.6,172.35,6.12
+409,"Cars and trucks, used",Under 25 years,2944.0,6.2,703.75,23.91
+409,"Cars and trucks, used",25-34 years,2776.0,3.7,427.05,15.38
+409,"Cars and trucks, used",35-44 years,3709.0,4.1,433.54,11.69
+409,"Cars and trucks, used",45-54 years,3841.0,3.8,516.35,13.44
+409,"Cars and trucks, used",55-64 years,2938.0,3.5,403.4,13.73
+409,"Cars and trucks, used",65 years and older,1588.0,2.6,199.96,12.59
+409,"Cars and trucks, used",65-74 years,2196.0,3.4,335.75,15.29
+409,"Cars and trucks, used",75 years and older,719.0,1.3,221.99,30.87
+414,Gasoline and other fuels,All consumer units,2645.0,3.4,34.55,1.31
+414,Gasoline and other fuels,Under 25 years,1841.0,3.9,120.8,6.56
+414,Gasoline and other fuels,25-34 years,2655.0,3.6,81.1,3.05
+414,Gasoline and other fuels,35-44 years,3099.0,3.4,69.48,2.24
+414,Gasoline and other fuels,45-54 years,3702.0,3.7,98.01,2.65
+414,Gasoline and other fuels,55-64 years,2768.0,3.3,64.18,2.32
+414,Gasoline and other fuels,65 years and older,1806.0,2.9,38.97,2.16
+414,Gasoline and other fuels,65-74 years,2144.0,3.3,48.68,2.27
+414,Gasoline and other fuels,75 years and older,1322.0,2.4,54.23,4.1
+419,Gasoline,All consumer units,2411.0,3.1,34.35,1.43
+419,Gasoline,Under 25 years,1706.0,3.6,115.36,6.76
+419,Gasoline,25-34 years,2444.0,3.3,80.22,3.28
+419,Gasoline,35-44 years,2829.0,3.1,65.74,2.32
+419,Gasoline,45-54 years,3379.0,3.4,84.13,2.49
+419,Gasoline,55-64 years,2522.0,3.0,61.87,2.45
+419,Gasoline,65 years and older,1623.0,2.6,31.82,1.96
+419,Gasoline,65-74 years,1908.0,2.9,37.84,1.98
+419,Gasoline,75 years and older,1216.0,2.2,45.49,3.74
+424,Other vehicle expenses,All consumer units,4206.0,5.4,54.5,1.3
+424,Other vehicle expenses,Under 25 years,2461.0,5.2,214.32,8.71
+424,Other vehicle expenses,25-34 years,3977.0,5.3,122.62,3.08
+424,Other vehicle expenses,35-44 years,4704.0,5.2,140.79,2.99
+424,Other vehicle expenses,45-54 years,5597.0,5.6,180.22,3.22
+424,Other vehicle expenses,55-64 years,4710.0,5.5,162.6,3.45
+424,Other vehicle expenses,65 years and older,3198.0,5.2,65.98,2.06
+424,Other vehicle expenses,65-74 years,3572.0,5.5,93.43,2.62
+424,Other vehicle expenses,75 years and older,2663.0,4.8,128.15,4.81
+429,Vehicle finance charges,All consumer units,418.0,0.5,15.1,3.61
+429,Vehicle finance charges,Under 25 years,294.0,0.6,46.3,15.72
+429,Vehicle finance charges,25-34 years,509.0,0.7,32.8,6.44
+429,Vehicle finance charges,35-44 years,562.0,0.6,32.99,5.87
+429,Vehicle finance charges,45-54 years,596.0,0.6,36.07,6.05
+429,Vehicle finance charges,55-64 years,445.0,0.5,35.58,7.99
+429,Vehicle finance charges,65 years and older,179.0,0.3,13.86,7.74
+429,Vehicle finance charges,65-74 years,240.0,0.4,21.71,9.06
+429,Vehicle finance charges,75 years and older,92.0,0.2,10.61,11.48
+434,Maintenance and repairs,All consumer units,984.0,1.3,28.12,2.86
+434,Maintenance and repairs,Under 25 years,537.0,1.1,79.33,14.76
+434,Maintenance and repairs,25-34 years,855.0,1.1,61.03,7.14
+434,Maintenance and repairs,35-44 years,1064.0,1.2,59.97,5.64
+434,Maintenance and repairs,45-54 years,1263.0,1.3,75.86,6.01
+434,Maintenance and repairs,55-64 years,1154.0,1.4,69.47,6.02
+434,Maintenance and repairs,65 years and older,814.0,1.3,38.26,4.7
+434,Maintenance and repairs,65-74 years,934.0,1.4,50.28,5.38
+434,Maintenance and repairs,75 years and older,643.0,1.2,57.25,8.91
+439,"Vehicle rental, leases, licenses, and other charges",All consumer units,811.0,1.0,41.22,5.08
+439,"Vehicle rental, leases, licenses, and other charges",Under 25 years,378.0,0.8,64.87,17.15
+439,"Vehicle rental, leases, licenses, and other charges",25-34 years,725.0,1.0,69.19,9.54
+439,"Vehicle rental, leases, licenses, and other charges",35-44 years,923.0,1.0,71.26,7.72
+439,"Vehicle rental, leases, licenses, and other charges",45-54 years,1128.0,1.1,164.12,14.55
+439,"Vehicle rental, leases, licenses, and other charges",55-64 years,859.0,1.0,81.92,9.54
+439,"Vehicle rental, leases, licenses, and other charges",65 years and older,647.0,1.1,40.6,6.28
+439,"Vehicle rental, leases, licenses, and other charges",65-74 years,676.0,1.0,38.19,5.65
+439,"Vehicle rental, leases, licenses, and other charges",75 years and older,605.0,1.1,82.21,13.59
+444,Vehicle insurance,All consumer units,1993.0,2.5,25.66,1.29
+444,Vehicle insurance,Under 25 years,1251.0,2.6,134.26,10.73
+444,Vehicle insurance,25-34 years,1888.0,2.5,61.61,3.26
+444,Vehicle insurance,35-44 years,2155.0,2.4,51.12,2.37
+444,Vehicle insurance,45-54 years,2609.0,2.6,60.53,2.32
+444,Vehicle insurance,55-64 years,2252.0,2.7,95.68,4.25
+444,Vehicle insurance,65 years and older,1558.0,2.5,29.93,1.92
+444,Vehicle insurance,65-74 years,1723.0,2.6,52.15,3.03
+444,Vehicle insurance,75 years and older,1323.0,2.4,51.3,3.88
+449,Public and other transportation,All consumer units,1131.0,1.4,34.42,3.04
+449,Public and other transportation,Under 25 years,628.0,1.3,110.55,17.59
+449,Public and other transportation,25-34 years,903.0,1.2,63.96,7.08
+449,Public and other transportation,35-44 years,1218.0,1.3,87.94,7.22
+449,Public and other transportation,45-54 years,1437.0,1.4,90.28,6.28
+449,Public and other transportation,55-64 years,1262.0,1.5,117.72,9.32
+449,Public and other transportation,65 years and older,1024.0,1.7,108.28,10.58
+449,Public and other transportation,65-74 years,1159.0,1.8,170.02,14.67
+449,Public and other transportation,75 years and older,831.0,1.5,89.51,10.77
+455,Healthcare,All consumer units,6197.0,7.9,99.44,1.6
+455,Healthcare,Under 25 years,1485.0,3.1,180.42,12.15
+455,Healthcare,25-34 years,3825.0,5.1,148.06,3.87
+455,Healthcare,35-44 years,5949.0,6.5,154.24,2.59
+455,Healthcare,45-54 years,6748.0,6.7,251.26,3.72
+455,Healthcare,55-64 years,6711.0,7.9,213.92,3.19
+455,Healthcare,65 years and older,7799.0,12.7,181.84,2.33
+455,Healthcare,65-74 years,7715.0,11.8,209.79,2.72
+455,Healthcare,75 years and older,7918.0,14.2,282.38,3.57
+460,Health insurance,All consumer units,4055.0,5.2,63.31,1.56
+460,Health insurance,Under 25 years,922.0,1.9,148.12,16.07
+460,Health insurance,25-34 years,2613.0,3.5,119.4,4.57
+460,Health insurance,35-44 years,3911.0,4.3,130.39,3.33
+460,Health insurance,45-54 years,4381.0,4.4,185.97,4.24
+460,Health insurance,55-64 years,4313.0,5.1,155.53,3.61
+460,Health insurance,65 years and older,5107.0,8.3,66.8,1.31
+460,Health insurance,65-74 years,5114.0,7.8,81.38,1.59
+460,Health insurance,75 years and older,5098.0,9.1,112.11,2.2
+465,Medical services,All consumer units,1252.0,1.6,53.79,4.3
+465,Medical services,Under 25 years,302.0,0.6,63.9,21.16
+465,Medical services,25-34 years,811.0,1.1,69.9,8.61
+465,Medical services,35-44 years,1312.0,1.4,92.3,7.04
+465,Medical services,45-54 years,1427.0,1.4,118.82,8.32
+465,Medical services,55-64 years,1352.0,1.6,93.79,6.94
+465,Medical services,65 years and older,1449.0,2.4,112.17,7.74
+465,Medical services,65-74 years,1377.0,2.1,113.33,8.23
+465,Medical services,75 years and older,1552.0,2.8,223.45,14.39
+470,Drugs,All consumer units,658.0,0.8,24.51,3.73
+470,Drugs,Under 25 years,169.0,0.4,30.74,18.19
+470,Drugs,25-34 years,284.0,0.4,23.6,8.32
+470,Drugs,35-44 years,559.0,0.6,46.18,8.26
+470,Drugs,45-54 years,698.0,0.7,60.96,8.73
+470,Drugs,55-64 years,794.0,0.9,43.02,5.42
+470,Drugs,65 years and older,898.0,1.5,41.32,4.6
+470,Drugs,65-74 years,855.0,1.3,53.51,6.26
+470,Drugs,75 years and older,959.0,1.7,63.58,6.63
+475,Medical supplies,All consumer units,233.0,0.3,19.89,8.54
+475,Medical supplies,Under 25 years,93.0,0.2,12.67,13.66
+475,Medical supplies,25-34 years,117.0,0.2,10.32,8.81
+475,Medical supplies,35-44 years,167.0,0.2,15.38,9.24
+475,Medical supplies,45-54 years,241.0,0.2,20.18,8.36
+475,Medical supplies,55-64 years,252.0,0.3,28.02,11.13
+475,Medical supplies,65 years and older,344.0,0.6,62.33,18.1
+475,Medical supplies,65-74 years,369.0,0.6,107.33,29.05
+475,Medical supplies,75 years and older,309.0,0.6,34.07,11.04
+481,Entertainment,All consumer units,3609.0,4.6,116.66,3.23
+481,Entertainment,Under 25 years,1835.0,3.9,323.14,17.61
+481,Entertainment,25-34 years,3224.0,4.3,275.8,8.55
+481,Entertainment,35-44 years,4128.0,4.5,205.61,4.98
+481,Entertainment,45-54 years,4803.0,4.8,400.06,8.33
+481,Entertainment,55-64 years,3706.0,4.4,227.08,6.13
+481,Entertainment,65 years and older,3025.0,4.9,180.26,5.96
+481,Entertainment,65-74 years,3122.0,4.8,231.29,7.41
+481,Entertainment,75 years and older,2888.0,5.2,283.28,9.81
+486,Fees and admissions,All consumer units,935.0,1.2,39.78,4.26
+486,Fees and admissions,Under 25 years,408.0,0.9,46.17,11.32
+486,Fees and admissions,25-34 years,747.0,1.0,47.96,6.42
+486,Fees and admissions,35-44 years,1355.0,1.5,102.62,7.57
+486,Fees and admissions,45-54 years,1450.0,1.4,145.58,10.04
+486,Fees and admissions,55-64 years,871.0,1.0,83.77,9.62
+486,Fees and admissions,65 years and older,602.0,1.0,49.42,8.2
+486,Fees and admissions,65-74 years,656.0,1.0,69.32,10.57
+486,Fees and admissions,75 years and older,526.0,0.9,96.96,18.43
+491,Audio and visual equipment and services,All consumer units,965.0,1.2,34.12,3.53
+491,Audio and visual equipment and services,Under 25 years,559.0,1.2,71.19,12.73
+491,Audio and visual equipment and services,25-34 years,737.0,1.0,43.61,5.92
+491,Audio and visual equipment and services,35-44 years,901.0,1.0,46.02,5.11
+491,Audio and visual equipment and services,45-54 years,1045.0,1.0,39.82,3.81
+491,Audio and visual equipment and services,55-64 years,1130.0,1.3,142.54,12.62
+491,Audio and visual equipment and services,65 years and older,1048.0,1.7,59.76,5.7
+491,Audio and visual equipment and services,65-74 years,1079.0,1.7,104.6,9.69
+491,Audio and visual equipment and services,75 years and older,1004.0,1.8,43.65,4.35
+496,"Pets, toys, hobbies, and playground equipment",All consumer units,1069.0,1.4,75.7,7.08
+496,"Pets, toys, hobbies, and playground equipment",Under 25 years,334.0,0.7,53.28,15.95
+496,"Pets, toys, hobbies, and playground equipment",25-34 years,1138.0,1.5,209.65,18.43
+496,"Pets, toys, hobbies, and playground equipment",35-44 years,1112.0,1.2,80.27,7.22
+496,"Pets, toys, hobbies, and playground equipment",45-54 years,1506.0,1.5,345.08,22.92
+496,"Pets, toys, hobbies, and playground equipment",55-64 years,1096.0,1.3,105.16,9.6
+496,"Pets, toys, hobbies, and playground equipment",65 years and older,849.0,1.4,65.42,7.7
+496,"Pets, toys, hobbies, and playground equipment",65-74 years,900.0,1.4,92.26,10.25
+496,"Pets, toys, hobbies, and playground equipment",75 years and older,777.0,1.4,112.27,14.45
+501,Pets,All consumer units,880.0,1.1,72.89,8.28
+501,Pets,Under 25 years,200.0,0.4,33.3,16.64
+501,Pets,25-34 years,831.0,1.1,196.4,23.63
+501,Pets,35-44 years,866.0,0.9,64.05,7.39
+501,Pets,45-54 years,1266.0,1.3,342.21,27.03
+501,Pets,55-64 years,959.0,1.1,104.59,10.91
+501,Pets,65 years and older,752.0,1.2,63.71,8.47
+501,Pets,65-74 years,779.0,1.2,91.67,11.77
+501,Pets,75 years and older,714.0,1.3,113.66,15.92
+506,"Toys, hobbies, and playground equipment",All consumer units,189.0,0.2,14.51,7.69
+506,"Toys, hobbies, and playground equipment",Under 25 years,134.0,0.3,44.72,33.39
+506,"Toys, hobbies, and playground equipment",25-34 years,307.0,0.4,59.33,19.36
+506,"Toys, hobbies, and playground equipment",35-44 years,245.0,0.3,33.55,13.67
+506,"Toys, hobbies, and playground equipment",45-54 years,239.0,0.2,27.01,11.28
+506,"Toys, hobbies, and playground equipment",55-64 years,137.0,0.2,19.0,13.9
+506,"Toys, hobbies, and playground equipment",65 years and older,97.0,0.2,13.18,13.57
+506,"Toys, hobbies, and playground equipment",65-74 years,121.0,0.2,18.49,15.27
+506,"Toys, hobbies, and playground equipment",75 years and older,63.0,0.1,13.93,22.14
+511,"Other entertainment supplies, equipment, and services",All consumer units,640.0,0.8,56.55,8.83
+511,"Other entertainment supplies, equipment, and services",Under 25 years,534.0,1.1,271.33,50.79
+511,"Other entertainment supplies, equipment, and services",25-34 years,602.0,0.8,137.15,22.77
+511,"Other entertainment supplies, equipment, and services",35-44 years,760.0,0.8,136.24,17.93
+511,"Other entertainment supplies, equipment, and services",45-54 years,802.0,0.8,113.77,14.18
+511,"Other entertainment supplies, equipment, and services",55-64 years,609.0,0.7,87.59,14.37
+511,"Other entertainment supplies, equipment, and services",65 years and older,525.0,0.9,122.88,23.39
+511,"Other entertainment supplies, equipment, and services",65-74 years,487.0,0.7,162.7,33.43
+511,"Other entertainment supplies, equipment, and services",75 years and older,581.0,1.0,210.6,36.25
+517,Personal care products and services,All consumer units,978.0,1.2,27.68,2.83
+517,Personal care products and services,Under 25 years,647.0,1.4,74.96,11.58
+517,Personal care products and services,25-34 years,863.0,1.2,59.53,6.9
+517,Personal care products and services,35-44 years,1202.0,1.3,72.2,6.01
+517,Personal care products and services,45-54 years,1226.0,1.2,53.14,4.33
+517,Personal care products and services,55-64 years,1023.0,1.2,32.67,3.19
+517,Personal care products and services,65 years and older,782.0,1.3,31.06,3.97
+517,Personal care products and services,65-74 years,817.0,1.2,34.94,4.28
+517,Personal care products and services,75 years and older,734.0,1.3,41.33,5.63
+523,Reading,All consumer units,125.0,0.2,9.7,7.74
+523,Reading,Under 25 years,92.0,0.2,42.26,46.13
+523,Reading,25-34 years,93.0,0.1,9.7,10.45
+523,Reading,35-44 years,141.0,0.2,17.6,12.45
+523,Reading,45-54 years,183.0,0.2,50.83,27.84
+523,Reading,55-64 years,103.0,0.1,16.01,15.49
+523,Reading,65 years and older,120.0,0.2,10.28,8.55
+523,Reading,65-74 years,117.0,0.2,13.61,11.59
+523,Reading,75 years and older,124.0,0.2,21.58,17.4
+529,Education,All consumer units,1569.0,2.0,98.8,6.3
+529,Education,Under 25 years,2652.0,5.6,749.29,28.25
+529,Education,25-34 years,1418.0,1.9,246.38,17.38
+529,Education,35-44 years,1445.0,1.6,154.87,10.72
+529,Education,45-54 years,3181.0,3.2,272.46,8.57
+529,Education,55-64 years,1856.0,2.2,251.61,13.56
+529,Education,65 years and older,429.0,0.7,76.62,17.86
+529,Education,65-74 years,482.0,0.7,103.62,21.52
+529,Education,75 years and older,354.0,0.6,110.52,31.22
+535,Tobacco products and smoking supplies,All consumer units,352.0,0.4,15.74,4.47
+535,Tobacco products and smoking supplies,Under 25 years,189.0,0.4,43.41,22.93
+535,Tobacco products and smoking supplies,25-34 years,299.0,0.4,29.49,9.87
+535,Tobacco products and smoking supplies,35-44 years,398.0,0.4,30.44,7.64
+535,Tobacco products and smoking supplies,45-54 years,461.0,0.5,37.48,8.13
+535,Tobacco products and smoking supplies,55-64 years,435.0,0.5,26.55,6.11
+535,Tobacco products and smoking supplies,65 years and older,266.0,0.4,17.02,6.41
+535,Tobacco products and smoking supplies,65-74 years,320.0,0.5,27.75,8.67
+535,Tobacco products and smoking supplies,75 years and older,188.0,0.3,28.95,15.44
+541,Miscellaneous,All consumer units,1218.0,1.6,77.63,6.37
+541,Miscellaneous,Under 25 years,376.0,0.8,65.32,17.39
+541,Miscellaneous,25-34 years,1417.0,1.9,336.45,23.75
+541,Miscellaneous,35-44 years,1119.0,1.2,84.97,7.59
+541,Miscellaneous,45-54 years,1374.0,1.4,157.91,11.5
+541,Miscellaneous,55-64 years,1633.0,1.9,140.95,8.63
+541,Miscellaneous,65 years and older,972.0,1.6,62.01,6.38
+541,Miscellaneous,65-74 years,1067.0,1.6,94.01,8.81
+541,Miscellaneous,75 years and older,837.0,1.5,72.01,8.6
+547,Cash contributions,All consumer units,2292.0,2.9,203.77,8.89
+547,Cash contributions,Under 25 years,345.0,0.7,90.95,26.36
+547,Cash contributions,25-34 years,1004.0,1.3,127.2,12.67
+547,Cash contributions,35-44 years,1595.0,1.7,183.02,11.47
+547,Cash contributions,45-54 years,3315.0,3.3,1057.39,31.9
+547,Cash contributions,55-64 years,2300.0,2.7,171.86,7.47
+547,Cash contributions,65 years and older,3158.0,5.1,230.11,7.29
+547,Cash contributions,65-74 years,2921.0,4.5,260.24,8.91
+547,Cash contributions,75 years and older,3497.0,6.3,384.46,10.99
+553,Personal insurance and pensions,All consumer units,9797.0,12.5,168.35,1.72
+553,Personal insurance and pensions,Under 25 years,4428.0,9.4,343.11,7.75
+553,Personal insurance and pensions,25-34 years,10701.0,14.4,264.69,2.47
+553,Personal insurance and pensions,35-44 years,13465.0,14.8,468.62,3.48
+553,Personal insurance and pensions,45-54 years,14948.0,14.9,574.23,3.84
+553,Personal insurance and pensions,55-64 years,12172.0,14.3,445.99,3.66
+553,Personal insurance and pensions,65 years and older,3480.0,5.7,144.65,4.16
+553,Personal insurance and pensions,65-74 years,4579.0,7.0,206.6,4.51
+553,Personal insurance and pensions,75 years and older,1908.0,3.4,166.66,8.74
+558,Life and other personal insurance,All consumer units,575.0,0.7,28.26,4.91
+558,Life and other personal insurance,Under 25 years,54.0,0.1,13.65,25.42
+558,Life and other personal insurance,25-34 years,254.0,0.3,35.75,14.05
+558,Life and other personal insurance,35-44 years,596.0,0.7,80.86,13.57
+558,Life and other personal insurance,45-54 years,771.0,0.8,55.05,7.14
+558,Life and other personal insurance,55-64 years,726.0,0.9,79.32,10.93
+558,Life and other personal insurance,65 years and older,616.0,1.0,33.57,5.45
+558,Life and other personal insurance,65-74 years,665.0,1.0,42.64,6.42
+558,Life and other personal insurance,75 years and older,547.0,1.0,50.5,9.23
+563,"Retirement, pensions, and Social Security",All consumer units,9222.0,11.7,157.22,1.7
+563,"Retirement, pensions, and Social Security",Under 25 years,4374.0,9.3,342.24,7.82
+563,"Retirement, pensions, and Social Security",25-34 years,10447.0,14.0,249.39,2.39
+563,"Retirement, pensions, and Social Security",35-44 years,12869.0,14.1,443.52,3.45
+563,"Retirement, pensions, and Social Security",45-54 years,14177.0,14.1,565.71,3.99
+563,"Retirement, pensions, and Social Security",55-64 years,11447.0,13.5,422.94,3.69
+563,"Retirement, pensions, and Social Security",65 years and older,2863.0,4.7,143.63,5.02
+563,"Retirement, pensions, and Social Security",65-74 years,3914.0,6.0,200.56,5.12
+563,"Retirement, pensions, and Social Security",75 years and older,1361.0,2.4,150.28,11.04
+571,Income before taxes,All consumer units,104207.0,,1248.94,1.2
+571,Income before taxes,Under 25 years,48514.0,,3585.03,7.39
+571,Income before taxes,25-34 years,102494.0,,2500.8,2.44
+571,Income before taxes,35-44 years,128285.0,,2889.26,2.25
+571,Income before taxes,45-54 years,141121.0,,4186.85,2.97
+571,Income before taxes,55-64 years,121571.0,,4133.34,3.4
+571,Income before taxes,65 years and older,67462.0,,1692.81,2.51
+571,Income before taxes,65-74 years,75460.0,,2601.34,3.45
+571,Income before taxes,75 years and older,56028.0,,2107.55,3.76
+575,Wages and salaries,All consumer units,80864.0,77.6,1076.56,1.33
+575,Wages and salaries,Under 25 years,43360.0,89.4,3409.14,7.86
+575,Wages and salaries,25-34 years,95038.0,92.7,2266.99,2.39
+575,Wages and salaries,35-44 years,114905.0,89.6,2531.0,2.2
+575,Wages and salaries,45-54 years,124248.0,88.0,3895.92,3.14
+575,Wages and salaries,55-64 years,96110.0,79.1,3324.4,3.46
+575,Wages and salaries,65 years and older,23800.0,35.3,1269.54,5.33
+575,Wages and salaries,65-74 years,32898.0,43.6,1967.89,5.98
+575,Wages and salaries,75 years and older,10795.0,19.3,1209.21,11.2
+580,Self-employment income,All consumer units,7084.0,6.8,456.11,6.44
+580,Self-employment income,Under 25 years,2248.0,4.6,932.08,41.46
+580,Self-employment income,25-34 years,4888.0,4.8,934.17,19.11
+580,Self-employment income,35-44 years,8107.0,6.3,1167.5,14.4
+580,Self-employment income,45-54 years,10612.0,7.5,1254.29,11.82
+580,Self-employment income,55-64 years,10968.0,9.0,1354.54,12.35
+580,Self-employment income,65 years and older,3987.0,5.9,699.53,17.55
+580,Self-employment income,65-74 years,4951.0,6.6,1114.23,22.51
+580,Self-employment income,75 years and older,2609.0,4.7,686.09,26.3
+585,"Social Security, private and government retirement",All consumer units,11646.0,11.2,235.24,2.02
+585,"Social Security, private and government retirement",Under 25 years,483.0,1.0,222.69,46.12
+585,"Social Security, private and government retirement",25-34 years,639.0,0.6,98.25,15.39
+585,"Social Security, private and government retirement",35-44 years,1593.0,1.2,226.16,14.19
+585,"Social Security, private and government retirement",45-54 years,2916.0,2.1,341.29,11.7
+585,"Social Security, private and government retirement",55-64 years,7558.0,6.2,521.5,6.9
+585,"Social Security, private and government retirement",65 years and older,33382.0,49.5,759.63,2.28
+585,"Social Security, private and government retirement",65-74 years,31347.0,41.5,1006.55,3.21
+585,"Social Security, private and government retirement",75 years and older,36291.0,64.8,1088.41,3.0
+590,"Interest, dividends, rental income, and other property income",All consumer units,3066.0,2.9,207.8,6.78
+590,"Interest, dividends, rental income, and other property income",Under 25 years,147.0,0.3,103.08,70.07
+590,"Interest, dividends, rental income, and other property income",25-34 years,432.0,0.4,88.71,20.54
+590,"Interest, dividends, rental income, and other property income",35-44 years,1978.0,1.5,416.03,21.03
+590,"Interest, dividends, rental income, and other property income",45-54 years,1721.0,1.2,325.44,18.91
+590,"Interest, dividends, rental income, and other property income",55-64 years,5134.0,4.2,738.14,14.38
+590,"Interest, dividends, rental income, and other property income",65 years and older,5149.0,7.6,445.27,8.65
+590,"Interest, dividends, rental income, and other property income",65-74 years,5073.0,6.7,457.59,9.02
+590,"Interest, dividends, rental income, and other property income",75 years and older,5257.0,9.4,826.23,15.72
+595,"Public assistance, Supplemental Security Income, Supplementary Nutrition Assistance Program (SNAP)",All consumer units,620.0,0.6,44.32,7.15
+595,"Public assistance, Supplemental Security Income, Supplementary Nutrition Assistance Program (SNAP)",Under 25 years,538.0,1.1,125.43,23.3
+595,"Public assistance, Supplemental Security Income, Supplementary Nutrition Assistance Program (SNAP)",25-34 years,623.0,0.6,78.8,12.65
+595,"Public assistance, Supplemental Security Income, Supplementary Nutrition Assistance Program (SNAP)",35-44 years,667.0,0.5,78.6,11.79
+595,"Public assistance, Supplemental Security Income, Supplementary Nutrition Assistance Program (SNAP)",45-54 years,586.0,0.4,99.7,17.0
+595,"Public assistance, Supplemental Security Income, Supplementary Nutrition Assistance Program (SNAP)",55-64 years,933.0,0.8,143.25,15.36
+595,"Public assistance, Supplemental Security Income, Supplementary Nutrition Assistance Program (SNAP)",65 years and older,428.0,0.6,42.16,9.84
+595,"Public assistance, Supplemental Security Income, Supplementary Nutrition Assistance Program (SNAP)",65-74 years,534.0,0.7,60.78,11.39
+595,"Public assistance, Supplemental Security Income, Supplementary Nutrition Assistance Program (SNAP)",75 years and older,278.0,0.5,38.52,13.87
+600,"Unemployment and workers' compensation, veterans' benefits, and regular contributions for support",All consumer units,635.0,0.6,76.2,12.0
+600,"Unemployment and workers' compensation, veterans' benefits, and regular contributions for support",Under 25 years,334.0,0.7,169.63,50.83
+600,"Unemployment and workers' compensation, veterans' benefits, and regular contributions for support",25-34 years,539.0,0.5,114.1,21.17
+600,"Unemployment and workers' compensation, veterans' benefits, and regular contributions for support",35-44 years,822.0,0.6,139.25,16.93
+600,"Unemployment and workers' compensation, veterans' benefits, and regular contributions for support",45-54 years,723.0,0.5,297.23,41.11
+600,"Unemployment and workers' compensation, veterans' benefits, and regular contributions for support",55-64 years,607.0,0.5,147.25,24.28
+600,"Unemployment and workers' compensation, veterans' benefits, and regular contributions for support",65 years and older,588.0,0.9,74.9,12.75
+600,"Unemployment and workers' compensation, veterans' benefits, and regular contributions for support",65-74 years,524.0,0.7,92.15,17.58
+600,"Unemployment and workers' compensation, veterans' benefits, and regular contributions for support",75 years and older,678.0,1.2,124.31,18.33
+605,Other income,All consumer units,291.0,0.3,28.63,9.83
+605,Other income,Under 25 years,1404.0,2.9,379.45,27.02
+605,Other income,25-34 years,335.0,0.3,54.42,16.26
+605,Other income,35-44 years,212.0,0.2,33.53,15.79
+605,Other income,45-54 years,314.0,0.2,70.93,22.61
+605,Other income,55-64 years,262.0,0.2,54.5,20.78
+605,Other income,65 years and older,128.0,0.2,25.34,19.74
+605,Other income,65-74 years,133.0,0.2,25.28,18.94
+605,Other income,75 years and older,121.0,0.2,44.21,36.5
+614,Other money receipts,All consumer units,942.0,,136.0,14.44
+614,Other money receipts,Under 25 years,125.0,,58.52,46.92
+614,Other money receipts,25-34 years,516.0,,216.77,42.03
+614,Other money receipts,35-44 years,509.0,,187.36,36.82
+614,Other money receipts,45-54 years,692.0,,239.2,34.54
+614,Other money receipts,55-64 years,1079.0,,286.02,26.52
+614,Other money receipts,65 years and older,1642.0,,365.34,22.24
+614,Other money receipts,65-74 years,2088.0,,492.05,23.57
+614,Other money receipts,75 years and older,1005.0,,513.22,51.06
+618,Mortgage principal paid on owned property,All consumer units,-2924.0,,127.76,-4.37
+618,Mortgage principal paid on owned property,Under 25 years,-517.0,,255.67,-49.46
+618,Mortgage principal paid on owned property,25-34 years,-2050.0,,156.65,-7.64
+618,Mortgage principal paid on owned property,35-44 years,-3898.0,,534.45,-13.71
+618,Mortgage principal paid on owned property,45-54 years,-4465.0,,337.08,-7.55
+618,Mortgage principal paid on owned property,55-64 years,-3625.0,,187.78,-5.18
+618,Mortgage principal paid on owned property,65 years and older,-1865.0,,105.03,-5.63
+618,Mortgage principal paid on owned property,65-74 years,-2213.0,,152.05,-6.87
+618,Mortgage principal paid on owned property,75 years and older,-1366.0,,198.24,-14.51
+622,Estimated market value of owned home,All consumer units,310670.0,,6887.25,2.22
+622,Estimated market value of owned home,Under 25 years,30001.0,,6481.74,21.61
+622,Estimated market value of owned home,25-34 years,169777.0,,8722.86,5.14
+622,Estimated market value of owned home,35-44 years,292785.0,,12155.06,4.15
+622,Estimated market value of owned home,45-54 years,383818.0,,18634.61,4.86
+622,Estimated market value of owned home,55-64 years,367815.0,,13599.8,3.7
+622,Estimated market value of owned home,65 years and older,367817.0,,13840.96,3.76
+622,Estimated market value of owned home,65-74 years,369134.0,,18188.02,4.93
+622,Estimated market value of owned home,75 years and older,365936.0,,15781.8,4.31
+626,Estimated monthly rental value of owned home,All consumer units,1556.0,,21.69,1.39
+626,Estimated monthly rental value of owned home,Under 25 years,186.0,,35.0,18.86
+626,Estimated monthly rental value of owned home,25-34 years,965.0,,40.61,4.21
+626,Estimated monthly rental value of owned home,35-44 years,1518.0,,43.39,2.86
+626,Estimated monthly rental value of owned home,45-54 years,1848.0,,60.48,3.27
+626,Estimated monthly rental value of owned home,55-64 years,1821.0,,44.86,2.46
+626,Estimated monthly rental value of owned home,65 years and older,1798.0,,37.38,2.08
+626,Estimated monthly rental value of owned home,65-74 years,1822.0,,49.47,2.71
+626,Estimated monthly rental value of owned home,75 years and older,1764.0,,48.26,2.74

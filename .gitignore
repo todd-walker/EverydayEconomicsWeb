@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+web/_book/
+web/_freeze/
+web/.quarto/
+
+*.log
+*.tmp
+*.bak
+*.before-*
+.DS_Store
+
+.env
+.wrangler/

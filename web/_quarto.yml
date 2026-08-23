@@ -1,0 +1,26 @@
+project:
+  type: book
+  output-dir: _book
+book:
+  title: "Everyday Economics"
+  subtitle: "First Edition"
+  author: "Todd B. Walker"
+  date: "July 2026"
+  chapters:
+    - index.qmd
+    - chap01.qmd
+    - chap02.qmd
+bibliography: references.bib
+csl: chicago-author-date.csl
+format:
+  html:
+    include-in-header: noindex.html
+    theme: [cosmo, custom.scss]
+    toc: true
+    number-sections: true
+    code-tools: false
+    crossref:
+      chapters: true
+execute:
+  freeze: auto
+  echo: false

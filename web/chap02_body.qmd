@@ -1,0 +1,282 @@
+# Loans and Interest
+
+"Compound interest is the eighth wonder of the world. He who understands it, earns it. He who doesn't, pays it," ---Albert Einstein (but probably not)\
+
+## Loan Basics
+
+A basic loan consists of three things: principal, interest rate and duration. Suppose Ricky borrows money from a bank. The amount that he borrows is called the principal. The bank will charge him interest on the loan, typically quoted as a percentage. You can think of interest as the cost to borrow the money from the bank. The duration of the loan is the length of time Ricky has to repay the loan, which includes paying back the principal plus interest.
+
+::: {.vocabularybox}
+**Basis Point.** Interest rates are often quoted as basis points and percentages. Recall that 8%=.08=/100 are all the same number. A tip to remember this fact is that the percent sign % indicates a ratio $o / o$, numerator/denominator where the denominator is always equal to 100. A basis point is 1/100th of a percent, so 25 basis points is equal to 0.25%; 1.50% is 150 basis points.
+:::
+
+"I'm not a math person." This phrase is immensely frustrating to hear as an educator but I hear it often. A common mistake made by financial literacy books is to plunge headfirst into complex equations, such as those for present value or compound interest. These equations only serve to intimidate and obscure important concepts. As an example, consider the loan repayment formula $$\begin{gathered}
+    PMT = \frac{PV \times r \times (1 + r)^t}{(1 + r)^t - 1} \label{Eqn:LoanRepayment}
+\end{gathered}$$ Loan officers at banks would have difficulty deriving and explaining this formula.
+
+This book takes a different approach. We will build these equations from the ground up using simple examples, ensuring a deep understanding of the financial concepts at work. For the first few examples, all we need is some basic mental math.
+
+::: {.mentalmathbox}
+-   10% of a number can be found by simply moving the decimal one place to the left, so 10% of 150 is 15; 10% of 132 is 13.2; 10% of 1,254 is 125.4.
+
+-   1% of a number can be found by simply moving the decimal two places to the left, so 1% of 150 is 1.5; 1% of 132 is 1.32; 1% of 1,254 is 12.54.
+
+-   We can then find any combination: 20% of 150 = (10% + 10%) of 150 = 15+15 = 30; 12% of 167 is (10% + 1% + 1% ) $\times$ 167 = 16.7+1.67 + 1.67 = 20.04
+:::
+
+Let's return to Ricky and his loan.
+
+::: {.examplebox}
+Suppose Ricky borrows \$100 dollars at an interest rate of 12%, compounded annually, with a duration of one year. How much will Ricky have to pay back at the end of one year?\
+**Answer:** At the end of the year, Ricky must pay back principal plus interest. The interest charge is 12% of \$100 or \$12 = 0.12 $\times$ \$100, so he would owe \$112 = \$100 + \$12 = \$100(1+).
+:::
+
+## Compound Interest
+
+As Einstein probably never said, compound interest is the eighth wonder of the world. But what is it? Interest rates are quoted in annual terms; that is, 12% is the amount charged over the course of one calendar year.[^1] However, the *frequency* with which you can be charged varies. If interest is compounded twice per year, then you will be charged half of the interest in the first six months and half in the last six months; if the interest rate is 12%, you will be charged a rate of 6% in the first six months and 6% in the last six months. However, during the last six months, you are charged interest on the principal *and* interest on the interest that accrued during the first six months. Charging interest on interest is why it is called compound interest. (I envision a banker slamming their fist into a compound interest table, yelling comPOUND!)
+
+::: {.examplebox}
+Suppose Ricky borrows \$100 dollars at an interest rate of 12%, compounded **bi**-annually, with a duration of one year. How much will Ricky have to pay back at the end of one year?\
+**Answer:** The interest charge over the first six months is 12%/2 = 6% of \$100 or 0.06 $\times$ \$100 = \$6. Over the last six months, interest accrues on the principal and the interest charged during the first six months: 12%/2 = 6% of \$106 or 0.06 $\times$ \$106 = \$6.36. His total interest charge is \$12.36 and total repayment is \$112.36.
+:::
+
+In the two examples above, compounding interest leads to a difference in payment of only \$0.36; not exactly "eighth-wonder-of-the-world" worthy is it, Albert? Well, suppose Ricky borrowed \$400,000 at an 6.5% annual interest rate (roughly the average mortgage size and mortgage rate in the US as of July 2026) over a 30-year period. At the end of 30 years, if interest is compounded annually, he would owe \$2,645,746.47; if interest is compounded daily, he would owe \$2,810,986.98, a difference of \$165,240.51(!) (If it were \$165,240.51!, that would be much too high, #mathjokes.) There is no difference in the interest rate, duration, or principal between the two loans, the only difference is how frequently interest is compounded. Interest that consumers pay---whether it be car loans, mortgages, student loans---is almost always compounded *daily*. This is a very important concept that appears throughout the book, and we will see the power of compound interest in numerous examples below.
+
+::: {.vocabularybox}
+**APR vs.APY.** Banks typically do not report the number of times interest is compounded. It is "hidden" in the difference between two reported numbers, APR and APY. Annual Percentage Rate (APR) does not take compounding into effect. For the example above with bi-annually compounded interest, the APR is 12%. Annual Percentage Yield takes compounding into account; the APY with bi-annually compounded interest is 12.36%.
+:::
+
+**Visual Compound Interest.** Figure @fig-compound-timeline provides a visualization of compound interest. The line segment represents a one-year duration. The top figure assumes interest is compounded annually; starting with the principal of \$100 and ending with the total amount due of \$112, which is the principal plus \$12 in interest. The middle figure compounds interest bi-annually or collects interest twice. The blue horizontal line that appears halfway through the year indicates that interest is collected before and after this point. The total amount due at the end of the year is \$112.36. The additional \$0.36 is due to compound interest. The bottom example assumes interest is compounded three times; hence, two blue lines breaking up the year into three equal installments. After four months, the bank charges 12%/3 = 4% interest or \$4. After eight months, the bank charges \$8.16 = \$4+\$4.16. The additional \$0.16 comes from charging interest on the first four months interest \$4$\times$`<!-- -->`{=html}0.04 = \$0.16. In the last four months, the bank charges 4% on \$108.16, which includes interest charges over the first eight months. The total payment at the end of the year is \$112.49.
+
+<figure id="Fig:SimpleInterest">
+
+<figcaption>Visualization of Ricky’s $100 loan at 12% interest with different rates of compounding. Top figure: Simple or Annual Compounding. Middle Figure. Bi-Annual Compounding. Bottom Figure. Tri-Annual Compounding.</figcaption>
+</figure>
+
+**Banker's Algebra.** Economists use variables to derive generic relationships in equations. Variables are just placeholders for numbers. In the example above, Ricky's principal was \$100 and the interest rate was 12%=0.12. Let's replace the \$100 with the variable $P$ for "principal" and replace the interest rate of 0.12 with $r$ for "rate". This gives an equation for the total amount paid when interest is compounded annually as $$\begin{gathered}
+\$100(1\;+\;0.12) \; \rightarrow \; P(1+r)
+\end{gathered}$$ When interest was compounded bi-annually, we divided the interest rate by two $0.12/2 = r/2$ and the bank collected interest of $\$100\times 0.06=P\times(r/2)$ over the first six months. For the second six months, the interest charge was $\$106\times 0.06 = (\$100\times0.06)\times 0.06 = \$6.36$. Here we're multiplying $0.06$ times $0.06$ and recall that when you multiple a variable times itself, you "square" the variable, which is written as $x\times x = x^2$ in mathematical notation; so $(\$100\times0.06)\times 0.06$ can be written as $\$100 \times 0.06^2$. The total principal plus interest is given by \$100 $\times$ 1.06 $\times$ 1.06 = \$100$\times 1.06^2$ =\$112.36. Replacing the numbers with corresponding variables gives the equation for total amount paid when interest is compounded at frequency $n$, $$\begin{gathered}
+    \$100(1\;+\;0.12/2)^2 \; \rightarrow \; P(1+r/n)^n \label{Eqn:CompoundInterest}
+\end{gathered}$$ This equation shows the power of algebra. Replacing variables with letters allows us to compute total amount repaid for *any* rate of compounding over the course of one year. I can now easily calculate the "Total Due" of Figure @fig-compound-timeline by setting $n=\{1,2,3\}$. We can even set $n$ = 365, which gives \$112.75.
+
+**Limits to Greed.** Suppose we wanted to be very greedy and we lend \$100 to Ricky with a 12% interest rate as in the examples above, but we compound interest every minute of every day. In this scenario, the variable $n$ of becomes 365 $\times$ 24 $\times$ 60 = 525,600. You might expect the "Total Due" to be multiplied by this amount, but our greed would not materialize because Ricky's payback amount would only be $$\$100 \left(1 + \frac{0.12}{525,600}\right)^{525,600} \approx \$112.749684$$ or \$112.75, which is the same number (rounded to nearest penny) as the daily compounded rate $(n=365$). Despite increasing the frequency of compounding over a thousand times (24 $\times$ 60 = 1,440), there is no change in the amount repaid. Why?
+
+If we isolate the frequency of compounding given by the equation $(1+1/n)^n$, then as $n$ gets "big", this term approaches a famous fixed constant or number, roughly 2.71828. Technically, this is written as a limit[^2] $$\lim_{n\to\infty} \left(1 + \frac{1}{n}\right)^n =\bm{e} \approx 2.71828 \notag$$ This constant was named $\bm{e}$ by Leonhard Euler and plays an important role in many branches of mathematics (see, [@maor1994e]). For any interest rate $r$, this number gives the theoretical "ceiling" on growth due to compounding, $\lim_{n\to\infty} \left(1 + \frac{r}{n}\right)^n = e^r \approx 2.71828^r$ and is known as *continuous compounding*. We can update our compound interest formula [\[Eqn:CompoundInterest\]](#Eqn:CompoundInterest){reference-type="eqref" reference="Eqn:CompoundInterest"} to account for continuous compounding $$\begin{gathered}
+P\left(1+\frac{r}{n}\right)^n \; \rightarrow \; \lim_{n\rightarrow \infty} P\left(1+\frac{r}{n}\right)^n = P e^{r} \label{Eqn:ContinuousCompounding}
+\end{gathered}$$
+
+We don't need fancy limit theorems to understand the behavior of $\left(1 + \frac{1}{n}\right)^n$. Figure @fig-compound-limit plots this value as $n$ increases from 1 to 30, and shows that the return to compounding is substantial at first but moderates quickly. As you go from annual compounding ($n=1$) to monthly ($n=12$), the value rises from $\left(1+\frac{1}{1}\right)^{1} = 2.000$ to $\left(1+\frac{1}{12}\right)^{12} = 2.613$, a gain of $0.613$ or about $31\%$ ($0.613/2.000 = 30.7\%$). This initial step adds roughly $12$ times the absolute gain of the next doubling of frequency: moving from $n=12$ to $n=24$ increases the value only to $\left(1+\frac{1}{24}\right)^{24} = 2.664$, an increase of $0.051$ (just under $2\%$), and $0.613/0.051 \approx 12$.
+
+This is an excellent example of *diminishing returns*, a concept that is fundamental to and appears throughout all fields of economics. Diminishing returns is broadly defined as a situation where adding more of one input (e.g., labor, capital, or in this case, compounding frequency) results in progressively smaller increases in output or benefit. Understanding this concept helps economists optimize not only investments, but production processes, policy interventions, even abstract concepts like utility. While a social science cannot have "laws" in the same manner as the hard sciences (e.g., the law of gravity), we designate certain concepts as "laws" to demonstrate importance. The law of diminishing returns was first articulated in Turgot's ([-@turgot1766reflections]) essay on agricultural production; Turgot explained that if one holds the amount of land constant, successive applications of capital and labor will yield progressively smaller increases in agricultural output after a certain point. Every influential economic textbook since, from @ricardo1817principles to @samuelson1948economics, treats this principle as a foundational concept.
+
+<figure id="Fig:CompoundInterestLimit">
+
+<figcaption>Diminishing returns to compounding frequency. The value <span class="math inline">$\left(1+\frac{1}{n}\right)^n$</span> rises steeply for small <span class="math inline"><em>n</em></span> and converges to <span class="math inline"><em>e</em> ≈ 2.71828</span>; successive increases in compounding frequency add progressively less.</figcaption>
+</figure>
+
+**Duration.** The only variable that we have not generalized is duration. What if the loan is for two years and not one?
+
+::: {.examplebox}
+Suppose Ricky borrows \$100 dollars at an interest rate of 12%, compounded **bi**-annually, with a duration of two years. He makes no payment until the end of the loan. How much will Ricky have to pay back at the end of two years?\
+**Answer:** The interest charge over the first six months is 12%/2 = 6% of \$100 or 0.06 $\times$ \$100 = \$6. Over the next six months, interest accrues on the principal and the interest charged during the first six months: 12%/2 = 6% of \$106 or 0.06 $\times$ \$106 = \$6.36. The process repeats in year two. The interest charge over the first six months of the second year is 12%/2 = 6% of \$112.36 or \$6.74, and 6% of \$119.10 over the last six months. His total interest charge is \$12.36 in the first year and \$13.89 in the second, with a total repayment of \$126.25.
+:::
+
+If the loan is extended for two years, and no payment is made until the end of the second year, then compound interest just repeats exactly as in the first year, $(1+r/n)^n$, so we have $$\begin{gathered}
+    \$100(1\;+\;0.12/2)^2(1\;+\;0.12/2)^2 = \$100(1\;+\;0.12/2)^4 \notag
+\end{gathered}$$ Recall that for a variable $x$ raised to the exponent $j$, we have $x^j \times x^j = x^{j+j}= x^{2j}$, and $x^j \times x^j \times x^j = x^{j+j+j}= x^{3j}$, and so on. For any length of duration $t$, we then have $$\begin{gathered}
+    P\underbrace{(1+r/n)^n(1+r/n)^n\cdots (1+r/n)^n}_{\text{$t$ times}} = P(1+r/n)^{tn} \label{Eqn:CompoundInterestT}
+\end{gathered}$$ where $t$ is the number of years of the loan. As we increase the frequency of compounding of [\[Eqn:CompoundInterestT\]](#Eqn:CompoundInterestT){reference-type="eqref" reference="Eqn:CompoundInterestT"} to infinity and beyond, we get the well-known shampoo formula $$\begin{gathered}
+    \lim_{n\rightarrow \infty} P(1+r/n)^{tn} = Pe^{rt} \label{Eqn:ContCompoundInterestT}
+\end{gathered}$$ This equation is the equivalent of [\[Eqn:ContinuousCompounding\]](#Eqn:ContinuousCompounding){reference-type="eqref" reference="Eqn:ContinuousCompounding"}, the only difference being that duration is generalized from one in [\[Eqn:ContinuousCompounding\]](#Eqn:ContinuousCompounding){reference-type="eqref" reference="Eqn:ContinuousCompounding"} to $t$ in [\[Eqn:ContCompoundInterestT\]](#Eqn:ContCompoundInterestT){reference-type="eqref" reference="Eqn:ContCompoundInterestT"}.
+
+## Present and Future Value
+
+We derived the important formulae, [\[Eqn:CompoundInterestT\]](#Eqn:CompoundInterestT){reference-type="eqref" reference="Eqn:CompoundInterestT"} and [\[Eqn:ContCompoundInterestT\]](#Eqn:ContCompoundInterestT){reference-type="eqref" reference="Eqn:ContCompoundInterestT"}, within the context of simple loans: Ricky borrows \$$P$ dollars at interest rate $r$, compounded at frequency $n$ (including $n \rightarrow \infty$) with duration $t$, and asked how much he will owe at the end of the life of the loan. However, most financial textbooks refer to the principal ($P$) in these examples as the *present value*, and the total amount owed as the *future value*. By grounding the math in a relatable situation, like borrowing money, the abstract concepts of 'present value' and 'future value' are much more intuitive. But the abstract concepts are important too, so note that we can write $P(1+r/n)^{tn}$ as $$\begin{gathered}
+    \text{\sc{FV}} = \text{\sc{PV}}(1+r/n)^{tn} \label{Eqn:FV}
+\end{gathered}$$ where [FV]{.smallcaps} is the future value of the present ([PV]{.smallcaps}) at annual percentage rate (APR) $r$, compounding at frequency $n$, with duration $t$. This equation permits alternative interpretations. Instead of Ricky borrowing money at interest rate $r$, we can think of him as investing money (amount equal to [PV]{.smallcaps}) and getting a return on his investment of $r$ compounded at $n$. The future value [FV]{.smallcaps} tells us the amount that he will have after $t$ years.
+
+Perhaps more importantly, allows us to solve for the present value (PV) as a function of future value (FV), $$\begin{gathered}
+    \text{\sc{PV}} =  \frac{\text{\sc{FV}}}{\text{}(1+r/n)^{tn}} \notag
+\end{gathered}$$ Instead of multiplying by $(1+r/n)^{tn}$, the present-value equation *divides* by this amount. As the interest rate, frequency of compounding or duration increase, the present value decreases. (Take any ratio, $a/b$, as the denominator $b$ increases, the entire ratio falls in value.)
+
+These equations encapsulate the core principles of compound interest, defining the relationship between *present value* ([PV]{.smallcaps}) and *future value* ([FV]{.smallcaps}) for an investment, loan, rate of inflation, etc. Their importance lies in their versatility; these equations guide personal finance decisions, such as saving for retirement, and underpin complex financial models for pricing bonds / stocks, valuing annuities, and optimizing corporate investments. They are prevalent in any *dynamic* economic model (i.e., a model that features time as a variable). Building these equations from the ground up, hopefully, provided a deeper understanding. We now list these equations as a "Core Concept."
+
+::: {.coreconceptbox}
+**$\text{\sc{FV}}$ and $\text{\sc{PV}}$ Equations.** The future value $\text{\sc{FV}}$ of an initial amount $\text{\sc{PV}}$ at an annual interest rate $r$, compounded $n$ times per year over $t$ years is given by $$\begin{gathered}
+        \text{\sc{FV}} = \text{\sc{PV}}(1+r/n)^{tn} \label{Eqn:PVCore} \\
+        \lim_{n\to\infty} \text{\sc{PV}}(1+r/n)^{tn} = \text{\sc{PV}}e^{rt} \label{Eqn:PVContCore}
+    
+\end{gathered}$$ Equation [\[Eqn:PVContCore\]](#Eqn:PVContCore){reference-type="eqref" reference="Eqn:PVContCore"} extends this to continuous compounding, where the frequency $n$ approaches infinity, yielding the exponential growth formula driven by the constant $e \approx 2.71828$. Likewise, the present value of future value $\text{\sc{FV}}$ is $$\begin{gathered}
+    \text{\sc{PV}} = \frac{\text{\sc{FV}}}{(1+r/n)^{tn}} \label{Eqn:PVCore2} \\
+    \lim_{n\to\infty} \frac{\text{\sc{FV}}}{(1+r/n)^{tn}} = \text{\sc{FV}}e^{-rt} \label{Eqn:PVContCore2}
+\end{gathered}$$
+:::
+
+## Amortization
+
+Examples of the previous section assumed Ricky paid back the loans in one large installment. If Ricky borrowed \$100 dollars at an interest rate of 12%, compounded bi-annually, with a duration of two years, then he paid \$126.25 at the *end* of two years. These are called "balloon payments" and are not common. Nearly all loans---mortgages, car loans, student loans---are paid off using *fixed* installments made consistently over the life of the loan; a process called amortization.
+
+::: {.vocabularybox}
+**Amortization** is the process of paying off a loan over time through a series of regular, *fixed* payments. Each payment is divided into two parts---one that covers the interest owed for that period, and the other goes toward reducing the principal of the loan.
+:::
+
+The etymology of the word "amortization" is relevant to how we will approach the topic. The root "mort" is the same root that appears in mortuary, mortal, mortician, rigor mortis, postmortem\...and mortgage. Quite morbid! You should be mortified! How are these financial terms---mortgage and amortization---related to death? Historically, to amortize a mortgage referred to a pledge that stated the loan "dies" either when the debt is fully paid off or when the property is forfeited due to failure to repay. The "death" in this case refers to the termination of the obligation, and the language underscores the finality of the agreement. However, I want to take a different perspective.
+
+Figure @fig-nonmortgage-debt illustrates the growth of U.S. household non-mortgage debt across various categories from 2003 to 2025, measured as a percentage of nominal Gross Domestic Product (GDP). The increase in student loan debt can metaphorically "kill" the hope of families building real wealth. Student loan debt has grown substantially, increasing from 0.24 trillion USD in 2003 (2.1% of 2003 GDP) to 1.64 trillion USD by 2025 (5.4% of 2025 GDP). This escalation reflects rising education costs and greater reliance on student loans, which can excessively burden young adults. Student loans delay wealth-building milestones such as home ownership and contributing to retirement savings. We will explore these points in greater detail in later chapters, but the key point here is that the growing weight of student loans, alongside other debts, may deal a *mort*al blow to accumulating lasting wealth.
+
+![U.S. non-mortgage household debt by category as a percentage of nominal GDP, 2003--2025. Debt balances are from the Federal Reserve Bank of New York's *Quarterly Report on Household Debt and Credit*. Nominal GDP is from FRED series `GDP`, sourced from the U.S. Bureau of Economic Analysis.](figures/Chapter2/non_mortgage_debt_pct_gdp.pdf){#fig:NonMortgageDebt width="\\textwidth"}
+
+Mortgages, student loans, car loans, and many other forms of debt are almost always paid off using an amortization process. In order to combat debt, we need to understand amortization. Specifically, we need to understand *how* the process works.
+
+### A Payment Equation
+
+Suppose Ricky borrows $\$P$ dollars at an interest rate of $r$ compounded annually and amortized over a three-year period. What will be his fixed annual payment? Let's first think about this problem graphically. Figure @fig-amortization shows the initial amount borrowed or original principal $P_1$. This is the amount of the principal in year one. This amount will change with time, so we will use subscripts to keep track of time; in this case, the 1 in $P_1$ denotes the principal at the beginning of year one, $P_2$ is principal at the beginning of year 2, $P_3$ is principal at the beginning of year 3. Payments are due at the end of each year. We will call our payment $X$. The defining property of amortized loans is that the payments are fixed, so we will pay the same amount, $X$, at the end of each year: Year 1, 2, and 3. Principal at the beginning of Year 2 will be the difference between our principal plus interest of Year 1 ($P_1(1+r)$) and our payment $X$, so $P_2 = P_1(1+r)-X$. We will be charged interest on this principal in Year 2, $P_2 r$. Our principal in Year 3 will be the principal plus interest in Year 2 minus our payment, $P_3 = P_2(1+r) - X$. Figure @fig-amortization includes a Year 4. If the loan is amortized over three years, why include a fourth year? The purpose is to emphasize that the loan must be paid off by the final payment in Year 3 so that the principal in Year 4 *must* be zero.
+
+<figure id="Fig:Amortization">
+
+<figcaption>Visualization of a loan of size <span class="math inline"><em>P</em><sub>1</sub></span> at interest rate <span class="math inline"><em>r</em></span> amortized over three years.</figcaption>
+</figure>
+
+We have established the following three equations $$\begin{aligned}
+    P_1(1+r)-X &= P_2 \label{Eqn:Amor1}\\
+    P_2(1+r)-X &= P_3 \label{Eqn:Amor2}\\
+    P_3(1+r)-X &= 0 \label{Eqn:Amor3}
+\end{aligned}$$ Equation [\[Eqn:Amor1\]](#Eqn:Amor1){reference-type="eqref" reference="Eqn:Amor1"} is the difference in the principal plus interest in year 1 and the payment. This becomes the new principal of year 2 and so on. Our goal is to solve for our fixed annual payment, $X$. We have three equations and three unknowns ($P_2, P_3, X$), recall that $P_1$ is known because it is the amount initially borrowed, and $r$ is the known interest rate. (Recall that a variable is said to be "known" if it has a fixed quantity that is independent of the other variables. An alternative phrasing is that $P_1$ and $r$ are taken as given and exogenous to the system of equations. Their values are predetermined. This concept is a subtle one but will be made clearer with examples below.)
+
+We will use elimination by substitution to solve the three equations and three unknowns. To that end, substituting $P_2$ given by [\[Eqn:Amor1\]](#Eqn:Amor1){reference-type="eqref" reference="Eqn:Amor1"} directly into Equation [\[Eqn:Amor2\]](#Eqn:Amor2){reference-type="eqref" reference="Eqn:Amor2"} yields $$\begin{aligned}
+    (P_1(1+r)-X)(1+r)-X &= P_3 \label{Eqn:Amor22}\\
+    P_3(1+r)-X &= 0 \label{Eqn:Amor32}
+\end{aligned}$$ This process is called "elimination by substitution" because we have eliminated the unknown $P_2$ from the system of equations and now only have two equations and two unknows ($P_3$ and $X$). We can perform this step one more time to isolate our variable of interest, $X$, by substituting [\[Eqn:Amor22\]](#Eqn:Amor22){reference-type="eqref" reference="Eqn:Amor22"} into [\[Eqn:Amor32\]](#Eqn:Amor32){reference-type="eqref" reference="Eqn:Amor32"}, $$\begin{aligned}
+(1+r)-X &= 0 \label{Eqn:Amor33}
+\end{aligned}$$ Equation [\[Eqn:Amor33\]](#Eqn:Amor33){reference-type="eqref" reference="Eqn:Amor33"} is now only one equation and one unknown, $X$. We only need some careful algebra to isolate and solve for $X$, $$\begin{aligned}
+(1+r)-X &= 0 \notag \\
+P_1(1+r)^3-X(1+r)^2-X(1+r)-X &= 0 \notag \\
+X(1+r)^2+X(1+r)+X &= P_1(1+r)^3 \notag \\
+X[(1+r)^2+(1+r)+1] &= P_1(1+r)^3 \notag
+\end{aligned}$$ Solving the last equation for $X$ gives our annual payment amount as $$\begin{gathered}
+    X = \frac{P_1(1+r)^3}{(1+r)^2+(1+r)+1} \label{Eqn:AmorPayment}
+\end{gathered}$$ This equation looks intimidating but has a straightforward interpretation. The numerator, $P_1(1+r)^3$, is the amount that would be owed if the entire loan was paid at the end of three years; that is, if we set $n=1$ and $t=3$ in equation [\[Eqn:PVCore\]](#Eqn:PVCore){reference-type="eqref" reference="Eqn:PVCore"}. If interest accrued over three years (compounded annually) and we did not make any payments on the loan in Years 1 and 2, our payment at the end of the third year would be $P_1(1+r)^3$. Let's call this value, $P_1(1+r)^3$, the *balloon payment*. Thus, the denominator, $(1+r)^2+(1+r)+1$, tells us the value in making payments in years one and two. Specifically, the $(1+r)^2$ term tells us the value of making the first payment at the end of Year 1; by making this payment, the loan is *not* charged two years worth of interest, valued at $(1+r)^2$. That this value appears in the denominator tells us that the overall payment $X$ falls relative to the balloon payment. (When you have a ratio, $z=A/B$, and the denominator increases, then the entire term decreases. In this instance, we increased the denominator from $1$ to $1+(1+r)^2$.) The additional $(1+r)$ term in the denominator is the value of making the payment in Year 2. To make these points explicit, write [\[Eqn:AmorPayment\]](#Eqn:AmorPayment){reference-type="eqref" reference="Eqn:AmorPayment"} as $$\begin{gathered}
+    X = \frac{P_1(1+r)^3}{\underbrace{(1+r)^2}_{\text{Value of Year 1 payment}}+\underbrace{(1+r)}_{\text{Value of Year 2 payment}}+1} \notag
+\end{gathered}$$ Writing the equation in this way provides insight on the relative value of the payment in the first year ($(1+r)^2$) vis-a-vis years two ($(1+r)^1$) and three ($(1+r)^0=1$, recall that any number raised to the power of zero is equal to one, $x^0=1$). The difference in the value of each payment is *exponential*! The payment in year one is exponentially more valuable than the payment in year two. The intuition is that the first payment saves the borrower two years worth of interest accrual.
+
+As before, we can generalize equation [\[Eqn:AmorPayment\]](#Eqn:AmorPayment){reference-type="eqref" reference="Eqn:AmorPayment"} and the exponential difference in payment values becomes even more striking. Let $n$ be compounding frequency and keep the amortization period as three years, then equation [\[Eqn:AmorPayment\]](#Eqn:AmorPayment){reference-type="eqref" reference="Eqn:AmorPayment"} becomes $$\begin{gathered}
+    X = \frac{P_1(1+r/n)^{n\times 3}}{(1+r/n)^{n\times 2}+(1+r/n)^{n}+1} \notag
+\end{gathered}$$ Here, we simply replace the interest rate $r$ with the compounded form, $r/n$, and raise to the power of $n$ as in equation [\[Eqn:CompoundInterest\]](#Eqn:CompoundInterest){reference-type="eqref" reference="Eqn:CompoundInterest"}. If we have $t$ periods, instead of 3, then the equation gets a bit more complicated $$\begin{gathered}
+    X  = \frac{P_1(1+r/n)^{nt}}{(1+r/n)^{n\times(t-1)}+(1+r/n)^{n\times(t-2)}+(1+r/n)^{n\times(t-3)} + \cdots +(1+r/n)^{n} + 1} \label{Eqn:AmorPay}
+\end{gathered}$$ The equation includes a strange $\cdots$ term; this term simply says "I'm too lazy to write out all the ($t$) terms, but you get the drift." You can probably guess the next term in the sequence, which is $(1+r/n)^{n\times(t-4)}$ and all the remaining terms follow. While [\[Eqn:AmorPay\]](#Eqn:AmorPay){reference-type="eqref" reference="Eqn:AmorPay"} looks complicated, the intuition is *exactly* the same as the three-period loan. $$\begin{gathered}
+    X  = \frac{P_1(1+r/n)^{nt}}{\underbrace{(1+r/n)^{n(t-1)}}_{\text{Value of Year 1 Payment}}+\underbrace{(1+r/n)^{n(t-2)}}_{\text{Value of Year 2 Payment}}+(1+r/n)^{n(t-3)} + \cdots +(1+r/n)^{n} + 1} \notag
+\end{gathered}$$ The numerator is the amount due if only a balloon payment was made at the end of $t$ years. The denominator tells us the value of each payment. The payment with the most value is the first payment and has a value of $(1+r/n)^{n\times(t-1)}$, which denotes the interest saved for the remaining $t-1$ years of the loan. If we set $r=0.1$, $n=12$ and $t=30$, the difference in value between the first payment and the last is roughly 19.83. The first payment is nearly twenty times more "valuable" than the last.[^3]
+
+### Amortization Table
+
+::: {#Table:Amortize}
+   Year   Payment   =   Interest   \+   Principal   $\rightarrow$   Balance
+  ------ --------- --- ---------- ---- ----------- --------------- ---------
+    1      40.21         10.00            30.21                      69.79
+    2      40.21          6.98            33.23                      36.56
+    3      40.21          3.65            36.56                      0.00
+
+  : Amortization Table for \$100 Loan at 10% Interest over 3 Years
+:::
+
+[]{#Table:Amortize label="Table:Amortize"}
+
+The defining characteristic of amortized loans is the fixed payment; one part of this fixed payment is used to cover the interest cost and another part is used to pay down the principal. An amortization table is used to visualize how each payment is divided between interest and principal. Table @tbl-amortization shows this breakdown for a loan with an initial principal $P_1 = \$100$, interest rate $r = 10\%$, and a term of 3 years. The table breaks down the payment into interest and principal. For example, payment in Year 2 is constant at \$40.21 and of that \$40.21, \$6.98 goes to paying interest and \$33.23 goes towards the principal of the loan. The "Balance" column shows the remaining principal balance. Note that interest paid declines each year, while the percentage of the payment going to principal increases each year. While you pay the most interest on the first payment \$10, the reduction in the principal (from \$100 to \$69.79) is how you save on interest in years two and three.
+
+The values in Table @tbl-amortization are constructed as follows:
+
+1.  **Calculate the annual payment $X$** using [\[Eqn:AmorPayment\]](#Eqn:AmorPayment){reference-type="eqref" reference="Eqn:AmorPayment"}:
+
+    -   Given $P_1 = 100$, $r = 0.10$, compute $1 + r = 1.10$.
+
+    -   Numerator: $P_1 (1+r)^3 = 100 \times (1.10)^3 = 100 \times 1.331 = 133.1$.
+
+    -   Denominator: $(1+r)^2 + (1+r) + 1 = (1.10)^2 + 1.10 + 1 = 1.21 + 1.10 + 1 = 3.31$.
+
+    -   Payment: $X = \frac{133.1}{3.31} \approx 40.21$.
+
+2.  **Year 1**:
+
+    -   Interest: $100 \times 0.10 = 10$.
+
+    -   Payment: $40.21$.
+
+    -   Principal repayment: $40.21 - 10 = 30.21$.
+
+    -   New principal: $100 - 30.21 = 69.79$.
+
+3.  **Year 2**:
+
+    -   Interest: $69.79 \times 0.10 \approx 6.98$.
+
+    -   Payment: $40.21$.
+
+    -   Principal repayment: $40.21 - 6.98 \approx 33.23$.
+
+    -   New principal: $69.79 - 33.23 \approx 36.56$.
+
+4.  **Year 3**:
+
+    -   Interest: $36.56 \times 0.10 \approx 3.65$.
+
+    -   Payment: $40.21$.
+
+    -   Principal repayment: $40.21 - 3.65 \approx 36.56$.
+
+    -   New principal: $36.56 - 36.56 = 0$
+
+While there is not much to be learned from generalizing an amortization table beyond the insights already established, we can do so by appealing to algebra: Let $P_1$ be any amount borrowed with interest rate $r$, compound frequency $n$ and duration $t$. Table [\[Table:AmorGeneral\]](#Table:AmorGeneral){reference-type="ref" reference="Table:AmorGeneral"} derives the equations of each payment of Period $i$, where $i$ does not have to be once a year.
+
+::: {#tab:GenericAmortization}
+   Period ($i$)   Payment             Interest                      Principal                                     Balance
+  -------------- ---------- ---------------------------- -------------------------------- --------------------------------------------------------
+        0            --                  --                             --                                         $P_1$
+        1           $X$       $P_1 \cdot \frac{r}{n}$      $X - P_1 \cdot \frac{r}{n}$     $P_2 = P_1 - \left( X - P_1 \cdot \frac{r}{n} \right)$
+        2           $X$       $P_2 \cdot \frac{r}{n}$      $X - P_2 \cdot \frac{r}{n}$     $P_3 = P_2 - \left( X - P_2 \cdot \frac{r}{n} \right)$
+        3           $X$       $P_3 \cdot \frac{r}{n}$      $X - P_3 \cdot \frac{r}{n}$     $P_4 = P_3 - \left( X - P_3 \cdot \frac{r}{n} \right)$
+     $\vdots$     $\vdots$            $\vdots$                       $\vdots$                                     $\vdots$
+       $nt$         $X$      $P_{nt} \cdot \frac{r}{n}$   $X - P_{nt} \cdot \frac{r}{n}$                       $P_{nt+1} = 0$
+
+  : Generic Amortization Table for a Loan of Principal $P_1$, Annual Interest Rate $r$, Term $t$ Years, and Compounding Frequency $n$ Times per Year
+:::
+
+*Note*: The fixed payment $X$ is calculated as $$X = \frac{P_1 \left(1 + \frac{r}{n}\right)^{nt}}{\left(1 + \frac{r}{n}\right)^{n(t-1)} + \left(1 + \frac{r}{n}\right)^{n(t-2)} + \cdots + \left(1 + \frac{r}{n}\right)^{n} + 1},$$ where $P_1$ is the initial principal, $r$ is the annual interest rate, $n$ is the compounding frequency per year, and $t$ is the loan term in years.
+
+[]{#Table:AmorGeneral label="Table:AmorGeneral"}
+
+### Value of Prepayments
+
+Prepaying a loan means paying more than the required amortized payment $X$. The extra amount is applied to principal rather than interest. This is valuable because reducing principal today prevents interest from being charged on that principal in the future. In the simple three-year example above, the required annual payment was \$40.21. If the borrower pays \$50.21 in year 1 instead, the additional \$10 reduces the remaining balance immediately. That \$10 prepayment then avoids interest charges in years 2 and 3. Equivalently, if $p$ dollars are prepaid at date $t$ and the loan would otherwise remain outstanding until date $T$, the prepayment reduces the future balance by $p(1+r)^{T-t}$. The return on a prepayment is therefore the loan rate itself: every dollar of principal paid early avoids future interest at the rate charged by the lender.
+
+A common misconception is that prepayments lower the required monthly payment going forward. In a standard fixed-payment amortizing loan, this is not true. The payment $X$ is set at origination and remains fixed unless the loan is formally recast or refinanced. Prepayments instead shorten the payoff horizon. After a prepayment, more of each future payment goes toward principal and less goes toward interest, so the loan ends earlier and lifetime interest falls.
+
+Consider a 30-year, \$350,000 mortgage at 8% interest compounded daily, with monthly payments computed using the same convention as in Figure @fig-prepayment. The required monthly payment is \$2,547.60. Without prepayments, the borrower pays roughly \$567,135 in interest over the life of the loan. Adding \$100 per month reduces total interest by about \$89,302 and shortens the payoff horizon from 360 months to 313 months. An extra \$300 per month saves about \$196,118 and pays off the loan in 254 months, nearly nine years early. An extra \$500 per month saves about \$260,322 and pays off the loan in 216 months, or 18 years.
+
+A related strategy is to pay earlier rather than to pay more. If the borrower makes the regular payment 14 days before the assumed month-end due date, the payment begins reducing principal sooner. In the same mortgage example, this timing change saves about \$11,303 in lifetime interest and pays off the loan in 356 months rather than 360 months. The effect is smaller than adding extra dollars each month, but the logic is the same: principal paid sooner has less time to accumulate interest.
+
+Figure @fig-prepayment summarizes these effects as interest savings relative to the baseline loan with no prepayments. The key lesson is that prepayments do not make the required monthly payment smaller. They make the loan shorter, reduce lifetime interest, and increase the share of future payments that goes toward principal.
+
+![Interest savings from additional mortgage payments relative to the baseline amortization schedule. The example uses a 30-year, \$350,000 mortgage at 8% interest compounded daily. Each scenario holds the original loan amount, interest rate, and scheduled monthly payment fixed, and varies only the timing or size of the payment.](figures/Chapter2/interest_savings_bar.pdf){#fig:InterestSavingsPrepay width="\\textwidth"}
+
+Nearly all substantial loans are paid using an amortization process, which makes it a Core Concept.
+
+::: {.coreconceptbox}
+**Amortization.** Amortization involves paying off a loan through fixed, regular payments covering interest and principal.
+
+-   For a loan of principal $P_1$, interest rate $r$, compounded $n$ times per year over $t$ years, the fixed payment $X$ is: $$\begin{gathered}
+                \hspace{-.5in}  X  = \frac{P_1(1+r/n)^{nt}}{\underbrace{(1+r/n)^{n(t-1)}}_{\text{Value of Year 1 Payment}}+\underbrace{(1+r/n)^{n(t-2)}}_{\text{Value of Year 2 Payment}}+(1+r/n)^{n(t-3)} + \cdots +(1+r/n)^{n} + 1} \notag
+            
+    \end{gathered}$$
+
+-   Early payments have greater value, reducing interest costs exponentially.
+
+-   Prepayments shorten loan duration and reduce total interest paid but do not change the fixed payment amount $X$.
+
+-   Amortization tables show the interest-principal split of each payment, with interest decreasing and principal increasing over time.
+:::
+
+[^1]: If you ask someone from the United States their salary, they will quote in annual terms. "I make \$75,000." It is understood that this is an annual figure, \$75,000 per year. Ask a friend from Europe this question.
+
+[^2]: We abbreviate "limit" with "lim" and the notation $n \rightarrow \infty$ says that we want to study the function $(1+1/n)^n$ as $n$ approaches $\infty$, but $n$ never quite gets to infinity so mathematicians no longer write $n=\infty$. Interesting, Euler, the mathematician who put this concept on firm footing, used $n=\infty$ freely. For those interested in deriving $\lim_{n\to\infty} \left(1 + \frac{r}{n}\right)^n = e^r$, we use an argument that Euler would appreciate. First, define a new variable $k$ such that $k = \frac{n}{r}$, which gives $n=kr$ and $r/n = 1/k$. Now, substitute these into the original limit formula, $\lim_{n\to\infty} \left(1 + \frac{r}{n}\right)^n = \lim_{k\to\infty} \left(1 + \frac{1}{k}\right)^{kr}$. Using the exponent rule $(a^b)^c = a^{bc}$, we can rewrite the expression as $\lim_{k\to\infty} \left[\left(1 + \frac{1}{k}\right)^{k}\right]^r$. Because the function $f(x) = x^r$ is continuous and defined only for positive values, we can bring the limit inside the brackets (see @spivak2008calculus, Chapter 6)$\left[\lim_{k\to\infty} \left(1 + \frac{1}{k}\right)^{k}\right]^r$, which simplifies to $e^r$.
+
+[^3]: What is nice about [\[Eqn:AmorPay\]](#Eqn:AmorPay){reference-type="eqref" reference="Eqn:AmorPay"} is that it allows for an intuitive interpretation---the numerator is the balloon payment and the denominator identifies the value of each and every payment. Compare this to the "standard" equation for calculating the amortized payment of a loan given by equation [\[Eqn:LoanRepayment\]](#Eqn:LoanRepayment){reference-type="eqref" reference="Eqn:LoanRepayment"}. Yes, you can derive this equation from [\[Eqn:AmorPay\]](#Eqn:AmorPay){reference-type="eqref" reference="Eqn:AmorPay"} but doing so involves geometric progressions.

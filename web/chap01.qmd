@@ -1,0 +1,111 @@
+# Cost of Economic Ignorance {#sec-cost-of-ignorance}
+
+The economic landscape has changed profoundly over the past fifty years. A few examples prove the point:
+
+- Retirement security has shifted from employer-provided *defined-benefit* pensions to employee-directed *defined-contribution* plans such as 401(k)s and Individual Retirement Accounts (IRAs).
+- Credit markets have expanded rapidly, and most households now rely on car loans, student loans, and mortgages to finance major purchases, and credit cards for smaller expenditures.
+- Government policies have introduced tax-advantaged savings vehicles, placing greater responsibility on individuals to make informed financial decisions.
+- Households are now legally obligated to purchase home, auto, and health insurance.
+- Inflation and interest rates that directly affect the value of savings, the cost of borrowing, and the burden of debt are not well understood.
+
+Taken together, these changes mean that no matter one's profession, earning a living in today's world requires working knowledge of basic economics. Yet surveys consistently show that many adults lack basic economic literacy. For example, only about one-third of Americans could answer the following three questions correctly [@LusardiMitchell2014JEL].
+
+::: {.examplebox}
+**Financial Literacy Quiz**
+
+1. Suppose you had \$100 in a savings account and the interest rate was 2% per year. After 5 years, how much would you have if you let it grow?
+   - More than \$102
+   - Exactly \$102
+   - Less than \$102
+   - Do not know
+2. Imagine the interest rate is 1% per year but inflation is 2% per year. After one year, what could you buy with the money?
+   - More than today
+   - Exactly the same
+   - Less than today
+   - Do not know
+3. True or False: "Buying a single company's stock usually provides a safer return than a stock mutual fund."
+   - True
+   - False
+   - Do not know
+:::
+
+If you're playing along at home, the answers are [1.] more than \$102; [2.] less than today; and [3.] false. While the third question can be misinterpreted (what does "safe" mean here?), the first two are basic math. That these questions are not well understood by a majority of people, coupled with the fact that individuals are now much more responsible for their economic outcomes, suggests a need for additional financial literacy.
+
+Unfortunately, human nature also works against us. In *Thinking, Fast and Slow*, Nobel laureate Daniel Kahneman describes how our minds toggle between fast, intuitive thinking (System 1) and slow, analytical reasoning (System 2). Financial decisions require System 2 to weigh risks and rewards, yet anxiety often pushes us toward System 1, leading to errors and poor outcomes.
+
+Consider two examples — *present bias* and *loss aversion*. Present bias drives people to prioritize short-term gains, such as spending now, over long-term needs like retirement savings. Loss aversion makes losses feel more painful than equivalent gains, prompting irrational behavior like selling stocks at market bottoms or avoiding diversified investments altogether.
+
+```{python}
+#| label: fig-networth-mean-median
+#| fig-cap: "Mean vs. Median Net Worth by Age Group, 2022 dollars (thousands). Source: U.S. Survey of Consumer Finances, 2022."
+import pandas as pd, plotly.graph_objects as go
+AGE = ["Less than 35","35-44","45-54","55-64","65-74","75 or older"]
+m  = pd.read_csv("figures/Chapter1/NetWorthMean.csv")
+md = pd.read_csv("figures/Chapter1/NetWorthMedian.csv")
+nw = pd.merge(
+    m[["year","Category","Net_Worth"]].rename(columns={"Net_Worth":"Mean"}),
+    md[["year","Category","Net_Worth"]].rename(columns={"Net_Worth":"Median"}),
+    on=["year","Category"])
+L = nw[nw["year"]==nw["year"].max()].set_index("Category").reindex(AGE).reset_index()
+fig = go.Figure()
+fig.add_bar(x=L["Category"], y=L["Median"], name="Median", marker_color="#1f4fd6",
+    hovertemplate="<b>%{x}</b><br>Median: $%{y:,.0f}k<extra></extra>")
+fig.add_bar(x=L["Category"], y=L["Mean"], name="Mean", marker_color="#e8833a",
+    hovertemplate="<b>%{x}</b><br>Mean: $%{y:,.0f}k<extra></extra>")
+fig.update_layout(template="plotly_white", barmode="group",
+    yaxis_title="Net Worth ($ thousands)", xaxis_title="Age of Household Head",
+    legend=dict(orientation="h", y=1.02, x=0), font=dict(family="Georgia, serif", size=14))
+fig
+```
+
+In this book, I will argue that two factors — inadequate education and irrational behavior — combine to erode household wealth substantially. One illustration appears in @fig-networth-mean-median, which reports both the mean and median of household net worth by age of head of household, using data from the 2022 Survey of Consumer Finances (SCF).[^scf] Both the mean and median are measures of the *average* household. In a normal situation (pun intended), both would be close in value. It is the significant *difference* between them that stands out. The mean is pulled upward by the very wealthiest households; the median identifies the middle household. If Elon Musk walks into a bar, the mean wealth jumps tremendously while the median barely moves. The gap between mean and median thus provides a direct measure of *inequality* within each age group.
+
+[^scf]: The SCF is the benchmark triennial survey of household finances in the United States, drawing on a nationally representative sample and oversampling high-wealth households. Net worth is total assets — financial holdings (stocks, bonds, retirement accounts) and non-financial assets (homes, vehicles, businesses) — minus total debts (mortgages, credit cards, other loans).
+
+@fig-networth-mean-median shows this wealth gap is substantial and widens with age. For households headed by someone under 35, mean net worth is about \$183,000 while the median is only \$39,000 — a difference of roughly \$144,000. Among households aged 65–74, the mean reaches nearly \$1.8 million but the median is only \$410,000 — a gap of more than \$1.3 million.
+
+```{python}
+#| label: fig-networth-over-time
+#| fig-cap: "Household Net Worth by Percentile Group, 2022 dollars (thousands). Source: U.S. Survey of Consumer Finances, 2022."
+import pandas as pd, plotly.graph_objects as go
+df = pd.read_csv("figures/Chapter1/NetWorthPercentilesOverTime.csv")
+po = ["Less than 25","25-49.9","50-74.9","75-89.9","90-100"]
+colors = ["#1f4fd6","#e8833a","#1f9d3a","#cc2b2b","#7a2fb0"]
+df["Category"] = pd.Categorical(df["Category"], po, ordered=True)
+pv = df.pivot_table(index="year", columns="Category", values="Net_Worth", observed=True)
+fig = go.Figure()
+for c, col in zip(po, colors):
+    if c in pv.columns:
+        fig.add_scatter(x=pv.index, y=pv[c], name=c, mode="lines",
+            line=dict(color=col, width=2.5),
+            hovertemplate=f"<b>{c}</b><br>%{{x}}: $%{{y:,.0f}}k<extra></extra>")
+fig.update_layout(template="plotly_white", yaxis_title="Net Worth ($ thousands)",
+    xaxis_title="Year", hovermode="x unified", font=dict(family="Georgia, serif", size=14),
+    legend=dict(title="Wealth Percentile", yanchor="top", y=0.98, xanchor="left", x=0.02))
+fig
+```
+
+@fig-networth-over-time is even more sobering. It traces household net worth over time and across percentiles. The bottom quartile have consistently had near-zero or negative net worth across the sample period, while families in the 90–100th percentile group have seen their wealth climb dramatically. Taken together with @fig-networth-mean-median, wealth inequality is pervasive and worsening over time.
+
+## Everyday Institutions and Policies
+
+The book emphasizes the institutions and financial instruments that all adults encounter in daily life.
+
+- **Credit markets:** credit cards, auto loans, student loans, and mortgages.
+- **Inflation and interest rates:** how they shape borrowing and saving.
+- **Taxes:** the role of taxes in household budgets.
+- **Retirement savings:** how Social Security, IRAs, and 401(k)s work.
+- **Insurance:** protecting against risk, from health to auto to life insurance.
+
+The objective of this book is not to train professional economists, but to give readers practical tools to make better decisions.
+
+## Data and Code {.unnumbered}
+
+The figures in this chapter are fully reproducible. Download the script and data:
+
+- [`scf_networth_figure.py`](downloads/Chapter1/scf_networth_figure.py)
+- [`NetWorthMean.csv`](downloads/Chapter1/NetWorthMean.csv)
+- [`NetWorthMedian.csv`](downloads/Chapter1/NetWorthMedian.csv)
+- [`NetWorthPercentilesOverTime.csv`](downloads/Chapter1/NetWorthPercentilesOverTime.csv)
+- [`scf_percentiles_figure.py`](downloads/Chapter1/scf_percentiles_figure.py)
+- [Download everything (zip)](downloads/Chapter1/chapter1_data_and_code.zip)
