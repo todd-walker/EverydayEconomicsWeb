@@ -15,3 +15,6 @@ web/.quarto/
 
 .env
 .wrangler/
+
+# Development backups
+*.bak_*
