@@ -1,0 +1,6 @@
+pandas>=2.2
+numpy>=1.26
+requests>=2.31
+pandas-datareader>=0.10
+fredapi>=0.5
+lxml>=5.0

@@ -1,0 +1,160 @@
+#!/usr/bin/env python3
+"""
+compute_time_costs.py
+
+Compute TIME COST (years and hours of labor) for major expenditures by age cohort,
+using 2024-dollar series and median wages in 2024 dollars.
+
+Inputs:
+  1) Expenditures (2024$) merged by year:
+       figures/Chapter3/output/expenditures_2024d.csv
+       columns: year, house_price_2024d, tuition_2024d, auto_2024d, health_2024d
+     (Housing from MSPUS (deflated); Education from SEEB anchored to NCES/IPEDS 2024;
+      Autos from New Vehicles CPI anchored to 2024 ATP; Health from CPIMEDSL anchored to 2024 benchmark.)
+
+  2) Wages by age cohort (2024$):
+       figures/Chapter3/median_income_by_age.csv
+       columns: Year, Age Group, Combined Median (2024 $)
+
+Allocation rules (per your specification):
+  - Housing:     1/4 of the annual cost across the first 4 cohorts (25–34, 35–44, 45–54, 55–64); 0 for 65+.
+  - Education:   assign 4 * (annual education cost) to the youngest cohort (25–34) only; 0 for others.
+  - Autos:       1/4 of the annual cost across the first 4 cohorts; 0 for 65+.
+  - Healthcare:  1/8 of the annual cost across the first 4 cohorts, and 1/2 to the 65+ cohort.
+
+Time conversion:
+  - Work year = 2,000 hours (40 hrs/week * 50 weeks)
+  - Years of labor = (allocated_cost / annual_wage_2024d)
+  - Hours of labor = Years * 2,000
+
+Outputs:
+  - figures/Chapter3/output/time_costs_by_age.csv   (tidy panel)
+  - figures/Chapter3/output/time_costs_latest.csv   (latest-year snapshot)
+"""
+
+import pandas as pd
+from pathlib import Path
+
+OUTDIR = Path("figures/Chapter3/output")
+EXP_FILE = OUTDIR / "expenditures_2024d.csv"
+WAGE_FILE = Path("figures/Chapter3/median_income_by_age.csv")
+
+WORK_HOURS_PER_YEAR = 2000.0
+
+COHORTS = [
+    "25 to 34 Years",
+    "35 to 44 Years",
+    "45 to 54 Years",
+    "55 to 64 Years",
+    "65 Years and Older",
+]
+
+def main():
+    OUTDIR.mkdir(parents=True, exist_ok=True)
+
+    # --- Load expenditures ---
+    exp = pd.read_csv(EXP_FILE)
+    # Ensure columns exist; if missing, create as zeros (for early years)
+    for c in ["house_price_2024d", "tuition_2024d", "auto_2024d", "health_2024d"]:
+        if c not in exp.columns:
+            exp[c] = 0.0
+
+    # --- Load wages ---
+    w = pd.read_csv(WAGE_FILE)
+    # Normalize column names
+    w = w.rename(columns={"Year": "year", "Age Group": "age_group", "Combined Median (2024 $)": "wage_annual_2024d"})
+    w = w[["year", "age_group", "wage_annual_2024d"]].copy()
+    
+
+    # Make sure only the 5 cohorts we care about are kept
+    w = w[w["age_group"].isin(COHORTS)].copy()
+
+    # Merge wages with expenditures by year (we’ll expand rows by age cohort)
+    # First, create a cross-join of exp years with the 5 cohorts
+    years = pd.DataFrame({"year": sorted(exp["year"].unique())})
+    cohorts = pd.DataFrame({"age_group": COHORTS})
+    panel = years.merge(cohorts, how="cross")
+
+    # Bring in expenditures (same for all cohorts within a year)
+    panel = panel.merge(exp[["year", "house_price_2024d", "tuition_2024d", "auto_2024d", "health_2024d"]],
+                        on="year", how="left")
+
+    # Bring in wages by cohort & year
+    panel = panel.merge(w, on=["year", "age_group"], how="left")
+
+    # For missing wages or expenditures, fill with 0 for costs, keep wages as NaN (so time becomes NaN)
+    for c in ["house_price_2024d", "tuition_2024d", "auto_2024d", "health_2024d"]:
+        panel[c] = panel[c].fillna(0.0)
+
+    # --- Allocation by cohort ---
+    # Housing: quarter across first 4 cohorts
+    panel["alloc_housing_2024d"] = 0.0
+    panel.loc[panel["age_group"].isin(COHORTS[:4]), "alloc_housing_2024d"] = panel["house_price_2024d"] / 4.0
+
+    # Education: 4 * annual cost to youngest cohort only
+    panel["alloc_education_2024d"] = 0.0
+    panel.loc[panel["age_group"] == COHORTS[0], "alloc_education_2024d"] = panel["tuition_2024d"] * 4.0
+
+    # Autos: quarter across first 4 cohorts
+    panel["alloc_transport_2024d"] = 0.0
+    panel.loc[panel["age_group"].isin(COHORTS[:4]), "alloc_transport_2024d"] = panel["auto_2024d"] / 4.0
+
+    # Healthcare: 1/8 across first 4 cohorts, 1/2 to oldest cohort
+    panel["alloc_health_2024d"] = 0.0
+    panel.loc[panel["age_group"].isin(COHORTS[:4]), "alloc_health_2024d"] = panel["health_2024d"] / 8.0
+    panel.loc[panel["age_group"] == COHORTS[4], "alloc_health_2024d"] = panel["health_2024d"] / 2.0
+
+    # --- Time conversion (years and hours) ---
+    # Time years = allocated_cost / annual_wage_2024d
+    # Hours = years * 2000
+    def time_years(cost, wage):
+        if pd.isna(wage) or wage <= 0:
+            return pd.NA
+        return float(cost) / float(wage)
+
+    for cat in ["housing", "education", "transport", "health"]:
+        panel[f"time_years_{cat}"] = [
+            time_years(c, w) for c, w in zip(panel[f"alloc_{cat}_2024d"], panel["wage_annual_2024d"])
+        ]
+        panel[f"time_hours_{cat}"] = panel[f"time_years_{cat}"] * WORK_HOURS_PER_YEAR
+
+    # Totals
+    panel["time_years_total"] = panel[[f"time_years_{c}" for c in ["housing","education","transport","health"]]].sum(axis=1, skipna=True)
+    panel["time_hours_total"] = panel["time_years_total"] * WORK_HOURS_PER_YEAR
+
+    # Also compute hourly wage (for reference)
+    panel["hourly_2024d"] = panel["wage_annual_2024d"] / WORK_HOURS_PER_YEAR
+
+    # Order columns nicely
+    cols = [
+    "year", "age_group",
+    "wage_annual_2024d", "hourly_2024d",
+    "house_price_2024d", "tuition_2024d", "auto_2024d", "health_2024d",
+    "alloc_housing_2024d", "alloc_education_2024d", "alloc_transport_2024d", "alloc_health_2024d",
+    "time_years_housing", "time_years_education", "time_years_transport", "time_years_health",
+    "time_hours_housing", "time_hours_education", "time_hours_transport", "time_hours_health",
+    "time_years_total", "time_hours_total",
+    ]
+
+    panel = panel[cols].sort_values(["year", "age_group"])
+
+    # Save outputs
+    panel.to_csv(OUTDIR / "time_costs_by_age.csv", index=False)
+
+    # Latest-year snapshot
+    latest = int(panel["year"].max())
+    latest_df = panel[panel["year"] == latest].copy()
+    latest_df.to_csv(OUTDIR / "time_costs_latest.csv", index=False)
+
+    print("Wrote:")
+    print(" -", OUTDIR / "time_costs_by_age.csv")
+    print(" -", OUTDIR / "time_costs_latest.csv")
+    print("Assumptions:")
+    print("  * Work year = 2,000 hours")
+    print("  * Housing: 1/4 across first 4 cohorts")
+    print("  * Education: 4x annual cost to 25–34 only")
+    print("  * Autos: 1/4 across first 4 cohorts")
+    print("  * Health: 1/8 across first 4 cohorts, 1/2 to 65+ cohort")
+
+if __name__ == "__main__":
+    main()

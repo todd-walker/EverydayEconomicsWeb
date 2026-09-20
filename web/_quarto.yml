@@ -10,6 +10,7 @@ book:
     - index.qmd
     - chap01.qmd
     - chap02.qmd
+    - chap03.qmd
 bibliography: references.bib
 csl: chicago-author-date.csl
 format:

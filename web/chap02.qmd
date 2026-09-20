@@ -663,6 +663,192 @@ $$
 - Amortization tables show the interest-principal split of each payment, with interest decreasing and principal increasing over time.
 :::
 
+## Making "Minimum" Payments
+
+Credit card companies make money by charging people interest on the amount borrowed (among other ways).
+
+As we'll discuss in more detail in Chapter XX, credit card companies allow cardholders to make a "minimum" payment each month.
+
+This payment is typically 1% of the new balance plus that month's interest and fees.
+
+The average interest rate charged to credit card holders is 22% as of Q2 2026 (Federal Reserve Statistical Release G.19).
+
+Unlike amortized loans like mortgages or car loans, credit card debt does not have to be repaid over a specific duration; this type of debt is called *revolving*.
+
+However, we can still use our amortization formulas to show the true cost of not paying off a credit card balance each month.
+
+::: {.vocabularybox}
+**Minimum Payment.**  
+The smallest amount the lender will accept that period without treating the account as past due. On an installment loan the minimum *is* the amortized payment $X$. On a credit card the minimum is a formula---typically 1% of the remaining balance plus that month's interest, or a small percentage of the statement balance.
+
+**Revolving Credit.**  
+A loan with a credit limit and no contracted payoff date. New charges can be added as old ones are paid. The duration $t$ is not a term of the contract; it is implied by whatever payment the borrower actually makes.
+:::
+
+Recall Ricky's \$100 loan at 10% interest, amortized over three years, from @tbl-amortization.
+
+The required annual payment was $X=\$40.21$.
+
+Suppose he pays a *fixed* card-style minimum of interest plus 1% of principal, or \$11.
+
+How much more interest will he pay over the life of the loan?
+
+The three-year amortized loan was a system of three equations and three unknowns.
+
+$P_1$ and $r$ were known, and the loan was required to be paid off entirely after three years.
+
+$$
+\begin{aligned}
+P_1(1+r)-X &= P_2 \\
+P_2(1+r)-X &= P_3 \\
+P_3(1+r)-X &= 0.
+\end{aligned}
+$$
+
+The unknowns were the principal amounts $P_2$, $P_3$, and the fixed payment $X$.
+
+The zero on the last line *is* the duration assumption.
+
+There are three equations because we had a three-year duration.
+
+Now $X$ is known and fixed at \$11 each year.
+
+The unknown part is *how long* it will take to pay off the loan or *how many* equations we need.
+
+Plugging in \$11 for $X$, we see that the principal at the end of year three or beginning of year four is $P_4$ and will *not* be zero:
+
+$$
+\begin{aligned}
+P_1(1+r)-11 &= P_2 \\
+P_2(1+r)-11 &= P_3 \\
+P_3(1+r)-11 &= P_4.
+\end{aligned}
+$$
+
+Substitute $P_1=\$100$ and $r=0.10$:
+
+$$
+\begin{aligned}
+P_2 &= \$100\times 1.10-11=\$99.00 \\
+P_3 &= \$99.00\times 1.10-11=\$97.90 \\
+P_4 &= \$97.90\times 1.10-11=\$96.69.
+\end{aligned}
+$$
+
+It is not even close to zero!
+
+If we continue to plug in the fixed payment and calculate the new principal each period, we'll see that the principal does not equal zero until 26 years later! These balances are given by @tbl-min-pay-schedule.
+
+| Year | Payment | = | Interest | + | Principal | $\rightarrow$ | Balance |
+|:---:|---:|:---:|---:|:---:|---:|:---:|---:|
+| 1 | 11.00 | | 10.00 | | 1.00 | | 99.00 |
+| 2 | 11.00 | | 9.90 | | 1.10 | | 97.90 |
+| 3 | 11.00 | | 9.79 | | 1.21 | | 96.69 |
+| $\vdots$ | $\vdots$ | | $\vdots$ | | $\vdots$ | | $\vdots$ |
+| 24 | 11.00 | | 2.05 | | 8.95 | | 11.50 |
+| 25 | 11.00 | | 1.15 | | 9.85 | | 1.65 |
+| 26 | 1.82 | | 0.17 | | 1.65 | | 0.00 |
+| **Total** | **276.82** | | **176.82** | | **100.00** | | **0.00** |
+
+: Minimum Payments on the \$100, 10% loan. {#tbl-min-pay-schedule}
+
+Our unknown variable is now the duration $T$.
+
+This is the duration at which $X^{\star}$ satisfies our amortization equation
+
+$$
+X^{\star}
+=
+\frac{P_1(1+r)^T}
+{(1+r)^{T-1}+\cdots+(1+r)+1}.
+$$ {#eq-implied-duration}
+
+A smaller payment than the $T=3$ amortized amount requires more terms in the denominator, so $T>3$.
+
+Solving @eq-implied-duration for $T$ directly is a bit cumbersome.
+
+Fortunately, there is an easier route.
+
+Suppose Ricky paid exactly \$10 every year, he would owe \$100 forever---the interest would be covered but the balance would never decrease.
+
+This is the *treading-water payment*.
+
+Everything above the treading-water payment is the part that actually brings down the principal.
+
+Write it as
+
+$$
+g \equiv X^{\star}-rP_1=\$11-\$10=\$1.
+$$ {#eq-principal-work}
+
+So we can always decompose the payment as
+
+$$
+X^{\star}
+=
+\underbrace{rP_1}_{\text{interest}}
++
+\underbrace{g}_{\text{principal}}.
+$$ {#eq-payment-split}
+
+Out of \$11, exactly *one dollar* of Ricky's first payment reduces what he owes.
+
+Each dollar of principal retired this year is a dollar Ricky no longer pays interest on next year, which frees up $r$ more dollars for principal.
+
+So the progress term grows by a factor of $(1+r)$ every year
+
+$$
+g,\qquad g(1+r),\qquad g(1+r)^2,\qquad \ldots
+$$ {#eq-progress-grows}
+
+Check this against the Principal column of @tbl-min-pay-schedule: \$1.00, then \$1.10, then \$1.21.
+
+The pattern holds all the way to the end, where \$8.95 is followed by $\$8.95\times1.10=\$9.85$.
+
+The loan is paid off in the year when these progress payments have accumulated to the full \$100.
+
+Because they grow at a constant rate, their total through year $T$ is
+
+$$
+g\cdot\frac{(1+r)^T-1}{r}=P_1.
+$$
+
+Now substitute $g=X^{\star}-rP_1$ and a bit of algebra gives
+
+$$
+(1+r)^T\left(X^{\star}-rP_1\right)=X^{\star}.
+$$
+
+Divide and take logarithms
+
+$$
+T
+=
+\frac{
+\ln\!\left(
+\dfrac{X^{\star}}{X^{\star}-rP_1}
+\right)
+}{
+\ln(1+r)
+}.
+$$ {#eq-duration-solved}
+
+The formula compares the whole payment to the part of it that does work.
+
+For Ricky, $X^{\star}=\$11$ and $X^{\star}-rP_1=\$1$, so
+
+$$
+T
+=
+\frac{\ln(11/1)}{\ln(1.10)}
+=
+\frac{2.3979}{0.0953}
+=
+25.16.
+$$
+
+Rounding up, Ricky needs 26 payments, matching @tbl-min-pay-schedule with the twenty-sixth payment only \$1.82.
+
 [^1]: If you ask someone from the United States their salary, they will usually quote it in annual terms: "I make $75,000." It is understood that this is $75,000 per year.
 [^2]: We abbreviate "limit" with "lim," and the notation $n \to \infty$ means that we want to study the function as $n$ grows without bound. For the derivation of continuous compounding, set $k=n/r$, so $n=kr$ and $r/n=1/k$. Then $\lim_{n\to\infty}(1+r/n)^n = \lim_{k\to\infty}(1+1/k)^{kr} = [\lim_{k\to\infty}(1+1/k)^k]^r=e^r$.
 [^3]: What is nice about @eq-amor-pay is that it allows for an intuitive interpretation: the numerator is the balloon payment and the denominator identifies the value of each payment. Compare this to the standard equation for calculating the amortized payment of a loan given by @eq-loan-repayment. Yes, you can derive the standard equation from @eq-amor-pay, but doing so involves geometric progressions.

@@ -1,0 +1,684 @@
+---
+title: "Inflation"
+filters:
+  - tikz
+  - latex-environment
+jupyter: python3
+---
+
+Inflation is the increase in prices of goods and services over time. Typically reported as the year-over-year percentage change. While there is more than one way to calculate a percentage change, we will use the simple formula[^1] $$
+     \Delta \% =    \frac{Y-X}{X} \times 100 \notag
+$$ where $\Delta$ is the Greek letter delta (used often in calculus to represent change). This equation is the percentage change from $X$ to $Y$.
+
+::: examplebox
+Suppose the price of bananas increases from \$2 per pound to \$3 per pound over the course of a year. The rate of annual inflation is $$
+    \frac{3-2}{2} = \frac{1}{2} = 0.5 \; \rightarrow \; 0.5 \times 100  = 50\% \notag
+$$
+:::
+
+While the above example seems trivial, there are important subtleties to note:
+
+1.  **Measurements must be consistent.** We are measuring the price of bananas *per pound*. A pound of bananas today will not be much different than a pound of bananas from last year or 20 years ago. What about automobiles? Personal computers? We revisit this point below, but we must be consistent in the quantity measured to get an accurate depiction of the change in prices. In this case, it is per pound.
+
+2.  **Inflation is typically reported as year-over-year percentage change.** Economists study different types of price changes over different time horizons but year-over-year is what is most reported in the mainstream media and most easily understood. If, for example, the price of bananas increases from \$2 to \$2.10 in one month, then the percentage change is *annualized* by multiplying by the number of months in a year, 12. Annualized inflation would be $$
+        \frac{2.10-2}{2} = \frac{.1}{2} = 0.05 \; \rightarrow \; 0.05 \times 12 \times 100 = 60\% \notag
+        
+    $$
+
+3.  **Inflation vs. Disinflation vs. Deflation.** Suppose after increasing 50% (from \$2 to \$3 per pound), the price of bananas increases again from \$3 to \$4 per pound the following year, annual inflation in this year would be $$
+            \frac{4-3}{3} = \frac{1}{3} = 0.33 = 33\% \notag
+        
+    $$ Prices are still going up but the *rate* of inflation has decreased from 50% to 33%, so this is an example of *disinflation*. Prices continue to increase but at a slower rate. Deflation occurs if prices *fall* from one year to the next (e.g., the price of bananas decreases from \$3 to \$2 per pound).
+
+4.  **Inflation is a decline in the purchasing power of currency.** The U.S. dollar (USD) is an example of *fiat* currency issued by the United States federal government. The word "fiat" translates to "let it be done" from the original Latin. Thus, a fiat currency has value because the government declares it legal tender--i.e., money that must be accepted for all debts, public and private. Rather than thinking only about the prices of goods and services rising, it is equally accurate to think of the number of dollars needed to buy them as growing, or the value of each dollar as falling. They are two sides of the same coin (pun intended).
+
+    Let's revisit the banana example to illustrate this point:
+
+    Year 1: The price of bananas is \$2 per pound. A \$20 bill has the purchasing power of 10 pounds of bananas (\$20 / \$2 per pound).
+
+    Year 2: The price increases to \$3 per pound (a 50% inflation rate). That same \$20 bill now has the purchasing power of only 6.67 pounds of bananas (\$20 / \$3 per pound).
+
+    The physical \$20 bill has not changed, but its ability to be exchanged for a real good (bananas) has significantly decreased. The purchasing power of the dollar has declined. By fixing the amount of cash and asking how many bananas we can buy with the same \$20 from one year to the next, we have transformed the problem into thinking about *quantities* purchased, instead of the price per pound.
+
+## A Price Index
+
+We purchase more than just bananas, so how can we measure inflation of multiple goods and services? Think about everything that you buy in a year: food, clothing, housing, education, gym memberships, cars, vacations, electricity, water, etc. While horribly unrealistic, suppose your total expenditures for the entire year amounted to \$1,000. The right-most column of Table [1.1](#tab:cpi-weights){reference-type="ref" reference="tab:cpi-weights"} shows your allocation of the \$1,000 across various items. One can then divide your expenditure amount by \$1,000 to get a relative weight. For example, if you spent \$145.26 on food and drinks throughout the year, then \$145.26/\$1,000 = 14.526% is the relative weight assigned to this item (relative to other items in your budget); if you spent \$82.73 on medical care, then \$82.73/\$1,000 = 8.273% is the weight on this budget item.
+
+::: {#tab:cpi-weights}
+  Category                         Weight (%)   Expenditure Amount (out of \$1,000)
+  ----------------------------- ------------- -------------------------------------
+  Food and beverages                   14.526                              \$145.26
+  Housing                              44.201                              \$442.01
+  Apparel                               2.480                               \$24.80
+  Transportation                       16.571                              \$165.71
+  Medical care                          8.273                               \$82.73
+  Recreation                            5.292                               \$52.92
+  Education and communication           5.732                               \$57.32
+  Other goods and services              2.925                               \$29.25
+  **Total**                       **100.000**                        **\$1,000.00**
+
+  : Expenditure Weights and Hypothetical Allocations
+:::
+
+The weights of Table [1.1](#tab:cpi-weights){reference-type="ref" reference="tab:cpi-weights"} are not fabricated but are the actual weights used to construct the Consumer Price Index (CPI) in 2025 (see, [BLS CPI Handbook](https://www.bls.gov/opub/hom/cpi/home.htm)). A price index is a statistical measure that tracks changes in the price level of a basket of consumer goods and services purchased by households over time. A crucial input of a price index are the weights that reflect the relative importance of each item in the basket based on "typical" consumer spending patterns.
+
+The CPI is constructed by the U.S. Bureau of Labor Statistics (BLS) through a multi-step process: (1) Defining the market basket and assigning weights using data from the Consumer Expenditure Survey, which captures typical spending patterns of urban consumers; (2) Collecting monthly price data from thousands of retail outlets across urban areas; (3) Calculating price relatives (current price divided by base price) for each item; and (4) Aggregating these relatives using the expenditure weights to form the overall index. These weights represent the "typical" spending shares averaged across U.S. urban households, updated periodically to reflect changes in consumption habits. For more details, see the BLS CPI Handbook ([BLS CPI Handbook](https://www.bls.gov/opub/hom/cpi/home.htm)) and the relative importance tables ([BLS Relative Importance](https://www.bls.gov/cpi/tables/relative-importance/)).
+
+Once we have the weights for our index, we then need to understand how these weights are used to analyze price changes over time. To simplify our problem, suppose your basket of goods consists of 60% apples and 40% bananas. If both bananas and apples cost \$1 per pound in year one and increase to \$1.50 for apples and \$1.80 for bananas in year two, what is the year-over-year increase in inflation of this basket of goods? $$
+    \text{Percentage of Basket } \times \text{Inflation Rate } \notag\\
+    0.6 \times 0.5 + 0.4 \times 0.8 = 0.3 + 0.32 = 0.62 \; \rightarrow \; 0.62\times 100 =  62\% 
+$$ As shows, to calculate the change in the price index, we weight each individual good's inflation rate by the relative weight of that good. Specifically, the inflation rate for apples is computed as $\frac{1.5-1}{1} = \frac{.5}{1} = 0.5 \rightarrow \; 0.5 \times 100 = 50\%$. We then multiply this inflation rate by the relative weight on apples, 0.6, which gives the price change of the basket of goods attributable to apple consumption, 0.6 $\times$ 0.5 = 0.3 or 30%. Similar algebra for bananas gives the price change times relative weight as $0.4 \times 0.8 = 0.32$. To get the price index, we sum these two components, 0.3+0.32 = 0.62, and find that the change in the price index from year one to year two is 62%.
+
+## Base Years
+
+As discussed above, inflation can be thought of as a deterioration of the value of the U.S. dollar (or any currency). When we measure inflation as a basket of goods over time, economists use the term *base year*, which is a reference point. It is the year against which all other years' prices are measured, typically set to an index value of 100 (or 1.00). When inflation rates are reported as "the price of bread in 2012 dollars," it means expressing the current price in terms of the purchasing power of dollars from the base year 2012. This adjustment accounts for inflation, showing what the equivalent cost would be if prices had remained at the base year's level.
+
+As an example, consider a basket consisting of apples and bananas. To keep the analysis simple, we will assume that the quantities purchased remain fixed (6 apples and 4 bananas), but prices change over the years 2014, 2015, and 2016. The table below shows the prices, quantities, and total costs for each year. Because our quantities are not changing, the change in the total amount spent over time tells us the precise decline in the purchasing power of the dollar. To demonstrate how the choice of base year affects the index values but *not* the underlying inflation rate, let's calculate the index using each of the three years as our reference point.
+
+::: {#tab:market-basket}
+  Items      Quantity   2014 Price   2014 Total   2015 Price   2015 Total   2016 Price   2016 Total
+  --------- ---------- ------------ ------------ ------------ ------------ ------------ ------------
+  Apples        6         \$1.00       \$6.00       \$1.50       \$9.00       \$2.50      \$15.00
+  Bananas       4         \$1.50       \$6.00       \$2.00       \$8.00       \$3.00      \$12.00
+  Total                               \$12.00                   \$17.00                   \$27.00
+
+  : Market Basket Costs Across Years
+:::
+
+#### Using 2014 as the Base Year
+
+When we use 2014 as the base year, we divide each year's total cost by the 2014 cost (\$12.00).
+
+-   Base year cost (2014): \$12.00
+
+-   2014 index: $\frac{12.00}{12.00} = 1.00$
+
+-   2015 index: $\frac{17.00}{12.00} \approx 1.42$
+
+-   2016 index: $\frac{27.00}{12.00} = 2.25$
+
+By dividing by the cost in 2014, we can reinterpret all expenditures in terms of "2014 dollars." This means it requires \$1.42 in 2015 and \$2.25 in 2016 to have the same purchasing power as \$1 in 2014. The value in indexing is that it makes inflation transparent, which achieves two things
+
+1.  **It shows total inflation from the base year.** The 2015 index of 1.42 immediately tells us that prices have risen by 42% since 2014 ( $1.42 - 1.00 = 0.42$). The 2016 index of 2.25 indicates a total price increase of 125% since 2014 ($2.25-1 = 1.25$).
+
+2.  **It simplifies year-over-year calculations.** To find the inflation rate between any *two years*, we just calculate the percentage change of their index values, eliminating the need for the original dollar amounts. The inflation from 2015 to 2016 is $$
+            \frac{\text{Index}_{2016} - \text{Index}_{2015}}{\text{Index}_{2015}} = \frac{2.25 - 1.42}{1.42} \approx 0.585 = 58.5\% \notag
+        
+    $$
+
+::: {#tab:base-year-comparison}
+   **Year**   **Index (Base 2014)**   **Index (Base 2015)**   **Index (Base 2016)**
+  ---------- ----------------------- ----------------------- -----------------------
+     2014             1.00                    0.71                    0.44
+     2015             1.42                    1.00                    0.63
+     2016             2.25                    1.59                    1.00
+
+  : Price Index Comparison with Different Base Years
+:::
+
+#### Comparing Different Base Years
+
+We can repeat this process using the 2015 cost (\$17.00) or the 2016 cost (\$27.00) as the denominator. The resulting index values are summarized in Table [1.3](#tab:base-year-comparison){reference-type="ref" reference="tab:base-year-comparison"}. The table reveals the most important property of a price index.
+
+1.  **The index values depend on the base year.** An index of 1.59 for 2016 (with a 2015 base) means something different than an index of 2.25 (with a 2014 base), but both describe the same underlying price level relative to their reference point.
+
+2.  **The inflation rate between any two years is the same regardless of the base year.** The percentage change remains constant because it reflects the real change in the basket's cost.
+
+We can show this by calculating the inflation rate from 2015 to 2016 using each index from the table
+
+-   **Base 2014:** $\frac{2.25 - 1.42}{1.42} \approx 58.5\%$
+
+-   **Base 2015:** $\frac{1.59 - 1.00}{1.00} = 59.0\%$
+
+-   **Base 2016:** $\frac{1.00 - 0.63}{0.63} \approx 58.7\%$
+
+The minor differences are simply due to rounding the index values to two decimal places. The true inflation rate, calculated from the original costs, is $\frac{\$27 - \$17}{\$17} \approx 58.8\%$. This demonstrates that while the choice of a base year changes the numbers in the index, it provides a consistent method for measuring inflation over time.
+
+Ultimately, the concept of a base year provides a powerful way to think about money itself. It is helpful to imagine each dollar bill having a "vintage" or a time stamp corresponding to the year it was earned or spent. In this framework, a dollar from 2014 is a different vintage from a dollar from 2016 because they possess different amounts of purchasing power. The price index, then, acts as an exchange rate between these vintages. When we set 2014 as the base year, the 2016 index of 2.25 tells us that it takes \$2.25 of the 2016 vintage to buy what just \$1.00 of the 2014 vintage could. Our key takeaway--that the inflation rate is constant regardless of the base year--simply means that the relative loss of purchasing power between any two consecutive vintages (say, from 2015 to 2016) is fixed, no matter which vintage we choose as our official yardstick. This perspective solidifies our understanding of inflation not just as rising prices, but as the changing value of money itself over time.
+
+```{python}
+#| label: fig-cpi-weights
+#| fig-cap: "Relative Changes in the U.S. Consumer Price Index, 1983–2020. Each component is expressed relative to the overall CPI and normalized to 1 in 1983. Source: U.S. Bureau of Labor Statistics."
+import pandas as pd
+import plotly.graph_objects as go
+
+df = pd.read_csv("../data/processed/chapter3/cpi_relative_1983.csv")
+
+fig = go.Figure()
+
+for category in df["category"].drop_duplicates():
+    d = df[df["category"] == category]
+    fig.add_scatter(
+        x=d["year"],
+        y=d["relative_index"],
+        mode="lines",
+        name=category,
+        hovertemplate=(
+            f"<b>{category}</b><br>"
+            "Year: %{x}<br>"
+            "Relative price: %{y:.2f}<br>"
+            "<extra></extra>"
+        ),
+    )
+
+fig.add_hline(
+    y=1,
+    line_dash="dot",
+    annotation_text="Overall CPI / 1983 baseline = 1",
+    annotation_position="bottom right",
+)
+
+fig.update_layout(
+    template="plotly_white",
+    xaxis_title="Year",
+    yaxis_title="Relative Price (1983 = 1)",
+    hovermode="x unified",
+    height=600,
+    margin=dict(l=70, r=30, t=30, b=60),
+    font=dict(family="Georgia, serif", size=14),
+)
+
+fig
+```
+
+To illustrate the concept of a base year with real-world data, @fig-cpi-weights shows relative changes in the U.S. Consumer Price Index (CPI) components from 1983 to 2020. The graph highlights how different categories---such as college tuition, medical care, shelter, food, household energy, apparel, and new vehicles---have experienced varying rates of price changes relative to the overall CPI ("All items"). For example, college tuition and medical care have risen much faster than the over CPI, while apparel and new vehicles have increased more slowly or even decreased in relative terms. This underscores that inflation is not uniform across goods and services, and the choice of base year can affect how these changes are perceived. The purchasing power of one 1983 US Dollar has declined substantially if you are buying college tuition; what \$1.00 purchased in college tuition in 1983 required about \$3.39 in 2020. This represents a total relative-price increase of about 239% over that 37-year period. By placing all categories into the same base year, direct comparisons are straightforward.
+
+## Nominal vs. Real
+
+When economists discuss economic variables such as income, interest rates, or returns on investments, it is crucial to distinguish between nominal and real values. Nominal values are measured in current dollars without adjusting for changes in the price level (i.e., these measures ignore inflation or deflation). In contrast, real values account for inflation by expressing quantities in terms of constant purchasing power, typically relative to a base year. As @fig-cpi-weights makes clear, this distinction is essential because inflation erodes the purchasing power of money over time. A nominal increase in income might seem beneficial, but if prices rise faster, the real purchasing power declines. Consider the following example.
+
+::: examplebox
+Suppose Jim lends Ricky \$100. The loan must be repaid after one year with 10% annual interest. If inflation is 20%, what is Jim's real return on the loan? What is his nominal return?\
+**Answer:** Jim's nominal return is \$110 total or \$10 net ("net" here is used to denote the return, \$110, minus the initial amount, \$100, so \$10 = \$110-\$100). Jim's real return is found by dividing by the rate of inflation $$
+            \text{Real Return} = \frac{\text{Nominal Return}}{1 + \text{Rate of Inflation}} = \frac{\$110}{1.20} \approx \$91.67 \notag
+        
+$$
+
+The real return is negative in terms of purchasing power because \$91.67 buys less than the original \$100. His net real return is \$91.67 - \$100 = -\$8.33.
+:::
+
+This book was / is being written for a course of the same title, Everyday Economics, taught at Indiana University. I rely on student feedback to help improve instruction. Students ask insightful questions, and throughout the book, I will share a few of these questions in the form of a "Student Question" box.
+
+::: studentquestionbox
+Why do we divide by the inflation rate to get the real or inflation-adjusted variable? Why not subtract the inflation rate?
+:::
+
+To answer the question above, think about one of the core lessons from Chapter 2: Present Value / Future Value equations
+
+$$
+\text{FV}
+=
+\text{PV}\left(1+\frac{r}{n}\right)^{tn},
+\qquad
+\text{PV}
+=
+\frac{\text{FV}}
+{\left(1+\frac{r}{n}\right)^{tn}}.
+$$
+
+These PV/FV formulas use an interest rate ($r$) to show how money *grows* in nominal terms. If you invest \$100 at 10% interest, it grows to \$110 in the future. The formula for Present Value reverses this process. It "discounts" the future amount to find its equivalent value today. The division by $\left(1+r/n\right)^{tn}$ is what strips out the effect of the interest rate growth.
+
+Inflation works just like a discount rate, but for *purchasing power*. An inflation rate of 20% means the purchasing power of your money is shrinking. To buy the same basket of goods a year from now will require 20% more dollars. So, when we ask for the *real return*, we are asking: "What is the purchasing power of Jim's future \$110 in today's terms?" We need to strip out the effect of inflation. Just as we divide by $(1+r)$ to remove the effect of interest, we must divide by $(1+\text{Inflation Rate})$ to remove the effect of inflation.
+
+Let's look at the problem through the lens of the Present Value formula:
+
+- We want to find the "Present Value" of Jim's future money (its real value).
+- The "Future Value" is the nominal amount he receives (\$110).
+- The "discount rate" is the rate at which his money's purchasing power is eroding (the inflation rate, 20%).
+
+Plugging this in gives us the exact same formula:
+
+$$
+\text{Real Value}
+=
+\frac{\text{Nominal Value}}
+{1+\text{Inflation Rate}}
+=
+\frac{\$110}{1.20}
+=
+\$91.67.
+$$
+
+However, the question is a very clever one because subtracting is a common and useful approximation known as the Fisher Approximation, named after economist Irving Fisher. The precise relationship between these rates is multiplicative:
+
+$$
+1+\text{Nominal Rate}
+=
+(1+\text{Real Rate})
+(1+\text{Inflation Rate}).
+$$
+
+If we expand the terms on the right side, we get
+
+$$
+1+\text{Nominal Rate}
+=
+1+\text{Real Rate}
++\text{Inflation Rate}
++
+(\text{Real Rate}\times\text{Inflation Rate}),
+$$
+
+which simplifies to
+
+$$
+\text{Nominal Rate}
+=
+\text{Real Rate}
++\text{Inflation Rate}
++
+(\text{Real Rate}\times\text{Inflation Rate}).
+$$
+
+When inflation and real rates are low (e.g., 2% or 3%), the final term $(\text{Real Rate}\times\text{Inflation Rate})$ is very small and can be safely ignored. For example, if the real rate is 3% and inflation is 2%, the extra term is just $0.03\times0.02=0.0006$, or 0.06%. In this case, the approximation is a good one:
+
+$$
+\text{Nominal Rate}
+\approx
+\text{Real Rate}
++
+\text{Inflation Rate},
+$$
+
+or equivalently,
+
+$$
+\text{Real Rate}
+\approx
+\text{Nominal Rate}
+-
+\text{Inflation Rate}.
+$$
+
+However, in our example with 20% inflation, this shortcut breaks down. The precise method---division---is the one that stems directly from the logic of compound growth and discounting, and it is always correct, whether inflation is high or low.
+
+A key challenge with inflation is its unpredictability---future inflation rates are unknown at the time of making financial decisions. Building on the previous example, suppose Jim wants to guarantee a real return of 10% (i.e., \$110 in real terms) on his \$100 loan, regardless of inflation. Jim could set an ex post (after-the-fact) interest rate that adjusts based on realized inflation. The formula for the nominal interest rate that achieves this goal is
+
+$$
+1+\text{Nominal Rate}
+=
+(1+\text{Real Rate})
+(1+\text{Inflation Rate})
+=
+(1+0.10)(1+0.20)
+=
+1.32.
+$$
+
+So the nominal interest rate would be 32%. If inflation turns out to be 20%, Ricky repays \$132, and the real return is
+
+$$
+\frac{\$132}{1.20}
+=
+\$110.
+$$
+
+This ensures Jim's desired real return of 10%.
+
+Banks and lenders protect against inflation risk through interest rate structures. Fixed interest rates remain constant over the loan term, exposing the lender to risk if inflation rises unexpectedly (reducing real returns) or the borrower if inflation falls. Variable (or adjustable) interest rates change periodically, which serves to shift inflation risk to the borrower.
+
+## Inflation across Time and Age {#Sec:InflationTimeAge}
+
+In standard economic theory, inflation is often analyzed as a rise in prices that erodes purchasing power of a currency like the U.S. Dollar. However, an alternative perspective views inflation through the lens of the most precious resource of all---time.
+
+For most people, income is earned by exchanging time for wages. Inflation, then, can be viewed as *an increase in the time required to secure these goods and services.* Rising prices demand more hours of labor for the same standard of living. The analysis below assesses how the (*time*) cost of living has evolved across groups from 1947 to 2024. We study different age groups because their distinct life stages---from early-career workers to retirees---shape their wage-earning capacity and consumption bundle. Our goal is to understand how inflation impacts the economic well-being of various age cohorts through the lens of time-based affordability.
+
+### Income
+
+To estimate the age-related time cost of meeting life's necessities and societal goods across age groups, we proceed as follows:
+
+1.  **Calculate Median Income.** We need a central measure of income for various age groups over time. We know from Chapter 1 @fig-networth-mean-median how distorted the mean or arithmetic average of income can be, so we will use the median. Our data come from the U.S. Census Bureau's Current Population Survey (CPS), which we describe in detail below. While all economic statistics have some degree of error, this metric is the most accurate among available economic data. We are restricted by the age grouping of our data and will study median income (in 2024 dollars) for age groups 25--34, 35--44, 45--54, 55--64, and 65+ years.
+
+2.  **Estimate Age-Specific Costs.** We construct a basket of necessities (food, clothing, shelter, healthcare) and societal goods (education) tailored to each age group's consumption patterns. For example, education costs are weighted more heavily for the 25--34 age group (early-career, often pursuing higher education), while healthcare costs are emphasized for the 65+ group (retirees with greater medical needs). Historical cost data for these categories are sourced from the Bureau of Labor Statistics' Consumer Price Index (CPI) and adjusted to 2024 dollars.
+
+3.  **Translate to Time Cost.** Assuming a standard workweek (e.g., 40 hours), we convert median income to an hourly wage for each age group and year. The time cost is calculated as the hours required to afford the age-specific basket, i.e., $\text{Time Cost} = \frac{\text{Cost of Basket}}{\text{Hourly Wage}}$. This reveals how many hours each age group must work to meet their needs, highlighting how inflation has altered the time burden for each group over the last several decades.
+
+#### Calculating Median Income
+
+```{python}
+#| label: fig-income
+#| fig-cap: "Median Income by Age Group in the U.S. (1947–2024, in 2024 $ Thousands). Data source: U.S. Census Bureau, CPS ASEC, Table P-8."
+import pandas as pd
+import plotly.graph_objects as go
+
+df = pd.read_csv("figures/Chapter3/median_income_by_age.csv")
+
+fig = go.Figure()
+for age_group in df["Age Group"].drop_duplicates():
+    d = df[df["Age Group"] == age_group]
+    fig.add_scatter(
+        x=d["Year"],
+        y=d["Combined Median (2024 $)"] / 1000,
+        mode="lines",
+        name=age_group,
+        hovertemplate=(
+            f"<b>{age_group}</b><br>"
+            "Year: %{x}<br>"
+            "Median income: $%{y:,.1f}k"
+            "<extra></extra>"
+        ),
+    )
+
+fig.update_layout(
+    template="plotly_white",
+    xaxis_title="Year",
+    yaxis_title="Median Income (Thousands of 2024 Dollars)",
+    hovermode="x unified",
+    height=550,
+    margin=dict(l=70, r=30, t=30, b=60),
+    font=dict(family="Georgia, serif", size=14),
+)
+fig
+```
+
+@fig-income plots the median income from 1947 to 2024 for age groups (25-34), (35-44), (45-54), (55,64) and (65,+) in 2024 dollars from 1947 to 2024. The data is sourced from the U.S. Census Bureau's Current Population Survey (CPS) Annual Social and Economic Supplements (ASEC), specifically Table P-8, covering median income by age and sex for individuals aged 14 and older (15 and older from March 1980) from 1947 to 2024. The data is available at <https://www2.census.gov/programs-surveys/cps/tables/time-series/historical-income-people/p08ar.xlsx>. Income values are reported in 2024 dollars, adjusted using the Chained Consumer Price Index for All Urban Consumers (C-CPI-U) for 2000--2024 and the Research Consumer Price Index Retroactive Series (R-CPI-U-RS) for pre-2000, ensuring consistency in real income across the time series.
+
+Data are reported individually for male and female respondents. We combine the median income for each age group by weighting the male and female median incomes by the number of individuals (respondents) within each age group. The formula is $$
+        \scriptsize
+\text{Median Wage} = \frac{(\text{Number Male Respondents} \times \text{Male Median}) + (\text{Number Female Respondents} \times \text{Female Median})}{\text{Number Male Respondents} + \text{Number Male Respondents}} \notag
+    
+$$
+
+@fig-income illustrates the combined median income (in thousands of 2024 dollars) for each age group from 1947 to 2024. The caption includes a table detailing the percentage changes in median income for two periods, 1947--1972 and 1972--2024, calculated as $\left( \frac{\text{End Year} - \text{Start Year}}{\text{Start Year}} \right) \times 100$. Key observations from the time series and percentage change table are:
+
+-   **Slowing Wage Growth**: The table in the right-hand corner of @fig-income highlights the most striking feature of this data: income growth was significantly faster from 1947--1972 than from 1972--2024 across all age groups except 65+. The first 25 years of the data saw tremendous growth in the median wage, while the percentage change over the next 52 years (more than twice the time) saw relatively little wage growth.
+
+    -   **1947--1972**: This period saw robust wage growth, with the 45--54 age group experiencing a 90.3% increase, followed by 35--44 (83.4%), 25--34 (82.2%), 65+ (84.8%), and 55--64 (74.9%). This rapid growth aligns with the post-World War II economic boom, characterized by strong industrial expansion, rising productivity, and increasing labor force participation.
+
+    -   **1972--2024**: Growth slowed considerably for all but the 65+ age group (likely due to enhanced retirement benefits and Social Security adjustments). The 55--64 age group grew by 32.4%, followed by 45--54 (25.7%), and 35--44 (20.1%). The youngest cohort saw the smallest increase, 25--34 age group's median wage only increased by 14.5%.
+
+-   **Age-Based Income Hierarchy**: The 45--54 age group consistently shows the highest median income with the 35--44 age group following closely behind. For the early part of the sample, the 25--34 age group is a very close third behind the top two age groups. This changes post-1972 with the 55--64 age group catching up to and eventually passing the youngest cohort.
+
+-   **Young Workers' Stagnation**: The 25--34 age group, representing early-career workers, has been disproportionately impacted by sluggish wage growth in recent decades. While their median income grew from \$24,250 in 1947 to \$50,610 in 2024 (108.8% total), the annualized growth rate plummeted from 2.43% in 1947--1972 to just 0.26% in 1972--2024---the lowest among all groups. The next-age income gap (difference between median salary of 25-34 years and the next age group of 35-44 years) has increased substantially over time.
+
+### Expenditures
+
+We focus on the four largest expenditure categories that households face: (1) Housing, (2) Education, (3) Transportation, and (4) Healthcare. Each series is converted to **constant 2024 dollars** to provide a consistent measure of purchasing power over time. All price data are drawn from official U.S. government statistical releases and accessed through the Federal Reserve Bank of St. Louis *FRED* database.
+
+**Housing.** The primary series for housing is the **Median Sales Price of Houses Sold for the United States (MSPUS)**, published jointly by the U.S. Census Bureau and the U.S. Department of Housing and Urban Development (HUD) as part of the *New Residential Sales* release. The MSPUS series measures the median transaction price of newly constructed single-family homes sold each quarter.
+
+-   **Frequency:** Quarterly, Not Seasonally Adjusted (NSA)
+
+-   **Units:** U.S. Dollars
+
+-   **Coverage:** 1963--present
+
+-   **FRED ID:** `MSPUS`
+
+-   **Source:** U.S. Census Bureau and HUD via FRED
+
+To express historical prices in constant purchasing power, the MSPUS series is deflated using the **Consumer Price Index for All Urban Consumers: All Items (CPI-U, NSA)** with FRED identifier `CPIAUCNS`, published monthly by the U.S. Bureau of Labor Statistics. Both series are aggregated to annual frequency using calendar-year means. Let $P_{y}$ denote the nominal median home price in year $y$ and $\text{CPI}_{y}$ the annual CPI-U index. Real (2024-dollar) prices are obtained as $$P_{y}^{(2024\$)} = P_{y} \times
+    \frac{\text{CPI}_{2024}}{\text{CPI}_{y}}.$$ This transformation rescales each year's nominal home price to its equivalent 2024-dollar value, holding the CPI basket fixed at its 2024 level.
+
+**Education.** The cost of education is measured using the **Consumer Price Index for All Urban Consumers: Tuition, Other School Fees, and Childcare (CUSR0000SEEB)** produced by the Bureau of Labor Statistics. Because this CPI subcomponent is an index (not a dollar value), it is converted to real 2024 dollars by anchoring the index to the 2024 average annual cost of attendance at a U.S. postsecondary institution, as reported by the National Center for Education Statistics (NCES) Integrated Postsecondary Education Data System (IPEDS), which places this value at \$38,270 for 2024: $$E_{y}^{(2024\$)} = 38{,}270 \times
+    \frac{\text{CPI}^{(\text{Edu})}_{y}}{\text{CPI}^{(\text{Edu})}_{2024}}.$$ This yields a 2024-dollar series representing the typical cost of higher education over time.
+
+**Transportation.** Transportation costs are proxied by the price of new vehicles, using the **Consumer Price Index for All Urban Consumers: New Vehicles (CUUR0000SETA01)**. As with education, the CPI index is anchored to the 2024 average new-vehicle transaction price, reported by industry data as approximately \$47,500: $$T_{y}^{(2024\$)} = 47{,}500 \times
+    \frac{\text{CPI}^{(\text{Auto})}_{y}}{\text{CPI}^{(\text{Auto})}_{2024}}.$$
+
+**Healthcare.** Healthcare expenditures are measured using the **Consumer Price Index for All Urban Consumers: Medical Care (CPIMEDSL)**. The CPI series is converted to 2024 dollars by anchoring to an estimated 2024 per-capita healthcare cost of \$6,500: $$H_{y}^{(2024\$)} = 6{,}500 \times
+    \frac{\text{CPI}^{(\text{Health})}_{y}}{\text{CPI}^{(\text{Health})}_{2024}}.$$
+
+All four series---housing, education, transportation, and healthcare---are thus expressed in comparable 2024-dollar terms, allowing direct comparisons of real expenditure burdens across time. Each transformation preserves the historical growth patterns from the underlying data while removing the effects of inflation.
+
+```{python}
+#| label: fig-expenditures-2024d
+#| fig-cap: "Major Household Expenditures in 2024 Dollars. Housing uses the left axis; education, transportation, and healthcare use the right axis. Index-based categories are anchored in 2024 to $38,270 (education), $48,108 (autos), and $6,500 (health)."
+import pandas as pd
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+
+df = pd.read_csv("figures/Chapter3/output/expenditures_2024d.csv")
+
+fig = make_subplots(specs=[[{"secondary_y": True}]])
+
+fig.add_trace(
+    go.Scatter(
+        x=df["year"],
+        y=df["house_price_2024d"] / 1000,
+        mode="lines",
+        name="Housing",
+        hovertemplate="Housing<br>%{x}: $%{y:,.1f}k<extra></extra>",
+    ),
+    secondary_y=False,
+)
+
+for label, col in [
+    ("Education", "tuition_2024d"),
+    ("Transportation", "auto_2024d"),
+    ("Healthcare", "health_2024d"),
+]:
+    fig.add_trace(
+        go.Scatter(
+            x=df["year"],
+            y=df[col] / 1000,
+            mode="lines",
+            name=label,
+            hovertemplate=(
+                f"<b>{label}</b><br>"
+                "%{x}: $%{y:,.1f}k"
+                "<extra></extra>"
+            ),
+        ),
+        secondary_y=True,
+    )
+
+fig.update_yaxes(
+    title_text="Housing (Thousands of 2024 Dollars)",
+    secondary_y=False,
+)
+fig.update_yaxes(
+    title_text="Other Expenditures (Thousands of 2024 Dollars)",
+    secondary_y=True,
+)
+
+fig.update_layout(
+    template="plotly_white",
+    xaxis_title="Year",
+    hovermode="x unified",
+    height=550,
+    margin=dict(l=70, r=70, t=30, b=60),
+    font=dict(family="Georgia, serif", size=14),
+)
+fig
+```
+
+::: {#tab:exp-2024d-selected}
+  **Year**     **Housing**   **Education**   **Autos**   **Healthcare**
+  ---------- ------------- --------------- ----------- ----------------
+  1963               184.9                        13.8             0.28
+  1978               268.6            2.65        20.5             0.71
+  2000               305.2           14.36        38.6             3.01
+  2010               320.4           25.41        37.3             4.48
+  2024               419.0           38.27       48.11             6.50
+
+  : *Notes.* Values shown are thousands of 2024 dollars. Housing: MSPUS deflated by CPI-U (NSA). Education: CPI (SEEB) anchored at \$38270 in 2024 (NCES/IPEDS) and backcast. Autos: CPI (New Vehicles) anchored at \$48,108 in 2024 and backcast. Healthcare: CPI Medical Care anchored at \$6,500 in 2024 and backcast.
+:::
+
+Three patterns are evident in @fig-expenditures-2024d. First, *education* has risen persistently in real terms, from roughly \$2.7K (1978) to over \$38K in 2024, reflecting tuition/fee and childcare costs that have outpaced broad inflation. Second, *housing* shows pronounced cycles around a strong upward trend, peaking in 2022 and easing somewhat by 2024, yet still far above earlier decades. Third, *autos* and *healthcare* display steadier climbs: new-vehicle costs in 2024 dollars move from the mid-teens (1960s) to the high-\$40Ks today, while healthcare rises from a few hundred dollars per capita in the 1960s to about \$6.5K in 2024. Because education, autos, and health originate as CPI sub-indexes, we anchor the 2024 level to credible benchmarks (NCES/IPEDS, ATP, and a healthcare amount) and scale the full history accordingly; this preserves CPI growth while ensuring interpretability in 2024-dollar units.
+
+### Inflation in the Time Scale
+
+We now combine the income and price series into a single measure of affordability: the *time cost* of major life milestones. The idea is to express each milestone not in dollars but in the share of a working year that a representative worker must surrender to finance it. Because income is earned by exchanging time for wages, inflation in this view is an increase in the hours of labor required to obtain the same standard of living.
+
+We study a single 25--34 *representative worker* and ask how the time price of four milestones, housing, a college degree, a vehicle, and healthcare, has changed between 1980 and 2024.
+
+#### From prices to annual financed payments
+
+Each milestone is converted into an *annual financed payment* in 2024 dollars, so that one-time purchases (stocks) and recurring costs (flows) are placed on the same annual basis. Let $B_{j,t}^{(2024)}$ denote the 2024-dollar benchmark cost of category $j$ in year $t$ (the price series of the previous section), and let the annual payment be $A_{j,t}$.
+
+##### Housing.
+
+A home is purchased with a 20% down payment and a 30-year fixed mortgage. The annual cost is the amortized down payment plus the level mortgage payment on the financed balance: $$A_{\text{house},t}
+    =
+    \frac{0.20\, B_{\text{house},t}}{30}
+    +
+    0.80\, B_{\text{house},t}\,
+    \frac{r^{m}_{t}}{1 - (1 + r^{m}_{t})^{-30}},$$ where $r^{m}_{t}$ is the 30-year fixed mortgage rate (FRED `MORTGAGE30US`).
+
+##### Education.
+
+Four years of tuition are financed as a 10-year student loan at the federal Direct Loan statutory rate $r^{e}_{t}$: $$A_{\text{edu},t}
+    =
+    4\, B_{\text{edu},t}\,
+    \frac{r^{e}_{t}}{1 - (1 + r^{e}_{t})^{-10}}.$$
+
+##### Transportation.
+
+One new vehicle is financed over its service life of $L=8$ years at the new-auto loan rate $r^{a}_{t}$ (FRED `TERMCBAUTO48NS`): $$A_{\text{auto},t}
+    =
+    B_{\text{auto},t}\,
+    \frac{r^{a}_{t}}{1 - (1 + r^{a}_{t})^{-L}}.$$
+
+##### Healthcare.
+
+Healthcare is already an annual flow and enters directly, $A_{\text{health},t} = B_{\text{health},t}$.
+
+#### From payments to time
+
+Let $W_{a,t}^{(2024)}$ be median annual income for cohort $a$ in year $t$ and assume a 2,000-hour work year. The time cost of milestone $j$ is the share of a work-year required to make its annual payment, $$s_{a,j,t}
+    =
+    \frac{A_{j,t}}{W_{a,t}^{(2024)}},
+    \qquad
+    \text{Hours}_{a,j,t}
+    =
+    2{,}000\, s_{a,j,t},$$ and the total time cost is $s_{a,t} = \sum_{j} s_{a,j,t}$. A value of $s_{a,t}=1$ means the four milestones together consume an entire year of labor.
+
+#### Results
+
+```{python}
+#| label: fig-timecost-25to34
+#| fig-cap: "Annual time cost of major milestones for a representative 25–34 worker, 1980–2024. Each band shows the share of a 2,000-hour work-year required to make the annual financed payment for housing, education, transportation, and healthcare."
+import pandas as pd
+import plotly.graph_objects as go
+
+df = pd.read_csv("figures/Chapter3/output/time_costs_repagent_by_age.csv")
+df = df[
+    (df["age_group"] == "25 to 34 Years")
+    & (df["year"] >= 1980)
+].copy()
+
+fig = go.Figure()
+for label, col in [
+    ("Housing", "share_house"),
+    ("Education", "share_degree"),
+    ("Transportation", "share_car"),
+    ("Healthcare", "share_health"),
+]:
+    fig.add_scatter(
+        x=df["year"],
+        y=df[col],
+        mode="lines",
+        name=label,
+        stackgroup="one",
+        hovertemplate=(
+            f"<b>{label}</b><br>"
+            "%{x}: %{y:.1%} of work-year"
+            "<extra></extra>"
+        ),
+    )
+
+fig.update_layout(
+    template="plotly_white",
+    xaxis_title="Year",
+    yaxis_title="Share of 2,000-Hour Work-Year",
+    hovermode="x unified",
+    height=550,
+    margin=dict(l=70, r=30, t=30, b=60),
+    font=dict(family="Georgia, serif", size=14),
+)
+fig.update_yaxes(tickformat=".0%")
+fig
+```
+
+@fig-timecost-25to34 decomposes the time burden of the thirty-year-old. In 1980 the four milestones together required about 96% of a work-year (roughly 1,925 hours). By 2024 the same bundle required about 129% of a work-year (roughly 2,585 hours)---an increase of 34% in time price. Strikingly, this rise occurred *despite* a fall in the mortgage rate from 13.7% in 1980 to 6.7% in 2024: cheaper credit was overwhelmed by the rising real prices of housing and, especially, education. In 2024 housing accounts for about 44% of the burden, education 33%, transportation 13%, and healthcare 10%.
+
+```{python}
+#| label: fig-timecost-compare
+#| fig-cap: "Annual time cost of each milestone for a representative 25–34 worker, 1980 versus 2024, as a share of a 2,000-hour work-year."
+import pandas as pd
+import plotly.graph_objects as go
+
+df = pd.read_csv("figures/Chapter3/output/time_costs_repagent_compare_1980_2024.csv")
+
+categories = ["Housing", "Education", "Transportation", "Healthcare"]
+cols = ["share_house", "share_degree", "share_car", "share_health"]
+
+fig = go.Figure()
+for year in [1980, 2024]:
+    row = df[df["year"] == year].iloc[0]
+    fig.add_bar(
+        x=categories,
+        y=[row[c] for c in cols],
+        name=str(year),
+        hovertemplate=(
+            f"<b>{year}</b><br>"
+            "%{x}: %{y:.1%} of work-year"
+            "<extra></extra>"
+        ),
+    )
+
+fig.update_layout(
+    template="plotly_white",
+    barmode="group",
+    xaxis_title="",
+    yaxis_title="Share of 2,000-Hour Work-Year",
+    height=500,
+    margin=dict(l=70, r=30, t=30, b=60),
+    font=dict(family="Georgia, serif", size=14),
+)
+fig.update_yaxes(tickformat=".0%")
+fig
+```
+
+@fig-timecost-compare contrasts the two years milestone by milestone. The widening is driven primarily by housing and education, the two categories whose real benchmark prices rose fastest. This is the central paradox of the chapter: technological progress has made the goods themselves better and made financing cheaper, yet the thirty-year-old must give up *more* of their finite time to secure the markers of a middle-class life than their counterpart did four decades ago.
+
+```{python}
+#| label: fig-timecost-by-cohort
+#| fig-cap: "Total annual time cost of the four milestones by age cohort, 1980–2024, as a share of a 2,000-hour work-year. Each line applies the same financed milestone bundle to a representative worker in that cohort, dividing by cohort median income."
+import pandas as pd
+import plotly.graph_objects as go
+
+df = pd.read_csv("figures/Chapter3/output/time_costs_repagent_by_age.csv")
+df = df[
+    (df["year"] >= 1980)
+    & (df["age_group"] != "65 Years and Older")
+].copy()
+
+fig = go.Figure()
+for age_group in df["age_group"].drop_duplicates():
+    d = df[df["age_group"] == age_group]
+    fig.add_scatter(
+        x=d["year"],
+        y=d["share_total"],
+        mode="lines",
+        name=age_group,
+        hovertemplate=(
+            f"<b>{age_group}</b><br>"
+            "%{x}: %{y:.1%} of work-year"
+            "<extra></extra>"
+        ),
+    )
+
+fig.update_layout(
+    template="plotly_white",
+    xaxis_title="Year",
+    yaxis_title="Share of 2,000-Hour Work-Year",
+    hovermode="x unified",
+    height=550,
+    margin=dict(l=70, r=30, t=30, b=60),
+    font=dict(family="Georgia, serif", size=14),
+)
+fig.update_yaxes(tickformat=".0%")
+fig
+```
+
+@fig-timecost-by-cohort extends the calculation to the four working-age cohorts by applying the same milestone bundle and dividing by each cohort's median income. We exclude the 65+ group: a bundle built around a first home purchase, a new degree, and a new vehicle is a working-age life-cycle event, and applying it to a cohort living largely on fixed and transfer income would reflect the collapse of the income denominator rather than a meaningful affordability burden.
+
+Because the numerator is held fixed across cohorts, the figure isolates the role of the income denominator. The time cost traces a *U-shape* across working life: it is heaviest for the youngest cohort (25--34, about 129% of a work-year in 2024) and the pre-retirement cohort (55--64, about 123%), and lightest for prime earners (45--54, about 104%, with 35--44 at about 107%). The full working-age spread in 2024 is therefore only about 25 percentage points, in contrast to the much larger gap that appears when retirees are included. The burden rose for every working-age cohort between 1980 and 2024, with the steepest increase among the youngest workers.
+
+##### Interpretation and caveats.
+
+This measure is a stylized affordability benchmark, not a description of actual annual spending. Three caveats apply. First, the benchmark goods have improved in quality---a 2024 home, vehicle, and course of medical care are not the 1980 versions---so part of the rising time price reflects a more capable good. Second, the comparison uses individual median income; the rise in dual-earner households since 1980 cushions the household-level burden relative to the individual figures shown here. Third, the financing terms (down-payment share, loan maturities, vehicle service life) are fixed assumptions; the qualitative result is robust to plausible variation in them. With these caveats noted, the exercise makes a simple point: a stable headline inflation rate can conceal a large increase in the time cost of the milestones that define economic adulthood.
+
+[^1]: Taking natural logs is another way to calculate percentage changes: $\ln(Y / X)$, which approximates our formula quite well for small percentage changes $\pm 5\%$. The midpoint method uses the average as the denominator: $\frac{Y - X}{(Y + X) / 2}$, yielding a result that is symmetric for increases and decreases.

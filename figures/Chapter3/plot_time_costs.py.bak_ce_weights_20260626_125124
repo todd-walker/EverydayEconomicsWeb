@@ -1,0 +1,161 @@
+#!/usr/bin/env python3
+"""
+plot_time_costs.py
+
+Reads time_costs_by_age.csv (from compute_time_costs.py) and produces:
+  1) time_costs_lines_by_cohort.pdf/png
+     Lines of total time cost (years) by age cohort over time
+
+  2) time_costs_latest_stacked_hours.pdf/png
+     Latest-year stacked bars of category time burdens (hours) by cohort
+
+  3) time_costs_25to34_breakdown_area.pdf/png
+     25–34 cohort: stacked area of category time burdens (years) over time
+
+Also prints a brief analytic summary (peaks, changes).
+
+Inputs:
+  figures/Chapter3/output/time_costs_by_age.csv
+
+Outputs:
+  figures/Chapter3/output/<plots and a summary text file>
+"""
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+from pathlib import Path
+
+OUTDIR = Path("figures/Chapter3/output")
+INFILE = OUTDIR / "time_costs_by_age.csv"
+
+COHORTS = [
+    "25 to 34 Years",
+    "35 to 44 Years",
+    "45 to 54 Years",
+    "55 to 64 Years",
+    "65 Years and Older",
+]
+CATS = ["housing", "education", "transport", "health"]
+
+def yfmt(x, _pos):
+    return f"{x:,.2f}"
+
+def hfmt(x, _pos):
+    return f"{x:,.0f}"
+
+def main():
+    OUTDIR.mkdir(parents=True, exist_ok=True)
+    df = pd.read_csv(INFILE)
+
+    # Ensure sorted and clean
+    df = df.sort_values(["year", "age_group"]).reset_index(drop=True)
+    df = df[(df["year"] >= 1980) & (df["year"] <= 2020)].copy()
+
+    # ----------------- (1) Lines by cohort: total years -----------------
+    fig, ax = plt.subplots(figsize=(10, 6))
+    for cohort in COHORTS:
+        s = df[df["age_group"] == cohort][["year", "time_years_total"]].dropna()
+        if not s.empty:
+            ax.plot(s["year"], s["time_years_total"], lw=2, label=cohort)
+    ax.set_xlabel("Year")
+    ax.set_ylabel("Total Time Cost (Years of Labor)")
+    ax.yaxis.set_major_formatter(FuncFormatter(yfmt))
+    ax.grid(True, alpha=0.3)
+    ax.legend(frameon=False, ncol=2)
+    ax.set_title("Annual Time Cost of Major Expenditures by Age Cohort")
+    fig.tight_layout()
+    fig.savefig(OUTDIR / "time_costs_lines_by_cohort.png", dpi=250)
+    fig.savefig(OUTDIR / "time_costs_lines_by_cohort.pdf")
+    plt.close(fig)
+
+    # ----------------- (2) Latest-year stacked bars: hours by cohort -----------------
+    latest = int(df["year"].max())
+    latest_df = df[df["year"] == latest].copy()
+
+    # Build hours by category for latest year
+    bars = latest_df[["age_group"]].copy()
+    for c in CATS:
+        bars[f"{c}_hours"] = latest_df[f"time_hours_{c}"].fillna(0)
+
+    bars = bars.set_index("age_group").reindex(COHORTS)
+    bottoms = np.zeros(len(bars))
+    colors = {"housing":"#1f77b4","education":"#d62728","transport":"#2ca02c","health":"#9467bd"}
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    x = np.arange(len(bars.index))
+    width = 0.6
+    for c in CATS:
+        values = bars[f"{c}_hours"].values
+        ax.bar(x, values, width, bottom=bottoms, label=c.capitalize(), color=colors[c])
+        bottoms += values
+
+    ax.set_xticks(x)
+    ax.set_xticklabels([s.replace(" Years", "") for s in bars.index], rotation=0)
+    ax.set_ylabel("Hours of Labor (Annual)")
+    ax.yaxis.set_major_formatter(FuncFormatter(hfmt))
+    ax.set_title(f"Latest Year ({latest}): Category Time Burden by Cohort (Hours)")
+    ax.legend(frameon=False, ncol=4, loc="upper left")
+    ax.grid(axis="y", alpha=0.3)
+    fig.tight_layout()
+    fig.savefig(OUTDIR / "time_costs_latest_stacked_hours.png", dpi=250)
+    fig.savefig(OUTDIR / "time_costs_latest_stacked_hours.pdf")
+    plt.close(fig)
+
+    # ----------------- (3) 25–34 cohort breakdown: stacked area (years) -----------------
+    young = df[df["age_group"] == "25 to 34 Years"].copy()
+    young = young.sort_values("year")
+    if not young.empty:
+        fig, ax = plt.subplots(figsize=(10, 6))
+        stacks = [young[f"time_years_{c}"].fillna(0).values for c in CATS]
+        ax.stackplot(young["year"].values, stacks, labels=[c.capitalize() for c in CATS],
+                     colors=[colors[c] for c in CATS], alpha=0.85)
+        ax.set_xlabel("Year")
+        ax.set_ylabel("Time Cost (Years of Labor)")
+        ax.yaxis.set_major_formatter(FuncFormatter(yfmt))
+        ax.set_title("25–34 Cohort: Time Burden by Category (Years)")
+        ax.legend(frameon=False, ncol=4, loc="upper left")
+        ax.grid(True, alpha=0.3)
+        fig.tight_layout()
+        fig.savefig(OUTDIR / "time_costs_25to34_breakdown_area.png", dpi=250)
+        fig.savefig(OUTDIR / "time_costs_25to34_breakdown_area.pdf")
+        plt.close(fig)
+
+    # ----------------- (4) Summary analytics -----------------
+    lines = []
+    lines.append(f"Latest year in panel: {latest}\n")
+    for cohort in COHORTS:
+        sub = df[df["age_group"] == cohort].dropna(subset=["time_years_total"])
+        if sub.empty:
+            continue
+        # Peak and current
+        peak_row = sub.loc[sub["time_years_total"].idxmax()]
+        curr_row = sub[sub["year"] == latest].iloc[0] if (sub["year"] == latest).any() else peak_row
+        peak_yr = int(peak_row["year"]); peak_val = float(peak_row["time_years_total"])
+        curr_val = float(curr_row["time_years_total"])
+        # long-run change since 1978 if available
+        if (sub["year"] == 1978).any():
+            base_val = float(sub.loc[sub["year"] == 1978, "time_years_total"].iloc[0])
+            pct_change = (curr_val - base_val) / base_val * 100 if base_val > 0 else np.nan
+            base_str = f" vs 1978: {pct_change:+.1f}%"
+        else:
+            base_str = ""
+        # Composition in latest year (shares)
+        comp = {}
+        denom = curr_row["time_years_total"] if curr_row["time_years_total"] and curr_row["time_years_total"] > 0 else np.nan
+        for c in CATS:
+            comp[c] = float(curr_row[f"time_years_{c}"]) / denom if denom and not np.isnan(denom) else np.nan
+        comp_str = ", ".join([f"{c}:{comp[c]*100:,.0f}%" for c in CATS if comp[c] == comp[c]])  # skip NaN
+
+        lines.append(
+            f"{cohort:>16s} — peak: {peak_val:.2f} years in {peak_yr}; "
+            f"latest: {curr_val:.2f} years{base_str}; "
+            f"latest composition: {comp_str}"
+        )
+
+    (OUTDIR / "time_costs_summary.txt").write_text("\n".join(lines))
+    print("Summary written to:", OUTDIR / "time_costs_summary.txt")
+
+if __name__ == "__main__":
+    main()
